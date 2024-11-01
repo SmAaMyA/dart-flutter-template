@@ -77,7 +77,7 @@ class MyHomePageState extends State<MyHomePage> {
         title: Row(
           children: [
             Image.asset(
-              'assets/logo.png', // Replace with your logo asset path
+              'assets/images/flutter_logo.png', // Replace with your logo asset path
               height: 40,
             ),
             const Spacer(),
