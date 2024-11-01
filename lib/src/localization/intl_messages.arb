@@ -1,0 +1,21 @@
+{
+  "@@last_modified": "2024-11-02T06:41:24.336303",
+  "appTitle": "Flutter Application Template",
+  "@appTitle": {
+    "description": "The title of the application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "hello": "Hello",
+  "@hello": {
+    "description": "Greeting message",
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Login button text",
+    "type": "text",
+    "placeholders": {}
+  }
+}

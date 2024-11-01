@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
+import 'localization/app_localizations.dart';
 import 'settings/settings_controller.dart';
 
 class MyApp extends StatelessWidget {
@@ -83,7 +83,6 @@ class MyHomePageState extends State<MyHomePage> {
             const Spacer(),
             DropdownButton<String>(
               value: _selectedLanguage,
-              icon: const Icon(Icons.language),
               onChanged: (String? newValue) {
                 if (newValue != null) {
                   _changeLanguage(newValue);
@@ -93,7 +92,17 @@ class MyHomePageState extends State<MyHomePage> {
                   .map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(value),
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(
+                        'assets/images/flags/${value.toLowerCase()}.svg',
+                        width: 24,
+                        height: 24,
+                      ),
+                      const SizedBox(width: 8),
+                      Text(value),
+                    ],
+                  ),
                 );
               }).toList(),
             ),
@@ -126,8 +135,8 @@ class MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: const Center(
-        child: Text('Hello, world!'),
+      body: Center(
+        child: Text(AppLocalizations.of(context).hello),
       ),
     );
   }

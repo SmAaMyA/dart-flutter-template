@@ -1,0 +1,14 @@
+{
+  "appTitle": "แม่แบบแอปพลิเคชัน Flutter",
+  "hello": "สวัสดี",
+  "login": "เข้าสู่ระบบ",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "@hello": {
+    "description": "Greeting message"
+  },
+  "@login": {
+    "description": "Login button text"
+  }
+}
