@@ -4,8 +4,11 @@ import 'package:flutter_application_template/src/settings/settings_controller.da
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'more_page.dart';
-import '../widgets/language_selector.dart';
+import 'trade_page.dart';
+import 'portfolio_page.dart';
+import 'chat_page.dart';
 import '../widgets/custom_bottom_navigation_bar.dart';
+import '../widgets/header.dart';
 
 class MyHomePage extends StatefulWidget {
   final SettingsController settingsController;
@@ -50,9 +53,9 @@ class MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final List<Widget> pages = <Widget>[
       Center(child: Text(AppLocalizations.of(context).hello)),
-      Center(child: Text('Trade Page')),
-      Center(child: Text('Portfolio Page')),
-      Center(child: Text('Chat Page')),
+      const TradePage(),
+      const PortfolioPage(),
+      const ChatPage(),
       MorePage(
         selectedLanguage: _selectedLanguage,
         onLanguageChanged: _changeLanguage,
@@ -64,47 +67,10 @@ class MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: [
-            Image.asset(
-              'assets/images/flutter_logo.png', // Replace with your logo asset path
-              height: 40,
-            ),
-            const Spacer(),
-            if (kIsWeb)
-              LanguageSelector(
-                selectedLanguage: _selectedLanguage,
-                onLanguageChanged: _changeLanguage,
-              ),
-            if (kIsWeb)
-              IconButton(
-                icon: Icon(
-                    widget.settingsController.themeMode == ThemeMode.light
-                        ? Icons.dark_mode
-                        : Icons.light_mode),
-                onPressed: () {
-                  widget.settingsController.updateThemeMode(
-                    widget.settingsController.themeMode == ThemeMode.light
-                        ? ThemeMode.dark
-                        : ThemeMode.light,
-                  );
-                },
-              ),
-            if (kIsWeb)
-              TextButton(
-                onPressed: () {
-                  // Handle login action
-                },
-                child: Text(AppLocalizations.of(context).login),
-              ),
-            if (kIsWeb)
-              IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: () {
-                  // Handle hamburger menu action
-                },
-              ),
-          ],
+        title: Header(
+          selectedLanguage: _selectedLanguage,
+          onLanguageChanged: _changeLanguage,
+          settingsController: widget.settingsController,
         ),
       ),
       body: IndexedStack(
