@@ -5,6 +5,7 @@ import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'more_page.dart';
 import '../widgets/language_selector.dart';
+import '../widgets/custom_bottom_navigation_bar.dart';
 
 class MyHomePage extends StatefulWidget {
   final SettingsController settingsController;
@@ -60,8 +61,6 @@ class MyHomePageState extends State<MyHomePage> {
     ];
 
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
-    final iconColor = isDarkMode ? Colors.white : Colors.black;
-    final textColor = isDarkMode ? Colors.white : Colors.black;
 
     return Scaffold(
       appBar: AppBar(
@@ -113,33 +112,10 @@ class MyHomePageState extends State<MyHomePage> {
         children: pages,
       ),
       bottomNavigationBar: !kIsWeb && (Platform.isIOS || Platform.isAndroid)
-          ? BottomNavigationBar(
-              items: <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.home, color: iconColor),
-                  label: 'Home',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.swap_horiz, color: iconColor),
-                  label: 'Trade',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.pie_chart, color: iconColor),
-                  label: 'Portfolio',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.chat, color: iconColor),
-                  label: 'Chat',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.more_horiz, color: iconColor),
-                  label: 'More',
-                ),
-              ],
+          ? CustomBottomNavigationBar(
               currentIndex: _selectedIndex,
-              selectedItemColor: Colors.amber[800],
-              unselectedItemColor: textColor,
               onTap: _onItemTapped,
+              isDarkMode: isDarkMode,
             )
           : null,
     );
