@@ -69,3 +69,4 @@ android/gradlew.bat
 
 # VS Code related
 .vscode/
+.fake
