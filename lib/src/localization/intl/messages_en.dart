@@ -14,19 +14,23 @@ import 'package:intl/message_lookup_by_library.dart';
 
 final messages = MessageLookup();
 
-typedef String? MessageIfAbsent(
-    String? messageStr, List<Object>? args);
+typedef String? MessageIfAbsent(String? messageStr, List<Object>? args);
 
 class MessageLookup extends MessageLookupByLibrary {
   @override
   String get localeName => 'en';
 
   @override
-  final Map<String, dynamic> messages = _notInlinedMessages(_notInlinedMessages);
+  final Map<String, dynamic> messages =
+      _notInlinedMessages(_notInlinedMessages);
 
   static Map<String, dynamic> _notInlinedMessages(_) => {
-      'appTitle': MessageLookupByLibrary.simpleMessage('Flutter Application Template'),
-    'hello': MessageLookupByLibrary.simpleMessage('Hello'),
-    'login': MessageLookupByLibrary.simpleMessage('Login')
-  };
+        'appTitle': MessageLookupByLibrary.simpleMessage(
+            'Flutter Application Template'),
+        'hello': MessageLookupByLibrary.simpleMessage('Hello'),
+        'language': MessageLookupByLibrary.simpleMessage('Language'),
+        'lightDarkTheme':
+            MessageLookupByLibrary.simpleMessage('Light/Dark Theme'),
+        'login': MessageLookupByLibrary.simpleMessage('Login')
+      };
 }

@@ -3,6 +3,8 @@
   "appTitle": "Flutter 应用模板",
   "hello": "你好",
   "login": "登录",
+  "lightDarkTheme": "亮/暗主题",
+  "language": "语言",
   "@appTitle": {
     "description": "The title of the application"
   },
@@ -11,5 +13,11 @@
   },
   "@login": {
     "description": "Login button text"
+  },
+  "@lightDarkTheme": {
+    "description": "Light/Dark Theme toggle"
+  },
+  "@language": {
+    "description": "Language selector"
   }
 }

@@ -3,6 +3,8 @@
   "appTitle": "แม่แบบแอปพลิเคชัน Flutter",
   "hello": "สวัสดี",
   "login": "เข้าสู่ระบบ",
+  "lightDarkTheme": "ธีมสว่าง/มืด",
+  "language": "ภาษา",
   "@appTitle": {
     "description": "The title of the application"
   },
@@ -11,5 +13,11 @@
   },
   "@login": {
     "description": "Login button text"
+  },
+  "@lightDarkTheme": {
+    "description": "Light/Dark Theme toggle"
+  },
+  "@language": {
+    "description": "Language selector"
   }
 }

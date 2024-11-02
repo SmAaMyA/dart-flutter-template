@@ -3,6 +3,8 @@
   "appTitle": "Flutter Application Template",
   "hello": "Hello",
   "login": "Login",
+  "lightDarkTheme": "Light/Dark Theme",
+  "language": "Language",
   "@appTitle": {
     "description": "The title of the application"
   },
@@ -11,5 +13,11 @@
   },
   "@login": {
     "description": "Login button text"
+  },
+  "@lightDarkTheme": {
+    "description": "Light/Dark Theme toggle"
+  },
+  "@language": {
+    "description": "Language selector"
   }
 }

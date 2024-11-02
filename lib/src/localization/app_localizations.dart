@@ -49,6 +49,22 @@ class AppLocalizations {
       desc: 'Login button text',
     );
   }
+
+  String get lightDarkTheme {
+    return Intl.message(
+      'Light/Dark Theme',
+      name: 'lightDarkTheme',
+      desc: 'Light/Dark Theme toggle',
+    );
+  }
+
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: 'Language selector',
+    );
+  }
 }
 
 class _AppLocalizationsDelegate

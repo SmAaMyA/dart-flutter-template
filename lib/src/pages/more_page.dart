@@ -30,7 +30,7 @@ class MorePage extends StatelessWidget {
           ),
         if (!kIsWeb)
           ListTile(
-            title: Text('Light/Dark Theme'),
+            title: Text(AppLocalizations.of(context).lightDarkTheme),
             trailing: IconButton(
               icon: Icon(settingsController.themeMode == ThemeMode.light
                   ? Icons.dark_mode
@@ -46,7 +46,7 @@ class MorePage extends StatelessWidget {
           ),
         if (!kIsWeb)
           ListTile(
-            title: Text('Language'),
+            title: Text(AppLocalizations.of(context).language),
             trailing: LanguageSelector(
               selectedLanguage: selectedLanguage,
               onLanguageChanged: onLanguageChanged,
