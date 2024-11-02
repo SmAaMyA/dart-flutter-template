@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'localization/app_localizations.dart';
+import 'package:flutter_application_template/src/localization/app_localizations.dart';
 import 'settings/settings_controller.dart';
 
 class MyApp extends StatelessWidget {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             Locale('th', ''), // Thai
             Locale('zh', ''), // Chinese
           ],
-          localizationsDelegates: const [
+          localizationsDelegates: [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
@@ -122,7 +122,7 @@ class MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 // Handle login action
               },
-              child: const Text('Login'),
+              child: Text(AppLocalizations.of(context).login),
             ),
           ],
         ),
