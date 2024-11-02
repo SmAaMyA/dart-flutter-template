@@ -9,6 +9,7 @@ import 'portfolio_page.dart';
 import 'chat_page.dart';
 import '../widgets/custom_bottom_navigation_bar.dart';
 import '../widgets/header.dart';
+import '../widgets/sidebar.dart';
 
 class MyHomePage extends StatefulWidget {
   final SettingsController settingsController;
@@ -73,6 +74,11 @@ class MyHomePageState extends State<MyHomePage> {
           settingsController: widget.settingsController,
         ),
       ),
+      endDrawer: kIsWeb
+          ? Sidebar(
+              onItemTapped: _onItemTapped,
+            )
+          : null,
       body: IndexedStack(
         index: _selectedIndex,
         children: pages,

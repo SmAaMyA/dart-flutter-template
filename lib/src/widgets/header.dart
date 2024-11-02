@@ -19,44 +19,50 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Image.asset(
           'assets/images/flutter_logo.png', // Replace with your logo asset path
           height: 40,
         ),
-        const Spacer(),
-        if (kIsWeb)
-          LanguageSelector(
-            selectedLanguage: selectedLanguage,
-            onLanguageChanged: onLanguageChanged,
-          ),
-        if (kIsWeb)
-          IconButton(
-            icon: Icon(settingsController.themeMode == ThemeMode.light
-                ? Icons.dark_mode
-                : Icons.light_mode),
-            onPressed: () {
-              settingsController.updateThemeMode(
-                settingsController.themeMode == ThemeMode.light
-                    ? ThemeMode.dark
-                    : ThemeMode.light,
-              );
-            },
-          ),
-        if (kIsWeb)
-          TextButton(
-            onPressed: () {
-              // Handle login action
-            },
-            child: Text(AppLocalizations.of(context).login),
-          ),
-        if (kIsWeb)
-          IconButton(
-            icon: const Icon(Icons.menu),
-            onPressed: () {
-              // Handle hamburger menu action
-            },
-          ),
+        Row(
+          children: [
+            if (kIsWeb)
+              LanguageSelector(
+                selectedLanguage: selectedLanguage,
+                onLanguageChanged: onLanguageChanged,
+              ),
+            if (kIsWeb)
+              IconButton(
+                icon: Icon(settingsController.themeMode == ThemeMode.light
+                    ? Icons.dark_mode
+                    : Icons.light_mode),
+                onPressed: () {
+                  settingsController.updateThemeMode(
+                    settingsController.themeMode == ThemeMode.light
+                        ? ThemeMode.dark
+                        : ThemeMode.light,
+                  );
+                },
+              ),
+            if (kIsWeb)
+              TextButton(
+                onPressed: () {
+                  // Handle login action
+                },
+                child: Text(AppLocalizations.of(context).login),
+              ),
+            if (kIsWeb)
+              Builder(
+                builder: (context) => IconButton(
+                  icon: const Icon(Icons.menu),
+                  onPressed: () {
+                    Scaffold.of(context).openEndDrawer();
+                  },
+                ),
+              ),
+          ],
+        ),
       ],
     );
   }
