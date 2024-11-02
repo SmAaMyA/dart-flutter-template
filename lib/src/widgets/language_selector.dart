@@ -25,11 +25,17 @@ class LanguageSelector extends StatelessWidget {
         return DropdownMenuItem<String>(
           value: value,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SvgPicture.asset(
-                'assets/images/flags/${value.toLowerCase()}.svg',
-                width: 24,
-                height: 24,
+              ClipOval(
+                child: SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: SvgPicture.asset(
+                    'assets/images/flags/${value.toLowerCase()}.svg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
               const SizedBox(width: 8),
               Text(_getLanguageName(value)),
