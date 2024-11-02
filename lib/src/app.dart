@@ -3,6 +3,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_application_template/src/localization/app_localizations.dart';
 import 'settings/settings_controller.dart';
+import 'dart:io' show Platform;
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class MyApp extends StatelessWidget {
   final SettingsController settingsController;
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
             Locale('th', ''), // Thai
             Locale('zh', ''), // Chinese
           ],
-          localizationsDelegates: [
+          localizationsDelegates: const [
             AppLocalizations.delegate,
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
@@ -49,6 +51,7 @@ class MyHomePage extends StatefulWidget {
 
 class MyHomePageState extends State<MyHomePage> {
   String _selectedLanguage = 'TH';
+  int _selectedIndex = 0;
 
   void _changeLanguage(String languageCode) {
     Locale newLocale;
@@ -70,8 +73,22 @@ class MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    final List<Widget> _pages = <Widget>[
+      Center(child: Text(AppLocalizations.of(context).hello)),
+      Center(child: Text('Search Page')),
+      Center(child: Text('Notifications Page')),
+      Center(child: Text('Messages Page')),
+      Center(child: Text('Profile Page')),
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: Row(
@@ -100,7 +117,7 @@ class MyHomePageState extends State<MyHomePage> {
                         height: 24,
                       ),
                       const SizedBox(width: 8),
-                      Text(value),
+                      Text(_getLanguageName(value)),
                     ],
                   ),
                 );
@@ -135,9 +152,51 @@ class MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: Center(
-        child: Text(AppLocalizations.of(context).hello),
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _pages,
       ),
+      bottomNavigationBar: !kIsWeb && (Platform.isIOS || Platform.isAndroid)
+          ? BottomNavigationBar(
+              items: const <BottomNavigationBarItem>[
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'Home',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.search),
+                  label: 'Search',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.notifications),
+                  label: 'Notifications',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.message),
+                  label: 'Messages',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: 'Profile',
+                ),
+              ],
+              currentIndex: _selectedIndex,
+              selectedItemColor: Colors.amber[800],
+              onTap: _onItemTapped,
+            )
+          : null,
     );
+  }
+
+  String _getLanguageName(String languageCode) {
+    switch (languageCode) {
+      case 'EN':
+        return 'English';
+      case 'ZH':
+        return '中文';
+      case 'TH':
+      default:
+        return 'ไทย';
+    }
   }
 }
