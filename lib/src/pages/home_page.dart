@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_application_template/src/localization/app_localizations.dart';
 import 'package:flutter_application_template/src/settings/settings_controller.dart';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'more_page.dart';
+import '../widgets/language_selector.dart';
 
 class MyHomePage extends StatefulWidget {
   final SettingsController settingsController;
@@ -73,30 +73,9 @@ class MyHomePageState extends State<MyHomePage> {
             ),
             const Spacer(),
             if (kIsWeb)
-              DropdownButton<String>(
-                value: _selectedLanguage,
-                onChanged: (String? newValue) {
-                  if (newValue != null) {
-                    _changeLanguage(newValue);
-                  }
-                },
-                items: <String>['TH', 'EN', 'ZH']
-                    .map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(
-                          'assets/images/flags/${value.toLowerCase()}.svg',
-                          width: 24,
-                          height: 24,
-                        ),
-                        const SizedBox(width: 8),
-                        Text(_getLanguageName(value)),
-                      ],
-                    ),
-                  );
-                }).toList(),
+              LanguageSelector(
+                selectedLanguage: _selectedLanguage,
+                onLanguageChanged: _changeLanguage,
               ),
             if (kIsWeb)
               IconButton(
@@ -164,17 +143,5 @@ class MyHomePageState extends State<MyHomePage> {
             )
           : null,
     );
-  }
-
-  String _getLanguageName(String languageCode) {
-    switch (languageCode) {
-      case 'EN':
-        return 'English';
-      case 'ZH':
-        return '中文';
-      case 'TH':
-      default:
-        return 'ไทย';
-    }
   }
 }
