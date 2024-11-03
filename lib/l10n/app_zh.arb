@@ -5,6 +5,11 @@
   "login": "登录",
   "lightDarkTheme": "亮/暗主题",
   "language": "语言",
+  "home": "首页",
+  "trade": "交易",
+  "portfolio": "投资组合",
+  "chat": "聊天",
+  "more": "更多",
   "@appTitle": {
     "description": "The title of the application"
   },
@@ -19,5 +24,20 @@
   },
   "@language": {
     "description": "Language selector"
+  },
+  "@home": {
+    "description": "Home page name"
+  },
+  "@trade": {
+    "description": "Trade page name"
+  },
+  "@portfolio": {
+    "description": "Portfolio page name"
+  },
+  "@chat": {
+    "description": "Chat page name"
+  },
+  "@more": {
+    "description": "More page name"
   }
 }

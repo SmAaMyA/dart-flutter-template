@@ -5,6 +5,11 @@
   "login": "เข้าสู่ระบบ",
   "lightDarkTheme": "ธีมสว่าง/มืด",
   "language": "ภาษา",
+  "home": "หน้าแรก",
+  "trade": "ซื้อขาย",
+  "portfolio": "พอร์ตโฟลิโอ",
+  "chat": "แชท",
+  "more": "เพิ่มเติม",
   "@appTitle": {
     "description": "The title of the application"
   },
@@ -19,5 +24,20 @@
   },
   "@language": {
     "description": "Language selector"
+  },
+  "@home": {
+    "description": "Home page name"
+  },
+  "@trade": {
+    "description": "Trade page name"
+  },
+  "@portfolio": {
+    "description": "Portfolio page name"
+  },
+  "@chat": {
+    "description": "Chat page name"
+  },
+  "@more": {
+    "description": "More page name"
   }
 }

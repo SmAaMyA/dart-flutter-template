@@ -5,6 +5,11 @@
   "login": "Login",
   "lightDarkTheme": "Light/Dark Theme",
   "language": "Language",
+  "home": "Home",
+  "trade": "Trade",
+  "portfolio": "Portfolio",
+  "chat": "Chat",
+  "more": "More",
   "@appTitle": {
     "description": "The title of the application"
   },
@@ -19,5 +24,20 @@
   },
   "@language": {
     "description": "Language selector"
+  },
+  "@home": {
+    "description": "Home page name"
+  },
+  "@trade": {
+    "description": "Trade page name"
+  },
+  "@portfolio": {
+    "description": "Portfolio page name"
+  },
+  "@chat": {
+    "description": "Chat page name"
+  },
+  "@more": {
+    "description": "More page name"
   }
 }

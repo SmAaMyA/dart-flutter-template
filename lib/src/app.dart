@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/pages/home_page.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_application_template/src/localization/app_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'settings/settings_controller.dart';
 
 class MyApp extends StatelessWidget {
@@ -23,17 +22,8 @@ class MyApp extends StatelessWidget {
           darkTheme: ThemeData.dark(),
           themeMode: settingsController.themeMode,
           locale: settingsController.locale,
-          supportedLocales: const [
-            Locale('en', ''), // English
-            Locale('th', ''), // Thai
-            Locale('zh', ''), // Chinese
-          ],
-          localizationsDelegates: const [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
           home: MyHomePage(settingsController: settingsController),
         );
       },

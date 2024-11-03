@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/localization/app_localizations.dart';
 import 'package:flutter_application_template/src/settings/settings_controller.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'language_selector.dart';
 
@@ -50,7 +50,7 @@ class Header extends StatelessWidget {
                 onPressed: () {
                   // Handle login action
                 },
-                child: Text(AppLocalizations.of(context).login),
+                child: Text(AppLocalizations.of(context)!.login),
               ),
             if (kIsWeb)
               Builder(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/localization/app_localizations.dart';
 import 'package:flutter_application_template/src/settings/settings_controller.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'more_page.dart';
@@ -53,7 +53,7 @@ class MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> pages = <Widget>[
-      Center(child: Text(AppLocalizations.of(context).hello)),
+      Center(child: Text(AppLocalizations.of(context)!.hello)),
       const TradePage(),
       const PortfolioPage(),
       const ChatPage(),
