@@ -16,7 +16,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
-    final selectedItemColor = primaryColor;
+    final selectedItemColor = isDarkMode ? Colors.white : primaryColor;
     final unselectedItemColor = isDarkMode ? Colors.white54 : Colors.black54;
 
     return BottomNavigationBar(
