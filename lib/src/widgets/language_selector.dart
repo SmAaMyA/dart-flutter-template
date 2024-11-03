@@ -54,7 +54,7 @@ class LanguageSelector extends StatelessWidget {
         return '中文';
       case 'TH':
       default:
-        return 'ไทย';
+        return 'ภาษาไทย';
     }
   }
 }
