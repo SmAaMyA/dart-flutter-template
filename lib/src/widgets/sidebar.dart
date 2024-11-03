@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Sidebar extends StatelessWidget {
   final ValueChanged<int> onItemTapped;
@@ -37,7 +38,7 @@ class Sidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.home),
-            title: Text('Home'),
+            title: Text(AppLocalizations.of(context)!.home),
             selected: currentIndex == 0,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
@@ -48,7 +49,7 @@ class Sidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.swap_horiz),
-            title: Text('Trade'),
+            title: Text(AppLocalizations.of(context)!.trade),
             selected: currentIndex == 1,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
@@ -59,7 +60,7 @@ class Sidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.pie_chart),
-            title: Text('Portfolio'),
+            title: Text(AppLocalizations.of(context)!.portfolio),
             selected: currentIndex == 2,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
@@ -70,7 +71,7 @@ class Sidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.chat),
-            title: Text('Chat'),
+            title: Text(AppLocalizations.of(context)!.chat),
             selected: currentIndex == 3,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
@@ -81,7 +82,7 @@ class Sidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.more_horiz),
-            title: Text('More'),
+            title: Text(AppLocalizations.of(context)!.more),
             selected: currentIndex == 4,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
