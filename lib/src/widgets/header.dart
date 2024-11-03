@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/settings/settings_controller.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
-import 'language_selector.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/pages/login_page.dart';
+import 'package:flutter_application_template/src/settings/settings_controller.dart';
+import 'package:flutter_application_template/src/widgets/language_selector.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Header extends StatelessWidget {
   final String selectedLanguage;

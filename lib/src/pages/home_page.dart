@@ -1,16 +1,17 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_application_template/src/settings/settings_controller.dart';
 import 'dart:io' show Platform;
+
 import 'package:flutter/foundation.dart' show kIsWeb;
-import 'more_page.dart';
-import 'trade_page.dart';
-import 'portfolio_page.dart';
-import 'chat_page.dart';
-import 'login_page.dart';
-import '../widgets/custom_bottom_navigation_bar.dart';
-import '../widgets/header.dart';
-import '../widgets/sidebar.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_application_template/src/pages/chat_page.dart';
+import 'package:flutter_application_template/src/pages/login_page.dart';
+import 'package:flutter_application_template/src/pages/more_page.dart';
+import 'package:flutter_application_template/src/pages/portfolio_page.dart';
+import 'package:flutter_application_template/src/pages/trade_page.dart';
+import 'package:flutter_application_template/src/settings/settings_controller.dart';
+import 'package:flutter_application_template/src/widgets/custom_bottom_navigation_bar.dart';
+import 'package:flutter_application_template/src/widgets/header.dart';
+import 'package:flutter_application_template/src/widgets/sidebar.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MyHomePage extends StatefulWidget {
   final SettingsController settingsController;
@@ -24,32 +25,6 @@ class MyHomePage extends StatefulWidget {
 class MyHomePageState extends State<MyHomePage> {
   String _selectedLanguage = 'TH';
   int _selectedIndex = 0;
-
-  void _changeLanguage(String languageCode) {
-    Locale newLocale;
-    switch (languageCode) {
-      case 'EN':
-        newLocale = const Locale('en', '');
-        break;
-      case 'ZH':
-        newLocale = const Locale('zh', '');
-        break;
-      case 'TH':
-      default:
-        newLocale = const Locale('th', '');
-        break;
-    }
-    widget.settingsController.updateLocale(newLocale);
-    setState(() {
-      _selectedLanguage = languageCode;
-    });
-  }
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -94,5 +69,31 @@ class MyHomePageState extends State<MyHomePage> {
             )
           : null,
     );
+  }
+
+  void _changeLanguage(String languageCode) {
+    Locale newLocale;
+    switch (languageCode) {
+      case 'EN':
+        newLocale = const Locale('en', '');
+        break;
+      case 'ZH':
+        newLocale = const Locale('zh', '');
+        break;
+      case 'TH':
+      default:
+        newLocale = const Locale('th', '');
+        break;
+    }
+    widget.settingsController.updateLocale(newLocale);
+    setState(() {
+      _selectedLanguage = languageCode;
+    });
+  }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 }
