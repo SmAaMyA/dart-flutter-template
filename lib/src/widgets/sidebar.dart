@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_application_template/src/pages/login_page.dart';
 
 class Sidebar extends StatelessWidget {
   final ValueChanged<int> onItemTapped;
@@ -50,18 +51,21 @@ class Sidebar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.login),
             title: Text(AppLocalizations.of(context)!.login),
-            selected: currentIndex == 1,
+            selected: currentIndex == 5,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
             onTap: () {
               Navigator.pop(context);
-              onItemTapped(5);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginPage()),
+              );
             },
           ),
           ListTile(
             leading: Icon(Icons.swap_horiz),
             title: Text(AppLocalizations.of(context)!.trade),
-            selected: currentIndex == 2,
+            selected: currentIndex == 1,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
             onTap: () {
@@ -72,7 +76,7 @@ class Sidebar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.pie_chart),
             title: Text(AppLocalizations.of(context)!.portfolio),
-            selected: currentIndex == 3,
+            selected: currentIndex == 2,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
             onTap: () {
@@ -83,7 +87,7 @@ class Sidebar extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.chat),
             title: Text(AppLocalizations.of(context)!.chat),
-            selected: currentIndex == 4,
+            selected: currentIndex == 3,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
             onTap: () {
