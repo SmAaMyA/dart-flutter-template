@@ -3,6 +3,7 @@ import 'package:flutter_application_template/src/settings/settings_controller.da
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'language_selector.dart';
+import 'package:flutter_application_template/src/pages/login_page.dart';
 
 class Header extends StatelessWidget {
   final String selectedLanguage;
@@ -46,11 +47,24 @@ class Header extends StatelessWidget {
                 },
               ),
             if (kIsWeb)
-              TextButton(
+              ElevatedButton(
                 onPressed: () {
-                  // Handle login action
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const LoginPage()),
+                  );
                 },
-                child: Text(AppLocalizations.of(context)!.login),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Theme.of(context).primaryColor,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                child: Text(
+                  AppLocalizations.of(context)!.login,
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             if (kIsWeb)
               Builder(

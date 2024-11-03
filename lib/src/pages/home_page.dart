@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/settings/settings_controller.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_application_template/src/settings/settings_controller.dart';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'more_page.dart';
 import 'trade_page.dart';
 import 'portfolio_page.dart';
 import 'chat_page.dart';
+import 'login_page.dart';
 import '../widgets/custom_bottom_navigation_bar.dart';
 import '../widgets/header.dart';
 import '../widgets/sidebar.dart';

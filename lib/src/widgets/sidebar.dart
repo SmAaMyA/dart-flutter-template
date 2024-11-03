@@ -48,8 +48,8 @@ class Sidebar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.swap_horiz),
-            title: Text(AppLocalizations.of(context)!.trade),
+            leading: Icon(Icons.login),
+            title: Text(AppLocalizations.of(context)!.login),
             selected: currentIndex == 1,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
@@ -59,8 +59,8 @@ class Sidebar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.pie_chart),
-            title: Text(AppLocalizations.of(context)!.portfolio),
+            leading: Icon(Icons.swap_horiz),
+            title: Text(AppLocalizations.of(context)!.trade),
             selected: currentIndex == 2,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
@@ -70,14 +70,25 @@ class Sidebar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.chat),
-            title: Text(AppLocalizations.of(context)!.chat),
+            leading: Icon(Icons.pie_chart),
+            title: Text(AppLocalizations.of(context)!.portfolio),
             selected: currentIndex == 3,
             selectedTileColor: selectedTileColor,
             selectedColor: selectedColor,
             onTap: () {
               Navigator.pop(context);
               onItemTapped(3);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.chat),
+            title: Text(AppLocalizations.of(context)!.chat),
+            selected: currentIndex == 4,
+            selectedTileColor: selectedTileColor,
+            selectedColor: selectedColor,
+            onTap: () {
+              Navigator.pop(context);
+              onItemTapped(4);
             },
           ),
         ],
