@@ -63,6 +63,7 @@ class MyHomePageState extends State<MyHomePage> {
         onLanguageChanged: _changeLanguage,
         settingsController: widget.settingsController,
       ),
+      const LoginPage(),
     ];
 
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;

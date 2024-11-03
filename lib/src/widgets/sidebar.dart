@@ -55,7 +55,7 @@ class Sidebar extends StatelessWidget {
             selectedColor: selectedColor,
             onTap: () {
               Navigator.pop(context);
-              onItemTapped(1);
+              onItemTapped(5);
             },
           ),
           ListTile(
@@ -66,7 +66,7 @@ class Sidebar extends StatelessWidget {
             selectedColor: selectedColor,
             onTap: () {
               Navigator.pop(context);
-              onItemTapped(2);
+              onItemTapped(1);
             },
           ),
           ListTile(
@@ -77,7 +77,7 @@ class Sidebar extends StatelessWidget {
             selectedColor: selectedColor,
             onTap: () {
               Navigator.pop(context);
-              onItemTapped(3);
+              onItemTapped(2);
             },
           ),
           ListTile(
@@ -88,7 +88,7 @@ class Sidebar extends StatelessWidget {
             selectedColor: selectedColor,
             onTap: () {
               Navigator.pop(context);
-              onItemTapped(4);
+              onItemTapped(3);
             },
           ),
         ],
