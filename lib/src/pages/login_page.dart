@@ -30,6 +30,10 @@ class LoginPage extends StatelessWidget {
             ),
             const SizedBox(height: 16.0),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Theme.of(context).primaryColor,
+                foregroundColor: Colors.white,
+              ),
               onPressed: () {
                 // Handle login action
               },
