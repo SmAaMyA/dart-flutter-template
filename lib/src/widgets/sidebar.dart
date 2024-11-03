@@ -80,17 +80,6 @@ class Sidebar extends StatelessWidget {
               onItemTapped(3);
             },
           ),
-          ListTile(
-            leading: Icon(Icons.more_horiz),
-            title: Text(AppLocalizations.of(context)!.more),
-            selected: currentIndex == 4,
-            selectedTileColor: selectedTileColor,
-            selectedColor: selectedColor,
-            onTap: () {
-              Navigator.pop(context);
-              onItemTapped(4);
-            },
-          ),
         ],
       ),
     );
