@@ -77,6 +77,7 @@ class MyHomePageState extends State<MyHomePage> {
       endDrawer: kIsWeb
           ? Sidebar(
               onItemTapped: _onItemTapped,
+              currentIndex: _selectedIndex,
             )
           : null,
       body: IndexedStack(
