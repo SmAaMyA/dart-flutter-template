@@ -8,7 +8,7 @@ import 'package:flutter_application_template/src/pages/more_page.dart';
 import 'package:flutter_application_template/src/pages/portfolio_page.dart';
 import 'package:flutter_application_template/src/pages/trade_page.dart';
 import 'package:flutter_application_template/src/settings/settings_controller.dart';
-import 'package:flutter_application_template/src/widgets/custom_bottom_navigation_bar.dart';
+import 'package:flutter_application_template/src/widgets/footer.dart';
 import 'package:flutter_application_template/src/widgets/header.dart';
 import 'package:flutter_application_template/src/widgets/sidebar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -62,7 +62,7 @@ class MyHomePageState extends State<MyHomePage> {
         children: pages,
       ),
       bottomNavigationBar: !kIsWeb && (Platform.isIOS || Platform.isAndroid)
-          ? CustomBottomNavigationBar(
+          ? FooterNavigationBar(
               currentIndex: _selectedIndex,
               onTap: _onItemTapped,
               isDarkMode: isDarkMode,
