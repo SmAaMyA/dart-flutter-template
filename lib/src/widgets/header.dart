@@ -32,21 +32,21 @@ class Header extends StatelessWidget {
                 Navigator.pushReplacementNamed(context, '/');
               },
               child: Image.asset(
-                'assets/images/flutter_logo.png', // Replace with your logo asset path
+                'assets/images/3.0x/flutter_logo.png', // Replace with your logo asset path
                 height: 40,
               ),
             ),
           )
         else
           Image.asset(
-            'assets/images/flutter_logo.png', // Replace with your logo asset path
+            'assets/images/3.0x/flutter_logo.png', // Replace with your logo asset path
             height: 40,
           ),
         Row(
           children: [
             if (kIsWeb)
               SizedBox(
-                width: screenWidth * 0.08,
+                width: screenWidth * 0.09,
                 child: LanguageSelector(
                   selectedLanguage: selectedLanguage,
                   onLanguageChanged: onLanguageChanged,
@@ -72,7 +72,7 @@ class Header extends StatelessWidget {
             if (kIsWeb) SizedBox(width: screenWidth * 0.01),
             if (kIsWeb)
               SizedBox(
-                width: screenWidth * 0.07,
+                width: screenWidth * 0.08,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -91,19 +91,6 @@ class Header extends StatelessWidget {
                   child: Text(
                     AppLocalizations.of(context)!.login,
                     style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-            if (kIsWeb) SizedBox(width: screenWidth * 0.01),
-            if (kIsWeb)
-              SizedBox(
-                width: screenWidth * 0.025,
-                child: Builder(
-                  builder: (context) => IconButton(
-                    icon: const Icon(Icons.menu),
-                    onPressed: () {
-                      Scaffold.of(context).openEndDrawer();
-                    },
                   ),
                 ),
               ),
