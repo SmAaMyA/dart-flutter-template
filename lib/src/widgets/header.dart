@@ -45,17 +45,20 @@ class Header extends StatelessWidget {
         Row(
           children: [
             if (kIsWeb)
-              SizedBox(
-                width: screenWidth * 0.09,
-                child: LanguageSelector(
-                  selectedLanguage: selectedLanguage,
-                  onLanguageChanged: onLanguageChanged,
+              ConstrainedBox(
+                constraints: BoxConstraints(minWidth: 125),
+                child: SizedBox(
+                  width: screenWidth * 0.09,
+                  child: LanguageSelector(
+                    selectedLanguage: selectedLanguage,
+                    onLanguageChanged: onLanguageChanged,
+                  ),
                 ),
               ),
             if (kIsWeb) SizedBox(width: screenWidth * 0.01),
             if (kIsWeb)
-              SizedBox(
-                width: screenWidth * 0.025,
+              ConstrainedBox(
+                constraints: BoxConstraints(minWidth: 35),
                 child: IconButton(
                   icon: Icon(settingsController.themeMode == ThemeMode.light
                       ? Icons.dark_mode
@@ -71,27 +74,18 @@ class Header extends StatelessWidget {
               ),
             if (kIsWeb) SizedBox(width: screenWidth * 0.01),
             if (kIsWeb)
-              SizedBox(
-                width: screenWidth * 0.08,
+              ConstrainedBox(
+                constraints: BoxConstraints(minWidth: 100),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const LoginPage()),
+                        builder: (context) => LoginPage(),
+                      ),
                     );
                   },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Theme.of(context).primaryColor,
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                  ),
-                  child: Text(
-                    AppLocalizations.of(context)!.login,
-                    style: TextStyle(color: Colors.white),
-                  ),
+                  child: Text(AppLocalizations.of(context)!.login),
                 ),
               ),
           ],
