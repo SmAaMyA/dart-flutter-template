@@ -4,11 +4,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 class LanguageSelector extends StatelessWidget {
   final String selectedLanguage;
   final ValueChanged<String> onLanguageChanged;
+  final bool showText;
 
   const LanguageSelector({
     super.key,
     required this.selectedLanguage,
     required this.onLanguageChanged,
+    this.showText = true,
   });
 
   @override
@@ -38,7 +40,10 @@ class LanguageSelector extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 8),
-              Text(_getLanguageName(value)),
+              SizedBox(
+                width: showText ? null : 0,
+                child: showText ? Text(_getLanguageName(value)) : null,
+              ),
             ],
           ),
         );

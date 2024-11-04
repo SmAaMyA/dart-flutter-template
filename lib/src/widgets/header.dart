@@ -45,15 +45,20 @@ class Header extends StatelessWidget {
         Row(
           children: [
             if (kIsWeb)
-              ConstrainedBox(
-                constraints: BoxConstraints(minWidth: 125),
-                child: SizedBox(
-                  width: screenWidth * 0.09,
-                  child: LanguageSelector(
-                    selectedLanguage: selectedLanguage,
-                    onLanguageChanged: onLanguageChanged,
-                  ),
-                ),
+              LayoutBuilder(
+                builder: (context, constraints) {
+                  final showText = screenWidth * 0.20 >= 115;
+                  return ConstrainedBox(
+                    constraints: BoxConstraints(
+                      minWidth: showText ? 115 : 58,
+                    ),
+                    child: LanguageSelector(
+                      selectedLanguage: selectedLanguage,
+                      onLanguageChanged: onLanguageChanged,
+                      showText: showText,
+                    ),
+                  );
+                },
               ),
             if (kIsWeb) SizedBox(width: screenWidth * 0.01),
             if (kIsWeb)
@@ -85,7 +90,17 @@ class Header extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Text(AppLocalizations.of(context)!.login),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Theme.of(context).primaryColor,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                  child: Text(
+                    AppLocalizations.of(context)!.login,
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
           ],
