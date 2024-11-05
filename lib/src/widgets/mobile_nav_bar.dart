@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class FooterNavigationBar extends StatelessWidget {
+class MobileNavigationBar extends StatelessWidget {
   final int currentIndex;
   final ValueChanged<int> onTap;
   final bool isDarkMode;
 
-  const FooterNavigationBar({
+  const MobileNavigationBar({
     super.key,
     required this.currentIndex,
     required this.onTap,

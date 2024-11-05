@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/pages/login_page.dart';
 import 'package:flutter_application_template/src/settings/settings_controller.dart';
@@ -26,43 +25,40 @@ class MorePage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          if (!kIsWeb)
-            ListTile(
-              leading: Icon(Icons.login),
-              title: Text(AppLocalizations.of(context)!.login),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const LoginPage()),
+          ListTile(
+            leading: Icon(Icons.login),
+            title: Text(AppLocalizations.of(context)!.login),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const LoginPage()),
+              );
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.brightness_6),
+            title: Text(AppLocalizations.of(context)!.lightDarkTheme),
+            trailing: IconButton(
+              icon: Icon(settingsController.themeMode == ThemeMode.light
+                  ? Icons.dark_mode
+                  : Icons.light_mode),
+              onPressed: () {
+                settingsController.updateThemeMode(
+                  settingsController.themeMode == ThemeMode.light
+                      ? ThemeMode.dark
+                      : ThemeMode.light,
                 );
               },
             ),
-          if (!kIsWeb)
-            ListTile(
-              leading: Icon(Icons.brightness_6),
-              title: Text(AppLocalizations.of(context)!.lightDarkTheme),
-              trailing: IconButton(
-                icon: Icon(settingsController.themeMode == ThemeMode.light
-                    ? Icons.dark_mode
-                    : Icons.light_mode),
-                onPressed: () {
-                  settingsController.updateThemeMode(
-                    settingsController.themeMode == ThemeMode.light
-                        ? ThemeMode.dark
-                        : ThemeMode.light,
-                  );
-                },
-              ),
+          ),
+          ListTile(
+            leading: Icon(Icons.language),
+            title: Text(AppLocalizations.of(context)!.language),
+            trailing: LanguageSelector(
+              selectedLanguage: selectedLanguage,
+              onLanguageChanged: onLanguageChanged,
             ),
-          if (!kIsWeb)
-            ListTile(
-              leading: Icon(Icons.language),
-              title: Text(AppLocalizations.of(context)!.language),
-              trailing: LanguageSelector(
-                selectedLanguage: selectedLanguage,
-                onLanguageChanged: onLanguageChanged,
-              ),
-            ),
+          ),
         ],
       ),
     );

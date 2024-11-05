@@ -1,6 +1,5 @@
-import 'dart:io' show Platform;
-
-import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/foundation.dart'
+    show defaultTargetPlatform, TargetPlatform;
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/pages/chat_page.dart';
 import 'package:flutter_application_template/src/pages/login_page.dart';
@@ -8,9 +7,10 @@ import 'package:flutter_application_template/src/pages/more_page.dart';
 import 'package:flutter_application_template/src/pages/portfolio_page.dart';
 import 'package:flutter_application_template/src/pages/trade_page.dart';
 import 'package:flutter_application_template/src/settings/settings_controller.dart';
-import 'package:flutter_application_template/src/widgets/footer.dart';
-import 'package:flutter_application_template/src/widgets/header.dart';
-import 'package:flutter_application_template/src/widgets/sidebar.dart';
+import 'package:flutter_application_template/src/widgets/mobile_nav_bar.dart';
+import 'package:flutter_application_template/src/widgets/mobile_header.dart';
+import 'package:flutter_application_template/src/widgets/pc_web_header.dart';
+import 'package:flutter_application_template/src/widgets/pc_web_sidebar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -28,30 +28,41 @@ class MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final isNotMobile = defaultTargetPlatform != TargetPlatform.iOS &&
+        defaultTargetPlatform != TargetPlatform.android;
+    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
+
     final List<Widget> pages = <Widget>[
       Center(child: Text(AppLocalizations.of(context)!.hello)),
       const TradePage(),
       const PortfolioPage(),
       const ChatPage(),
-      MorePage(
-        selectedLanguage: _selectedLanguage,
-        onLanguageChanged: _changeLanguage,
-        settingsController: widget.settingsController,
-      ),
-      const LoginPage(),
-    ];
-
-    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Header(
+      if (!isNotMobile)
+        MorePage(
           selectedLanguage: _selectedLanguage,
           onLanguageChanged: _changeLanguage,
           settingsController: widget.settingsController,
         ),
-      ),
-      endDrawer: kIsWeb
+      const LoginPage(),
+    ];
+
+    return Scaffold(
+      appBar: isNotMobile
+          ? AppBar(
+              title: PCWebHeader(
+                selectedLanguage: _selectedLanguage,
+                onLanguageChanged: _changeLanguage,
+                settingsController: widget.settingsController,
+              ),
+            )
+          : AppBar(
+              title: MobileHeader(
+                selectedLanguage: _selectedLanguage,
+                onLanguageChanged: _changeLanguage,
+                settingsController: widget.settingsController,
+              ),
+            ),
+      endDrawer: isNotMobile
           ? Sidebar(
               onItemTapped: _onItemTapped,
               currentIndex: _selectedIndex,
@@ -61,13 +72,13 @@ class MyHomePageState extends State<MyHomePage> {
         index: _selectedIndex,
         children: pages,
       ),
-      bottomNavigationBar: !kIsWeb && (Platform.isIOS || Platform.isAndroid)
-          ? FooterNavigationBar(
+      bottomNavigationBar: isNotMobile
+          ? null
+          : MobileNavigationBar(
               currentIndex: _selectedIndex,
               onTap: _onItemTapped,
               isDarkMode: isDarkMode,
-            )
-          : null,
+            ),
     );
   }
 
