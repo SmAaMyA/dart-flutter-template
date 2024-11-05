@@ -58,6 +58,7 @@ class LanguageSelector extends StatelessWidget {
       case 'ZH':
         return '中文';
       case 'TH':
+        return 'ภาษาไทย';
       default:
         return 'ภาษาไทย';
     }
