@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/routes/routes.dart';
-import 'package:flutter_application_template/src/view/widgets/shared_language_dropdown.dart';
-import 'package:flutter_application_template/src/view/widgets/shared_notification_menu.dart';
-import 'package:flutter_application_template/src/view/widgets/shared_theme_toggle.dart';
+import 'package:flutter_application_template/src/view/widgets/shared/language_dropdown.dart';
+import 'package:flutter_application_template/src/view/widgets/shared/notification_menu.dart';
+import 'package:flutter_application_template/src/view/widgets/shared/theme_toggle.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -78,9 +78,6 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
           ),
           const SizedBox(width: 8),
         ],
-      ),
-      body: Center(
-        child: Text(AppLocalizations.of(context)!.greeting),
       ),
     );
   }

@@ -32,7 +32,7 @@ class PCWebSidebar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.person),
+            leading: Icon(Icons.login),
             title: Text(AppLocalizations.of(context)!.login),
             onTap: () {
               Get.toNamed(AppRoutes.login);

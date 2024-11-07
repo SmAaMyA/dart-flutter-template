@@ -26,7 +26,7 @@ class App extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        initialRoute: AppRoutes.home,
+        initialRoute: AppRoutes.main,
         getPages: AppRoutes.routes,
       );
     });
