@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class SettingsService {
-  Future<Locale> locale() async => const Locale('en');
+class SettingService {
+  Future<Locale> locale() async => AppLocalizations.supportedLocales.first;
   Future<ThemeMode> themeMode() async => ThemeMode.system;
 
   Future<void> updateLocale(Locale locale) async {

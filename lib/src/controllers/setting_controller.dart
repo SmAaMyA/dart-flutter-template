@@ -1,14 +1,14 @@
-import 'package:flutter_application_template/src/services/setting_service.dart';
-import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_template/src/services/setting_service.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:get/get.dart';
 
 class SettingController extends GetxController {
-  final SettingsService _settingsService;
-  final Rx<Locale> _locale = const Locale('en').obs;
+  final SettingService _settingsService;
+  final Rx<Locale> _locale = AppLocalizations.supportedLocales.first.obs;
   final Rx<ThemeMode> _themeMode = ThemeMode.system.obs;
 
-  SettingController({required SettingsService settingsService})
+  SettingController({required SettingService settingsService})
       : _settingsService = settingsService;
 
   Locale get locale => _locale.value;
