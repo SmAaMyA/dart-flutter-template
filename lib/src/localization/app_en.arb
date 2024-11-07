@@ -8,9 +8,13 @@
   "@greeting": {
     "description": "Greeting message"
   },
-  "home": "Home",
-  "@home": {
+  "homeMenuName": "Home",
+  "@homeMenuName": {
     "description": "Home page name"
+  },
+  "homeMenuTooltip": "Go to home page",
+  "@homeMenuTooltip": {
+    "description": "Home page tooltip"
   },
   "login": "Login",
   "@login": {
@@ -23,6 +27,10 @@
   "more": "More",
   "@more": {
     "description": "More page name"
+  },
+  "moreMenuTooltip": "Go to more page",
+  "@moreMenuTooltip": {
+    "description": "More page tooltip"
   },
   "toggleThemeTootlip": "Toggle Theme",
   "@toggleThemeTootlip": {

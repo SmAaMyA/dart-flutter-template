@@ -14,7 +14,7 @@ class MobileHeader extends StatelessWidget implements PreferredSizeWidget {
   });
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +24,16 @@ class MobileHeader extends StatelessWidget implements PreferredSizeWidget {
           cursor: SystemMouseCursors.click,
           child: GestureDetector(
             onTap: () => Get.toNamed(AppRoutes.home),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SvgPicture.asset(
-                'assets/images/logo/asl_logo.svg',
-                fit: BoxFit.cover,
-                width: 24,
-                height: 24,
+            child: Tooltip(
+              message: AppLocalizations.of(context)!.homeMenuTooltip,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SvgPicture.asset(
+                  'assets/images/logo/asl_logo.svg',
+                  fit: BoxFit.cover,
+                  width: 24,
+                  height: 24,
+                ),
               ),
             ),
           ),

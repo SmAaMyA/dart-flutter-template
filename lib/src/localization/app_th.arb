@@ -8,9 +8,13 @@
   "@greeting": {
     "description": "ข้อความทักทาย"
   },
-  "home": "หน้าหลัก",
-  "@home": {
+  "homeMenuName": "หน้าหลัก",
+  "@homeMenuName": {
     "description": "ชื่อหน้าหลัก"
+  },
+  "homeMenuTooltip": "ไปที่หน้าหลัก",
+  "@homeMenuTooltip": {
+    "description": "คำอธิบายทูลทิปหน้าหลัก"
   },
   "login": "เข้าสู่ระบบ",
   "@login": {
@@ -23,6 +27,10 @@
   "more": "เพิ่มเติม",
   "@more": {
     "description": "ชื่อหน้าเพิ่มเติม"
+  },
+  "moreMenuTooltip": "ไปที่หน้าเพิ่มเติม",
+  "@moreMenuTooltip": {
+    "description": "คำอธิบายทูลทิปหน้าเพิ่มเติม"
   },
   "toggleThemeTootlip": "สลับธีม",
   "@toggleThemeTootlip": {

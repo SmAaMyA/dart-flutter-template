@@ -8,9 +8,13 @@
   "@greeting": {
     "description": "问候信息"
   },
-  "home": "主页",
-  "@home": {
+  "homeMenuName": "主页",
+  "@homeMenuName": {
     "description": "主页名称"
+  },
+  "homeMenuTooltip": "转到主页",
+  "@homeMenuTooltip": {
+    "description": "主页提示"
   },
   "login": "登录",
   "@login": {
@@ -23,6 +27,10 @@
   "more": "更多",
   "@more": {
     "description": "更多页面名称"
+  },
+  "moreMenuTooltip": "转到更多页面",
+  "@moreMenuTooltip": {
+    "description": "更多页面提示"
   },
   "toggleThemeTootlip": "切换主题",
   "@toggleThemeTootlip": {

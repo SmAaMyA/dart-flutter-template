@@ -17,11 +17,13 @@ class MobileNavbar extends StatelessWidget {
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          label: AppLocalizations.of(context)!.home,
+          label: AppLocalizations.of(context)!.homeMenuName,
+          tooltip: AppLocalizations.of(context)!.homeMenuTooltip,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.more),
           label: AppLocalizations.of(context)!.more,
+          tooltip: AppLocalizations.of(context)!.moreMenuTooltip,
         ),
       ],
       currentIndex: selectedIndex,
