@@ -1,3 +1,4 @@
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/controllers/setting_controller.dart';
 import 'package:flutter_application_template/src/routes/routes.dart';
@@ -18,8 +19,8 @@ class App extends StatelessWidget {
     settingController.loadSettings();
     return Obx(() {
       return GetMaterialApp(
-        theme: ThemeData(),
-        darkTheme: ThemeData.dark(),
+        theme: FlexColorScheme.light(scheme: FlexScheme.blueM3).toTheme,
+        darkTheme: FlexColorScheme.dark(scheme: FlexScheme.blueM3).toTheme,
         themeMode: settingController.themeMode,
         locale: settingController.locale,
         supportedLocales: AppLocalizations.supportedLocales,
