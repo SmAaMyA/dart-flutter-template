@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/controllers/setting_controller.dart';
 import 'package:flutter_application_template/src/routes/routes.dart';
+import 'package:flutter_application_template/src/view/widgets/language_dropdown.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-
-const Map<String, String> languageNames = {
-  'en': 'English',
-  'th': 'ภาษาไทย',
-  'zh': '中文',
-};
 
 class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
@@ -47,42 +42,7 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
       title: title != null ? Text(title!) : null,
       actions: [
         const SizedBox(width: 8),
-        Obx(() {
-          return ConstrainedBox(
-            constraints: const BoxConstraints(minWidth: 35),
-            child: DropdownButton<Locale>(
-              value: settingController.locale,
-              items: AppLocalizations.supportedLocales.map((Locale locale) {
-                return DropdownMenuItem<Locale>(
-                  value: locale,
-                  child: Row(
-                    children: [
-                      ClipOval(
-                        child: SizedBox(
-                          width: 24,
-                          height: 24,
-                          child: SvgPicture.asset(
-                            'assets/images/flags/${locale.languageCode.toLowerCase()}.svg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      if (showText)
-                        Text(languageNames[locale.languageCode] ??
-                            locale.languageCode),
-                    ],
-                  ),
-                );
-              }).toList(),
-              onChanged: (Locale? newLocale) {
-                if (newLocale != null) {
-                  settingController.setLocale(newLocale);
-                }
-              },
-            ),
-          );
-        }),
+        LanguageDropdown(showText: showText),
         const SizedBox(width: 8),
         ConstrainedBox(
           constraints: const BoxConstraints(minWidth: 35),
