@@ -13,20 +13,29 @@ const Map<String, String> languageNames = {
 
 class HomePage extends StatelessWidget {
   static const routeName = '/';
-  final bool showText;
 
-  const HomePage({
-    super.key,
-    this.showText = true,
-  });
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     final SettingController settingController = Get.find();
+    final screenWidth = MediaQuery.of(context).size.width;
+    final showText = screenWidth * 0.20 >= 115;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.home),
+        leading: MouseRegion(
+          cursor: SystemMouseCursors.click,
+          child: GestureDetector(
+            onTap: () {
+              Get.toNamed(HomePage.routeName);
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('assets/images/3.0x/flutter_logo.png'),
+            ),
+          ),
+        ),
         actions: [
           SizedBox(width: 8),
           Obx(() {
@@ -53,8 +62,10 @@ class HomePage extends StatelessWidget {
                         ),
                         const SizedBox(width: 8),
                         SizedBox(
-                          child: Text(languageNames[locale.languageCode] ??
-                              locale.languageCode),
+                          child: showText
+                              ? Text(languageNames[locale.languageCode] ??
+                                  locale.languageCode)
+                              : null,
                         ),
                       ],
                     ),

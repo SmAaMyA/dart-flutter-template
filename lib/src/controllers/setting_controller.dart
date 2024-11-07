@@ -22,8 +22,8 @@ class SettingController extends GetxController {
   Future<void> setLocale(Locale newLocale) async {
     if (AppLocalizations.supportedLocales.contains(newLocale)) {
       _locale.value = newLocale;
-      await _settingsService.updateLocale(_locale.value);
       Get.updateLocale(_locale.value);
+      await _settingsService.updateLocale(_locale.value);
     }
   }
 
@@ -33,7 +33,7 @@ class SettingController extends GetxController {
     } else {
       _themeMode.value = ThemeMode.light;
     }
-    await _settingsService.updateThemeMode(_themeMode.value);
     Get.changeThemeMode(_themeMode.value);
+    await _settingsService.updateThemeMode(_themeMode.value);
   }
 }
