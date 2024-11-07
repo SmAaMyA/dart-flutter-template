@@ -32,7 +32,12 @@ class HomePage extends StatelessWidget {
             },
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Image.asset('assets/images/3.0x/flutter_logo.png'),
+              child: SvgPicture.asset(
+                'assets/images/logo/asl_logo.svg',
+                fit: BoxFit.cover,
+                width: 24,
+                height: 24,
+              ),
             ),
           ),
         ),
