@@ -32,8 +32,12 @@
   "@moreMenuTooltip": {
     "description": "คำอธิบายทูลทิปหน้าเพิ่มเติม"
   },
-  "toggleThemeTootlip": "สลับธีม",
-  "@toggleThemeTootlip": {
+  "languageDropdownToottip": "เปลี่ยนภาษา",
+  "@languageDropdownToottip": {
+    "description": "คำอธิบายทูลทิปเลือกภาษา"
+  },
+  "toggleThemeTooltip": "สลับธีม",
+  "@toggleThemeTooltip": {
     "description": "คำอธิบายทูลทิปสลับธีม"
   },
   "notificationTooltip": "แสดงการแจ้งเตือน",

@@ -22,36 +22,39 @@ class SharedLanguageDropdown extends StatelessWidget {
     return Obx(() {
       return ConstrainedBox(
         constraints: const BoxConstraints(minWidth: 35),
-        child: DropdownButton<Locale>(
-          value: settingController.locale,
-          items: AppLocalizations.supportedLocales.map((Locale locale) {
-            return DropdownMenuItem<Locale>(
-              value: locale,
-              child: Row(
-                children: [
-                  ClipOval(
-                    child: SizedBox(
-                      width: 24,
-                      height: 24,
-                      child: SvgPicture.asset(
-                        'assets/images/flags/${locale.languageCode.toLowerCase()}.svg',
-                        fit: BoxFit.cover,
+        child: Tooltip(
+          message: AppLocalizations.of(context)!.languageDropdownToottip,
+          child: DropdownButton<Locale>(
+            value: settingController.locale,
+            items: AppLocalizations.supportedLocales.map((Locale locale) {
+              return DropdownMenuItem<Locale>(
+                value: locale,
+                child: Row(
+                  children: [
+                    ClipOval(
+                      child: SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: SvgPicture.asset(
+                          'assets/images/flags/${locale.languageCode.toLowerCase()}.svg',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
-                  const SizedBox(width: 8),
-                  if (showText)
-                    Text(languageNames[locale.languageCode] ??
-                        locale.languageCode),
-                ],
-              ),
-            );
-          }).toList(),
-          onChanged: (Locale? newLocale) {
-            if (newLocale != null) {
-              settingController.setLocale(newLocale);
-            }
-          },
+                    const SizedBox(width: 8),
+                    if (showText)
+                      Text(languageNames[locale.languageCode] ??
+                          locale.languageCode),
+                  ],
+                ),
+              );
+            }).toList(),
+            onChanged: (Locale? newLocale) {
+              if (newLocale != null) {
+                settingController.setLocale(newLocale);
+              }
+            },
+          ),
         ),
       );
     });

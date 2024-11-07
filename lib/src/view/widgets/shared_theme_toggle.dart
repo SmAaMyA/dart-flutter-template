@@ -13,7 +13,7 @@ class SharedThemeToggle extends StatelessWidget {
     return ConstrainedBox(
       constraints: const BoxConstraints(minWidth: 35),
       child: IconButton(
-        tooltip: AppLocalizations.of(context)!.toggleThemeTootlip,
+        tooltip: AppLocalizations.of(context)!.toggleThemeTooltip,
         icon: Icon(settingController.themeMode == ThemeMode.light
             ? Icons.dark_mode
             : Icons.light_mode),

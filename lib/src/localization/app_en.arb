@@ -32,8 +32,12 @@
   "@moreMenuTooltip": {
     "description": "More page tooltip"
   },
-  "toggleThemeTootlip": "Toggle Theme",
-  "@toggleThemeTootlip": {
+  "languageDropdownToottip": "Change language",
+  "@languageDropdownToottip": {
+    "description": "Language dropdown tooltip"
+  },
+  "toggleThemeTooltip": "Toggle Theme",
+  "@toggleThemeTooltip": {
     "description": "Theme toggle tooltip"
   },
   "notificationTooltip": "Show notifications",
