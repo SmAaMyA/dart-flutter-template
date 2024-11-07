@@ -14,12 +14,12 @@ class PCWebSidebar extends StatelessWidget {
         children: <Widget>[
           DrawerHeader(
             decoration: BoxDecoration(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).colorScheme.primary,
             ),
             child: Text(
               AppLocalizations.of(context)!.greeting,
               style: TextStyle(
-                color: Colors.white,
+                color: Theme.of(context).colorScheme.onPrimary,
                 fontSize: 24,
               ),
             ),
