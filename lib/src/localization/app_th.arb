@@ -12,12 +12,16 @@
   "@toggleTheme": {
     "description": "คำอธิบายปุ่มสลับธีม"
   },
+  "home": "หน้าหลัก",
+  "@home": {
+    "description": "ชื่อหน้าหลัก"
+  },
   "login": "เข้าสู่ระบบ",
   "@login": {
     "description": "ข้อความปุ่มเข้าสู่ระบบ"
   },
-  "home": "หน้าหลัก",
-  "@home": {
-    "description": "ชื่อหน้าหลัก"
+  "logout": "ออกจากระบบ",
+  "@logout": {
+    "description": "ข้อความปุ่มออกจากระบบ"
   }
 }

@@ -22,44 +22,55 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
     final double screenWidth = MediaQuery.of(context).size.width;
     final showText = screenWidth * 0.20 >= 115;
 
-    return AppBar(
-      leading: MouseRegion(
-        cursor: SystemMouseCursors.click,
-        child: GestureDetector(
-          onTap: () => Get.toNamed(AppRoutes.home),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SvgPicture.asset(
-              'assets/images/logo/asl_logo.svg',
-              fit: BoxFit.cover,
-              width: 24,
-              height: 24,
+    return Scaffold(
+      appBar: AppBar(
+        leading: MouseRegion(
+          cursor: SystemMouseCursors.click,
+          child: GestureDetector(
+            onTap: () => Get.toNamed(AppRoutes.home),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SvgPicture.asset(
+                'assets/images/logo/asl_logo.svg',
+                fit: BoxFit.cover,
+                width: 24,
+                height: 24,
+              ),
             ),
           ),
         ),
-      ),
-      title: title != null ? Text(title!) : null,
-      actions: [
-        const SizedBox(width: 8),
-        SharedLanguageDropdown(showText: showText),
-        const SizedBox(width: 8),
-        SharedThemeToggle(),
-        const SizedBox(width: 8),
-        ConstrainedBox(
-          constraints: const BoxConstraints(minWidth: 100),
-          child: TextButton.icon(
-            style: TextButton.styleFrom(
-              foregroundColor: Theme.of(context).colorScheme.onPrimary,
-              backgroundColor: Theme.of(context).colorScheme.primary,
+        title: title != null ? Text(title!) : null,
+        actions: [
+          const SizedBox(width: 8),
+          SharedLanguageDropdown(showText: showText),
+          const SizedBox(width: 8),
+          SharedThemeToggle(),
+          const SizedBox(width: 8),
+          ConstrainedBox(
+            constraints: const BoxConstraints(minWidth: 100),
+            child: TextButton.icon(
+              style: TextButton.styleFrom(
+                foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                backgroundColor: Theme.of(context).colorScheme.primary,
+              ),
+              label: Text(AppLocalizations.of(context)!.login),
+              onPressed: () {
+                Get.toNamed(AppRoutes.login);
+              },
             ),
-            label: Text(AppLocalizations.of(context)!.login),
+          ),
+          const SizedBox(width: 8),
+          IconButton(
+            icon: Icon(Icons.menu),
             onPressed: () {
-              Get.toNamed(AppRoutes.login);
+              Scaffold.of(context).openEndDrawer();
             },
           ),
-        ),
-        const SizedBox(width: 8),
-      ],
+        ],
+      ),
+      body: Center(
+        child: Text(AppLocalizations.of(context)!.greeting),
+      ),
     );
   }
 }

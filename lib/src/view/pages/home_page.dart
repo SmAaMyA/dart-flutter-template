@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/view/widgets/pc_web_header.dart';
+import 'package:flutter_application_template/src/view/widgets/pc_web_sidebar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,6 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PCWebHeader(),
+      endDrawer: PCWebSidebar(),
       body: Text(AppLocalizations.of(context)!.greeting),
     );
   }

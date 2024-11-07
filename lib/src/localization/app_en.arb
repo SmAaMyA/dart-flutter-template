@@ -12,12 +12,16 @@
   "@toggleTheme": {
     "description": "Theme toggle button tooltip"
   },
+  "home": "Home",
+  "@home": {
+    "description": "Home page name"
+  },
   "login": "Login",
   "@login": {
     "description": "Login button text"
   },
-  "home": "Home",
-  "@home": {
-    "description": "Home page name"
+  "logout": "Logout",
+  "@logout": {
+    "description": "Logout button text"
   }
 }
