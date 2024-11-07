@@ -56,6 +56,10 @@
   "@languageDropdownToottip": {
     "description": "Language dropdown tooltip"
   },
+  "toggleThemeMenuName": "Theme",
+  "@toggleThemeMenuName": {
+    "description": "Theme toggle menu name"
+  },
   "toggleThemeTooltip": "Toggle Theme",
   "@toggleThemeTooltip": {
     "description": "Theme toggle tooltip"

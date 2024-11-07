@@ -56,6 +56,10 @@
   "@languageDropdownToottip": {
     "description": "คำอธิบายทูลทิปเลือกภาษา"
   },
+  "toggleThemeMenuName": "ธีม",
+  "@toggleThemeMenuName": {
+    "description": "ชื่อเมนูสลับธีม"
+  },
   "toggleThemeTooltip": "สลับธีม",
   "@toggleThemeTooltip": {
     "description": "คำอธิบายทูลทิปสลับธีม"

@@ -56,6 +56,10 @@
   "@languageDropdownToottip": {
     "description": "语言选择提示文本"
   },
+  "toggleThemeMenuName": "主题",
+  "@toggleThemeMenuName": {
+    "description": "主题菜单名称"
+  },
   "toggleThemeTooltip": "切换主题",
   "@toggleThemeTooltip": {
     "description": "主题切换提示文本"

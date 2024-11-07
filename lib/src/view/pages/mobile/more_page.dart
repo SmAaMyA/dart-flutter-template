@@ -32,25 +32,15 @@ class MobileMorePage extends StatelessWidget {
             },
           ),
           const Divider(),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Icon(Icons.language),
-                    const SizedBox(width: 8),
-                    Text(AppLocalizations.of(context)!.languageMenuName),
-                  ],
-                ),
-                SharedLanguageDropdown(showText: false),
-              ],
-            ),
+          ListTile(
+            leading: Icon(Icons.language),
+            title: Text(AppLocalizations.of(context)!.languageMenuName),
+            trailing: SharedLanguageDropdown(showText: true),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: SharedThemeToggle(),
+          ListTile(
+            leading: Icon(Icons.brightness_6),
+            title: Text(AppLocalizations.of(context)!.toggleThemeMenuName),
+            trailing: SharedThemeToggle(),
           ),
         ],
       ),
