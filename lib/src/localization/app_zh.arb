@@ -20,6 +20,10 @@
   "@logout": {
     "description": "登出按钮文本"
   },
+  "more": "更多",
+  "@more": {
+    "description": "更多页面名称"
+  },
   "toggleThemeTootlip": "切换主题",
   "@toggleThemeTootlip": {
     "description": "主题切换提示文本"

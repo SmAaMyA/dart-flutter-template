@@ -20,6 +20,10 @@
   "@logout": {
     "description": "ข้อความออกจากระบบ"
   },
+  "more": "เพิ่มเติม",
+  "@more": {
+    "description": "ชื่อหน้าเพิ่มเติม"
+  },
   "toggleThemeTootlip": "สลับธีม",
   "@toggleThemeTootlip": {
     "description": "คำอธิบายทูลทิปสลับธีม"

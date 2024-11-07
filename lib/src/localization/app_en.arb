@@ -20,6 +20,10 @@
   "@logout": {
     "description": "Logout text"
   },
+  "more": "More",
+  "@more": {
+    "description": "More page name"
+  },
   "toggleThemeTootlip": "Toggle Theme",
   "@toggleThemeTootlip": {
     "description": "Theme toggle tooltip"
