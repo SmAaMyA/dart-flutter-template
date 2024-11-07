@@ -32,8 +32,16 @@
   "@logoutTooltip": {
     "description": "登出提示"
   },
-  "more": "更多",
-  "@more": {
+  "tradeMenuName": "交易",
+  "@tradeMenuName": {
+    "description": "交易页面名称"
+  },
+  "tradeMenuTooltip": "转到交易页面",
+  "@tradeMenuTooltip": {
+    "description": "交易页面提示"
+  },
+  "moreMenuName": "更多",
+  "@moreMenuName": {
     "description": "更多页面名称"
   },
   "moreMenuTooltip": "转到更多页面",

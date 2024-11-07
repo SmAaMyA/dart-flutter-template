@@ -32,8 +32,16 @@
   "@logoutTooltip": {
     "description": "คำอธิบายทูลทิปออกจากระบบ"
   },
-  "more": "เพิ่มเติม",
-  "@more": {
+  "tradeMenuName": "ซื้อขาย",
+  "@tradeMenuName": {
+    "description": "ชื่อหน้าซื้อขาย"
+  },
+  "tradeMenuTooltip": "ไปที่หน้าซื้อขาย",
+  "@tradeMenuTooltip": {
+    "description": "คำอธิบายทูลทิปหน้าซื้อขาย"
+  },
+  "moreMenuName": "เพิ่มเติม",
+  "@moreMenuName": {
     "description": "ชื่อหน้าเพิ่มเติม"
   },
   "moreMenuTooltip": "ไปที่หน้าเพิ่มเติม",

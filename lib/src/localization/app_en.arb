@@ -32,8 +32,16 @@
   "@logoutTooltip": {
     "description": "Logout tooltip"
   },
-  "more": "More",
-  "@more": {
+  "tradeMenuName": "Trade",
+  "@tradeMenuName": {
+    "description": "Trade page name"
+  },
+  "tradeMenuTooltip": "Go to trade page",
+  "@tradeMenuTooltip": {
+    "description": "Trade page tooltip"
+  },
+  "moreMenuName": "More",
+  "@moreMenuName": {
     "description": "More page name"
   },
   "moreMenuTooltip": "Go to more page",

@@ -19,7 +19,7 @@ class MobileMorePage extends StatelessWidget {
         children: [
           ListTile(
             leading: Icon(Icons.home),
-            title: Text(AppLocalizations.of(context)!.more),
+            title: Text(AppLocalizations.of(context)!.moreMenuName),
             onTap: () {
               Get.toNamed(AppRoutes.home);
             },
