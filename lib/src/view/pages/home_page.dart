@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/controllers/locale_controller.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
-import 'package:flutter_application_template/src/controllers/settings_controller.dart';
+import 'package:flutter_application_template/src/controllers/setting_controller.dart';
 import 'package:flutter_application_template/src/view/pages/login_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 const Map<String, String> languageNames = {
   'en': 'English',
@@ -14,18 +13,16 @@ const Map<String, String> languageNames = {
 
 class HomePage extends StatelessWidget {
   static const routeName = '/';
-  final SettingsController settingsController;
   final bool showText;
 
   const HomePage({
     super.key,
-    required this.settingsController,
     this.showText = true,
   });
 
   @override
   Widget build(BuildContext context) {
-    final LocaleController localeController = Get.find();
+    final SettingController settingController = Get.find();
 
     return Scaffold(
       appBar: AppBar(
@@ -35,7 +32,7 @@ class HomePage extends StatelessWidget {
             return ConstrainedBox(
               constraints: BoxConstraints(minWidth: 35),
               child: DropdownButton<Locale>(
-                value: localeController.locale.value,
+                value: settingController.locale,
                 items: AppLocalizations.supportedLocales.map((Locale locale) {
                   return DropdownMenuItem<Locale>(
                     value: locale,
@@ -64,7 +61,7 @@ class HomePage extends StatelessWidget {
                 }).toList(),
                 onChanged: (Locale? newLocale) {
                   if (newLocale != null) {
-                    localeController.setLocale(newLocale);
+                    settingController.setLocale(newLocale);
                   }
                 },
               ),
@@ -74,15 +71,11 @@ class HomePage extends StatelessWidget {
             constraints: BoxConstraints(minWidth: 35),
             child: IconButton(
               tooltip: AppLocalizations.of(context)!.toggleTheme,
-              icon: Icon(settingsController.themeMode == ThemeMode.light
+              icon: Icon(settingController.themeMode == ThemeMode.light
                   ? Icons.dark_mode
                   : Icons.light_mode),
               onPressed: () {
-                settingsController.updateThemeMode(
-                  settingsController.themeMode == ThemeMode.light
-                      ? ThemeMode.dark
-                      : ThemeMode.light,
-                );
+                settingController.toggleTheme();
               },
             ),
           ),
@@ -93,7 +86,6 @@ class HomePage extends StatelessWidget {
                 foregroundColor: Theme.of(context).colorScheme.onPrimary,
                 backgroundColor: Theme.of(context).colorScheme.primary,
               ),
-              // icon: const Icon(Icons.person),
               label: Text(AppLocalizations.of(context)!.login),
               onPressed: () {
                 Navigator.restorablePushNamed(context, LoginPage.routeName);

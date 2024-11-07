@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/controllers/locale_controller.dart';
-import 'package:get/get.dart';
-import 'package:flutter_application_template/src/controllers/settings_controller.dart';
+import 'package:flutter_application_template/src/controllers/setting_controller.dart';
+import 'package:flutter_application_template/src/services/setting_service.dart';
 import 'package:flutter_application_template/src/view/pages/home_page.dart';
-import 'package:flutter_application_template/src/view/pages/settings_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get.dart';
 
 class MyApp extends StatelessWidget {
-  final LocaleController localeController = Get.put(LocaleController());
-  final SettingsController settingsController;
+  final SettingsService settingsService = Get.put(SettingsService());
+  final SettingController settingController =
+      Get.put(SettingController(settingsService: Get.find()));
 
-  MyApp({
-    super.key,
-    required this.settingsController,
-  });
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +19,8 @@ class MyApp extends StatelessWidget {
       return GetMaterialApp(
         theme: ThemeData(),
         darkTheme: ThemeData.dark(),
-        themeMode: settingsController.themeMode,
-        locale: localeController.locale.value,
+        themeMode: settingController.themeMode,
+        locale: settingController.locale,
         supportedLocales: AppLocalizations.supportedLocales,
         localizationsDelegates: [
           AppLocalizations.delegate,
@@ -31,21 +28,7 @@ class MyApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        onGenerateRoute: (RouteSettings routeSettings) {
-          return MaterialPageRoute<void>(
-            settings: routeSettings,
-            builder: (BuildContext context) {
-              switch (routeSettings.name) {
-                case HomePage.routeName:
-                  return HomePage(settingsController: settingsController);
-                case SettingsView.routeName:
-                  return SettingsView(settingsController: settingsController);
-                default:
-                  return HomePage(settingsController: settingsController);
-              }
-            },
-          );
-        },
+        home: HomePage(),
       );
     });
   }
