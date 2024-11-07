@@ -8,20 +8,28 @@
   "@greeting": {
     "description": "ข้อความทักทาย"
   },
-  "toggleTheme": "สลับธีม",
-  "@toggleTheme": {
-    "description": "คำอธิบายปุ่มสลับธีม"
-  },
   "home": "หน้าหลัก",
   "@home": {
     "description": "ชื่อหน้าหลัก"
   },
   "login": "เข้าสู่ระบบ",
   "@login": {
-    "description": "ข้อความปุ่มเข้าสู่ระบบ"
+    "description": "ข้อความเข้าสู่ระบบ"
   },
   "logout": "ออกจากระบบ",
   "@logout": {
-    "description": "ข้อความปุ่มออกจากระบบ"
+    "description": "ข้อความออกจากระบบ"
+  },
+  "toggleThemeTootlip": "สลับธีม",
+  "@toggleThemeTootlip": {
+    "description": "คำอธิบายทูลทิปสลับธีม"
+  },
+  "notificationTooltip": "แสดงการแจ้งเตือน",
+  "@notificationTooltip": {
+    "description": "คำอธิบายทูลทิปการแจ้งเตือน"
+  },
+  "menuTooltip": "แสดงเมนู",
+  "@menuTooltip": {
+    "description": "คำอธิบายทูลทิปเมนู"
   }
 }

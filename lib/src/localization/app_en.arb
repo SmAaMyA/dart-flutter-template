@@ -8,20 +8,28 @@
   "@greeting": {
     "description": "Greeting message"
   },
-  "toggleTheme": "Toggle Theme",
-  "@toggleTheme": {
-    "description": "Theme toggle button tooltip"
-  },
   "home": "Home",
   "@home": {
     "description": "Home page name"
   },
   "login": "Login",
   "@login": {
-    "description": "Login button text"
+    "description": "Login text"
   },
   "logout": "Logout",
   "@logout": {
-    "description": "Logout button text"
+    "description": "Logout text"
+  },
+  "toggleThemeTootlip": "Toggle Theme",
+  "@toggleThemeTootlip": {
+    "description": "Theme toggle tooltip"
+  },
+  "notificationTooltip": "Show notifications",
+  "@notificationTooltip": {
+    "description": "Notification tooltip"
+  },
+  "menuTooltip": "Show menu",
+  "@menuTooltip": {
+    "description": "Menu tooltip"
   }
 }

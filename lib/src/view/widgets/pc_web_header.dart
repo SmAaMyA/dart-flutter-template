@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/routes/routes.dart';
 import 'package:flutter_application_template/src/view/widgets/shared_language_dropdown.dart';
+import 'package:flutter_application_template/src/view/widgets/shared_notification_menu.dart';
 import 'package:flutter_application_template/src/view/widgets/shared_theme_toggle.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -46,6 +47,8 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
           const SizedBox(width: 8),
           SharedThemeToggle(),
           const SizedBox(width: 8),
+          NotificationMenu(),
+          const SizedBox(width: 8),
           ConstrainedBox(
             constraints: const BoxConstraints(minWidth: 100),
             child: TextButton.icon(
@@ -61,6 +64,7 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
           ),
           const SizedBox(width: 8),
           IconButton(
+            tooltip: AppLocalizations.of(context)!.menuTooltip,
             icon: Icon(Icons.menu),
             onPressed: () {
               Scaffold.of(context).openEndDrawer();

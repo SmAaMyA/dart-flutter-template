@@ -8,10 +8,6 @@
   "@greeting": {
     "description": "问候信息"
   },
-  "toggleTheme": "切换主题",
-  "@toggleTheme": {
-    "description": "切换主题文本"
-  },
   "home": "主页",
   "@home": {
     "description": "主页名称"
@@ -23,5 +19,17 @@
   "logout": "登出",
   "@logout": {
     "description": "登出按钮文本"
+  },
+  "toggleThemeTootlip": "切换主题",
+  "@toggleThemeTootlip": {
+    "description": "主题切换提示文本"
+  },
+  "notificationTooltip": "切换主题",
+  "@notificationTooltip": {
+    "description": "通知提示文本"
+  },
+  "menuTooltip": "显示菜单",
+  "@menuTooltip": {
+    "description": "菜单提示文本"
   }
 }
