@@ -8,8 +8,8 @@
   "@greeting": {
     "description": "问候信息"
   },
-  "homeMenuName": "主页",
-  "@homeMenuName": {
+  "homePageName": "主页",
+  "@homePageName": {
     "description": "主页名称"
   },
   "homeMenuTooltip": "转到主页",
@@ -32,21 +32,25 @@
   "@logoutTooltip": {
     "description": "登出提示"
   },
-  "tradeMenuName": "交易",
-  "@tradeMenuName": {
+  "tradePageName": "交易",
+  "@tradePageName": {
     "description": "交易页面名称"
   },
-  "tradeMenuTooltip": "转到交易页面",
-  "@tradeMenuTooltip": {
+  "tradePageMenuTooltip": "转到交易页面",
+  "@tradePageMenuTooltip": {
     "description": "交易页面提示"
   },
-  "moreMenuName": "更多",
-  "@moreMenuName": {
+  "morePageName": "更多",
+  "@morePageName": {
     "description": "更多页面名称"
   },
-  "moreMenuTooltip": "转到更多页面",
-  "@moreMenuTooltip": {
+  "morePageMenuTooltip": "转到更多页面",
+  "@morePageMenuTooltip": {
     "description": "更多页面提示"
+  },
+  "languageMenuName": "语言",
+  "@languageMenuName": {
+    "description": "语言菜单提示"
   },
   "languageDropdownToottip": "选择语言",
   "@languageDropdownToottip": {

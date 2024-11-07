@@ -8,8 +8,8 @@
   "@greeting": {
     "description": "Greeting message"
   },
-  "homeMenuName": "Home",
-  "@homeMenuName": {
+  "homePageName": "Home",
+  "@homePageName": {
     "description": "Home page name"
   },
   "homeMenuTooltip": "Go to home page",
@@ -32,21 +32,25 @@
   "@logoutTooltip": {
     "description": "Logout tooltip"
   },
-  "tradeMenuName": "Trade",
-  "@tradeMenuName": {
+  "tradePageName": "Trade",
+  "@tradePageName": {
     "description": "Trade page name"
   },
-  "tradeMenuTooltip": "Go to trade page",
-  "@tradeMenuTooltip": {
+  "tradePageMenuTooltip": "Go to trade page",
+  "@tradePageMenuTooltip": {
     "description": "Trade page tooltip"
   },
-  "moreMenuName": "More",
-  "@moreMenuName": {
+  "morePageName": "More",
+  "@morePageName": {
     "description": "More page name"
   },
-  "moreMenuTooltip": "Go to more page",
-  "@moreMenuTooltip": {
+  "morePageMenuTooltip": "Go to more page",
+  "@morePageMenuTooltip": {
     "description": "More page tooltip"
+  },
+  "languageMenuName": "Language",
+  "@languageMenuName": {
+    "description": "Language menu tooltip"
   },
   "languageDropdownToottip": "Change language",
   "@languageDropdownToottip": {

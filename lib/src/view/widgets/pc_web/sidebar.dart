@@ -26,7 +26,7 @@ class PCWebSidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.home),
-            title: Text(AppLocalizations.of(context)!.homeMenuName),
+            title: Text(AppLocalizations.of(context)!.homePageName),
             onTap: () {
               Get.toNamed(AppRoutes.home);
             },

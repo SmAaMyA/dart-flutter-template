@@ -8,8 +8,8 @@
   "@greeting": {
     "description": "ข้อความทักทาย"
   },
-  "homeMenuName": "หน้าหลัก",
-  "@homeMenuName": {
+  "homePageName": "หน้าหลัก",
+  "@homePageName": {
     "description": "ชื่อหน้าหลัก"
   },
   "homeMenuTooltip": "ไปที่หน้าหลัก",
@@ -32,21 +32,25 @@
   "@logoutTooltip": {
     "description": "คำอธิบายทูลทิปออกจากระบบ"
   },
-  "tradeMenuName": "ซื้อขาย",
-  "@tradeMenuName": {
+  "tradePageName": "ซื้อขาย",
+  "@tradePageName": {
     "description": "ชื่อหน้าซื้อขาย"
   },
-  "tradeMenuTooltip": "ไปที่หน้าซื้อขาย",
-  "@tradeMenuTooltip": {
+  "tradePageMenuTooltip": "ไปที่หน้าซื้อขาย",
+  "@tradePageMenuTooltip": {
     "description": "คำอธิบายทูลทิปหน้าซื้อขาย"
   },
-  "moreMenuName": "เพิ่มเติม",
-  "@moreMenuName": {
+  "morePageName": "เพิ่มเติม",
+  "@morePageName": {
     "description": "ชื่อหน้าเพิ่มเติม"
   },
-  "moreMenuTooltip": "ไปที่หน้าเพิ่มเติม",
-  "@moreMenuTooltip": {
+  "morePageMenuTooltip": "ไปที่หน้าเพิ่มเติม",
+  "@morePageMenuTooltip": {
     "description": "คำอธิบายทูลทิปหน้าเพิ่มเติม"
+  },
+  "languageMenuName": "ภาษา",
+  "@languageMenuName": {
+    "description": "คำอธิบายทูลทิปเมนูภาษา"
   },
   "languageDropdownToottip": "เปลี่ยนภาษา",
   "@languageDropdownToottip": {

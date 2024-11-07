@@ -16,18 +16,18 @@ class MobileNavigationBar extends StatelessWidget {
     final List<BottomNavigationBarItem> bottomNavItems = [
       BottomNavigationBarItem(
         icon: Icon(Icons.home),
-        label: AppLocalizations.of(context)!.homeMenuName,
+        label: AppLocalizations.of(context)!.homePageName,
         tooltip: AppLocalizations.of(context)!.homeMenuTooltip,
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.swap_horiz),
-        label: AppLocalizations.of(context)!.tradeMenuName,
-        tooltip: AppLocalizations.of(context)!.tradeMenuTooltip,
+        label: AppLocalizations.of(context)!.tradePageName,
+        tooltip: AppLocalizations.of(context)!.tradePageMenuTooltip,
       ),
       BottomNavigationBarItem(
         icon: Icon(Icons.more),
-        label: AppLocalizations.of(context)!.moreMenuName,
-        tooltip: AppLocalizations.of(context)!.moreMenuTooltip,
+        label: AppLocalizations.of(context)!.morePageName,
+        tooltip: AppLocalizations.of(context)!.morePageMenuTooltip,
       ),
     ];
 

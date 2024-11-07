@@ -12,18 +12,11 @@ class MobileMorePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.greeting),
+        title: Text(AppLocalizations.of(context)!.morePageName),
       ),
       body: ListView(
         padding: const EdgeInsets.all(8.0),
         children: [
-          ListTile(
-            leading: Icon(Icons.home),
-            title: Text(AppLocalizations.of(context)!.moreMenuName),
-            onTap: () {
-              Get.toNamed(AppRoutes.home);
-            },
-          ),
           ListTile(
             leading: Icon(Icons.login),
             title: Text(AppLocalizations.of(context)!.login),
@@ -41,7 +34,19 @@ class MobileMorePage extends StatelessWidget {
           const Divider(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: SharedLanguageDropdown(showText: true),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.language),
+                    const SizedBox(width: 8),
+                    Text(AppLocalizations.of(context)!.languageMenuName),
+                  ],
+                ),
+                SharedLanguageDropdown(showText: false),
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0),

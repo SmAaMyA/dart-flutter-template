@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.homeMenuName),
+        title: Text(AppLocalizations.of(context)!.homePageName),
       ),
       body: Center(
         child: Text(AppLocalizations.of(context)!.greeting),
