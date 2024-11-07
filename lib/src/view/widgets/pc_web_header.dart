@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/controllers/setting_controller.dart';
 import 'package:flutter_application_template/src/routes/routes.dart';
-import 'package:flutter_application_template/src/view/widgets/language_dropdown.dart';
+import 'package:flutter_application_template/src/view/widgets/shared_language_dropdown.dart';
+import 'package:flutter_application_template/src/view/widgets/shared_theme_toggle.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -19,7 +19,6 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    final SettingController settingController = Get.find();
     final double screenWidth = MediaQuery.of(context).size.width;
     final showText = screenWidth * 0.20 >= 115;
 
@@ -42,23 +41,12 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
       title: title != null ? Text(title!) : null,
       actions: [
         const SizedBox(width: 8),
-        LanguageDropdown(showText: showText),
+        SharedLanguageDropdown(showText: showText),
+        const SizedBox(width: 8),
+        SharedThemeToggle(),
         const SizedBox(width: 8),
         ConstrainedBox(
-          constraints: const BoxConstraints(minWidth: 35),
-          child: IconButton(
-            tooltip: AppLocalizations.of(context)!.toggleTheme,
-            icon: Icon(settingController.themeMode == ThemeMode.light
-                ? Icons.dark_mode
-                : Icons.light_mode),
-            onPressed: () {
-              settingController.toggleTheme();
-            },
-          ),
-        ),
-        SizedBox(width: 8),
-        ConstrainedBox(
-          constraints: BoxConstraints(minWidth: 100),
+          constraints: const BoxConstraints(minWidth: 100),
           child: TextButton.icon(
             style: TextButton.styleFrom(
               foregroundColor: Theme.of(context).colorScheme.onPrimary,
@@ -70,7 +58,7 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
             },
           ),
         ),
-        SizedBox(width: 8),
+        const SizedBox(width: 8),
       ],
     );
   }

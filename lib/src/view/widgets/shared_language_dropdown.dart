@@ -10,10 +10,10 @@ const Map<String, String> languageNames = {
   'zh': '中文',
 };
 
-class LanguageDropdown extends StatelessWidget {
+class SharedLanguageDropdown extends StatelessWidget {
   final bool showText;
 
-  const LanguageDropdown({super.key, required this.showText});
+  const SharedLanguageDropdown({super.key, required this.showText});
 
   @override
   Widget build(BuildContext context) {
