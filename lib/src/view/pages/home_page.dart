@@ -26,8 +26,9 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: Text(AppLocalizations.of(context)!.home),
         actions: [
+          SizedBox(width: 8),
           Obx(() {
             return ConstrainedBox(
               constraints: BoxConstraints(minWidth: 35),
@@ -67,6 +68,7 @@ class HomePage extends StatelessWidget {
               ),
             );
           }),
+          SizedBox(width: 8),
           ConstrainedBox(
             constraints: BoxConstraints(minWidth: 35),
             child: IconButton(
@@ -79,6 +81,7 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
+          SizedBox(width: 8),
           ConstrainedBox(
             constraints: BoxConstraints(minWidth: 100),
             child: TextButton.icon(
@@ -92,6 +95,7 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
+          SizedBox(width: 8),
         ],
       ),
       body: Center(

@@ -15,5 +15,9 @@
   "login": "登录",
   "@login": {
     "description": "登录按钮文本"
+  },
+  "home": "主页",
+  "@home": {
+    "description": "主页名称"
   }
 }

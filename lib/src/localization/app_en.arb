@@ -15,5 +15,9 @@
   "login": "Login",
   "@login": {
     "description": "Login button text"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "Home page name"
   }
 }
