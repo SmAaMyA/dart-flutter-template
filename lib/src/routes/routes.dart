@@ -3,10 +3,11 @@ import 'package:flutter_application_template/src/view/pages/login_page.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {
-  static final initialRoute = HomePage.routeName;
+  static const String home = '/';
+  static const String login = '/login';
 
   static final routes = [
-    GetPage(name: HomePage.routeName, page: () => HomePage()),
-    GetPage(name: LoginPage.routeName, page: () => LoginPage()),
+    GetPage(name: home, page: () => HomePage()),
+    GetPage(name: login, page: () => LoginPage()),
   ];
 }
