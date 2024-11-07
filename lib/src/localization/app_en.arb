@@ -20,9 +20,17 @@
   "@login": {
     "description": "Login text"
   },
+  "loginTooltip": "Login",
+  "@loginTooltip": {
+    "description": "Login tooltip"
+  },
   "logout": "Logout",
   "@logout": {
     "description": "Logout text"
+  },
+  "logoutTooltip": "Logout",
+  "@logoutTooltip": {
+    "description": "Logout tooltip"
   },
   "more": "More",
   "@more": {

@@ -54,15 +54,18 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
           const SizedBox(width: 8),
           ConstrainedBox(
             constraints: const BoxConstraints(minWidth: 100),
-            child: TextButton.icon(
-              style: TextButton.styleFrom(
-                foregroundColor: Theme.of(context).colorScheme.onPrimary,
-                backgroundColor: Theme.of(context).colorScheme.primary,
+            child: Tooltip(
+              message: AppLocalizations.of(context)!.loginTooltip,
+              child: TextButton.icon(
+                style: TextButton.styleFrom(
+                  foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                ),
+                label: Text(AppLocalizations.of(context)!.login),
+                onPressed: () {
+                  Get.toNamed(AppRoutes.login);
+                },
               ),
-              label: Text(AppLocalizations.of(context)!.login),
-              onPressed: () {
-                Get.toNamed(AppRoutes.login);
-              },
             ),
           ),
           const SizedBox(width: 8),

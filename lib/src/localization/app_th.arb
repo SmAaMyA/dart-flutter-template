@@ -20,9 +20,17 @@
   "@login": {
     "description": "ข้อความเข้าสู่ระบบ"
   },
+  "loginTooltip": "เข้าสู่ระบบ",
+  "@loginTooltip": {
+    "description": "คำอธิบายทูลทิปเข้าสู่ระบบ"
+  },
   "logout": "ออกจากระบบ",
   "@logout": {
     "description": "ข้อความออกจากระบบ"
+  },
+  "logoutTooltip": "ออกจากระบบ",
+  "@logoutTooltip": {
+    "description": "คำอธิบายทูลทิปออกจากระบบ"
   },
   "more": "เพิ่มเติม",
   "@more": {
