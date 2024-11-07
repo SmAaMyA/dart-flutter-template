@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_template/src/controllers/locale_controller.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:flutter_application_template/src/controllers/settings_controller.dart';
 import 'package:flutter_application_template/src/view/pages/login_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -23,47 +25,51 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final LocaleController localeController = Get.find();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home'),
         actions: [
-          DropdownButton<Locale>(
-            value: Localizations.localeOf(context),
-            items: AppLocalizations.supportedLocales.map((Locale locale) {
-              return DropdownMenuItem<Locale>(
-                value: locale,
-                child: Row(
-                  children: [
-                    ClipOval(
-                      child: SizedBox(
-                        width: 24,
-                        height: 24,
-                        child: SvgPicture.asset(
-                          'assets/images/flags/${locale.languageCode.toLowerCase()}.svg',
-                          fit: BoxFit.cover,
-                          width: 24,
-                          height: 24,
+          Obx(() {
+            return ConstrainedBox(
+              constraints: BoxConstraints(minWidth: 35),
+              child: DropdownButton<Locale>(
+                value: localeController.locale.value,
+                items: AppLocalizations.supportedLocales.map((Locale locale) {
+                  return DropdownMenuItem<Locale>(
+                    value: locale,
+                    child: Row(
+                      children: [
+                        ClipOval(
+                          child: SizedBox(
+                            width: 24,
+                            height: 24,
+                            child: SvgPicture.asset(
+                              'assets/images/flags/${locale.languageCode.toLowerCase()}.svg',
+                              fit: BoxFit.cover,
+                              width: 24,
+                              height: 24,
+                            ),
+                          ),
                         ),
-                      ),
+                        const SizedBox(width: 8),
+                        SizedBox(
+                          child: Text(languageNames[locale.languageCode] ??
+                              locale.languageCode),
+                        ),
+                      ],
                     ),
-                    const SizedBox(width: 8),
-                    SizedBox(
-                      child: showText
-                          ? Text(languageNames[locale.languageCode] ??
-                              locale.languageCode)
-                          : null,
-                    ),
-                  ],
-                ),
-              );
-            }).toList(),
-            onChanged: (Locale? newLocale) {
-              if (newLocale != null) {
-                // Handle language change
-                // You might need to use a state management solution to update the locale
-              }
-            },
-          ),
+                  );
+                }).toList(),
+                onChanged: (Locale? newLocale) {
+                  if (newLocale != null) {
+                    localeController.setLocale(newLocale);
+                  }
+                },
+              ),
+            );
+          }),
           ConstrainedBox(
             constraints: BoxConstraints(minWidth: 35),
             child: IconButton(
@@ -80,16 +86,19 @@ class HomePage extends StatelessWidget {
               },
             ),
           ),
-          TextButton.icon(
-            style: TextButton.styleFrom(
-              foregroundColor: Theme.of(context).colorScheme.onPrimary,
-              backgroundColor: Theme.of(context).colorScheme.primary,
+          ConstrainedBox(
+            constraints: BoxConstraints(minWidth: 100),
+            child: TextButton.icon(
+              style: TextButton.styleFrom(
+                foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                backgroundColor: Theme.of(context).colorScheme.primary,
+              ),
+              // icon: const Icon(Icons.person),
+              label: Text(AppLocalizations.of(context)!.login),
+              onPressed: () {
+                Navigator.restorablePushNamed(context, LoginPage.routeName);
+              },
             ),
-            icon: const Icon(Icons.person),
-            label: Text(AppLocalizations.of(context)!.login),
-            onPressed: () {
-              Navigator.restorablePushNamed(context, LoginPage.routeName);
-            },
           ),
         ],
       ),
