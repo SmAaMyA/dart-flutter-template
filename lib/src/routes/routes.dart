@@ -1,5 +1,5 @@
-import 'package:flutter_application_template/src/view/pages/home_page.dart';
-import 'package:flutter_application_template/src/view/pages/login_page.dart';
+import 'package:flutter_application_template/src/view/pages/shared_home_page.dart';
+import 'package:flutter_application_template/src/view/pages/shared_login_page.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {
