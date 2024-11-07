@@ -5,13 +5,16 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-class MobileHeader extends StatelessWidget {
+class MobileHeader extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
 
   const MobileHeader({
     super.key,
     this.title,
   });
+
+  @override
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {
