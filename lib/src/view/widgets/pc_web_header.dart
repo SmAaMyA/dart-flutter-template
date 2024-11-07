@@ -70,6 +70,7 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
               Scaffold.of(context).openEndDrawer();
             },
           ),
+          const SizedBox(width: 8),
         ],
       ),
       body: Center(
