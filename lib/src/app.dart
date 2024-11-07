@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/controllers/setting_controller.dart';
 import 'package:flutter_application_template/src/services/setting_service.dart';
 import 'package:flutter_application_template/src/view/pages/home_page.dart';
+import 'package:flutter_application_template/src/view/pages/login_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 
-class MyApp extends StatelessWidget {
-  final SettingsService settingsService = Get.put(SettingsService());
+class App extends StatelessWidget {
+  final SettingService settingsService = Get.put(SettingService());
   final SettingController settingController =
       Get.put(SettingController(settingsService: Get.find()));
 
-  MyApp({super.key});
+  App({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,10 @@ class MyApp extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
         home: HomePage(),
+        getPages: [
+          GetPage(name: HomePage.routeName, page: () => HomePage()),
+          GetPage(name: LoginPage.routeName, page: () => LoginPage()),
+        ],
       );
     });
   }

@@ -88,7 +88,7 @@ class HomePage extends StatelessWidget {
               ),
               label: Text(AppLocalizations.of(context)!.login),
               onPressed: () {
-                Navigator.restorablePushNamed(context, LoginPage.routeName);
+                Get.toNamed(LoginPage.routeName);
               },
             ),
           ),
