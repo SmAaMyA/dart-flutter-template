@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_template/src/services/settings_service.dart';
+import 'package:flutter_application_template/src/controllers/settings_controller.dart';
 import 'package:flutter_application_template/src/app.dart';
-import 'package:flutter_application_template/src/settings/settings_controller.dart';
-import 'package:flutter_application_template/src/settings/settings_service.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
   // Set up the SettingsController, which will glue user settings to multiple
   // Flutter Widgets.
   final settingsController = SettingsController(SettingsService());

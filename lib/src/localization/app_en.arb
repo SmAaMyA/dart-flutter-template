@@ -1,0 +1,19 @@
+{
+  "@@locale": "en",
+  "appTitle": "Flutter Application Template",
+  "@appTitle": {
+    "description": "Application name"
+  },
+  "greeting": "Hello",
+  "@greeting": {
+    "description": "Greeting message"
+  },
+  "toggleTheme": "Toggle Theme",
+  "@toggleTheme": {
+    "description": "Theme toggle button tooltip"
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Login button text"
+  }
+}

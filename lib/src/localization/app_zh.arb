@@ -1,0 +1,19 @@
+{
+  "@@locale": "zh",
+  "appTitle": "Flutter 应用模板",
+  "@appTitle": {
+    "description": "应用名称"
+  },
+  "greeting": "你好",
+  "@greeting": {
+    "description": "问候信息"
+  },
+  "toggleTheme": "切换主题",
+  "@toggleTheme": {
+    "description": "切换主题文本"
+  },
+  "login": "登录",
+  "@login": {
+    "description": "登录按钮文本"
+  }
+}
