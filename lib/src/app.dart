@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/controllers/setting_controller.dart';
+import 'package:flutter_application_template/src/routes/routes.dart';
 import 'package:flutter_application_template/src/services/setting_service.dart';
-import 'package:flutter_application_template/src/view/pages/home_page.dart';
-import 'package:flutter_application_template/src/view/pages/login_page.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
@@ -16,6 +15,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    settingController.loadSettings();
     return Obx(() {
       return GetMaterialApp(
         theme: ThemeData(),
@@ -29,11 +29,8 @@ class App extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        home: HomePage(),
-        getPages: [
-          GetPage(name: HomePage.routeName, page: () => HomePage()),
-          GetPage(name: LoginPage.routeName, page: () => LoginPage()),
-        ],
+        initialRoute: AppRoutes.initialRoute,
+        getPages: AppRoutes.routes,
       );
     });
   }
