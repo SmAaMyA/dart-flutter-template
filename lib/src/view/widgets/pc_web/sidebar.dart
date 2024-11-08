@@ -4,7 +4,9 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
 
 class PCWebSidebar extends StatelessWidget {
-  const PCWebSidebar({super.key});
+  final PageController pageController;
+
+  const PCWebSidebar({super.key, required this.pageController});
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +30,8 @@ class PCWebSidebar extends StatelessWidget {
             leading: Icon(Icons.home),
             title: Text(AppLocalizations.of(context)!.homePageName),
             onTap: () {
+              pageController.jumpToPage(0);
+              Navigator.pop(context);
               Get.toNamed(AppRoutes.home);
             },
           ),
@@ -35,10 +39,12 @@ class PCWebSidebar extends StatelessWidget {
             leading: Icon(Icons.swap_horiz),
             title: Text(AppLocalizations.of(context)!.tradePageName),
             onTap: () {
+              pageController.jumpToPage(1);
+              Navigator.pop(context);
               Get.toNamed(AppRoutes.trade);
             },
           ),
-          // Add more items here
+          // Add more ListTile items here
         ],
       ),
     );

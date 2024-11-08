@@ -30,7 +30,8 @@ class MainWidgetState extends State<MainWidget> {
 
     return Scaffold(
       appBar: isMobile ? MobileHeader() : PCWebHeader(),
-      endDrawer: isMobile ? null : PCWebSidebar(),
+      endDrawer:
+          isMobile ? null : PCWebSidebar(pageController: _pageController),
       body: PageView(
         controller: _pageController,
         onPageChanged: (index) {
