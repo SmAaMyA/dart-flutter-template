@@ -32,7 +32,6 @@ class PCWebSidebar extends StatelessWidget {
             onTap: () {
               pageController.jumpToPage(0);
               Navigator.pop(context);
-              Get.toNamed(AppRoutes.home);
             },
           ),
           ListTile(
@@ -41,7 +40,6 @@ class PCWebSidebar extends StatelessWidget {
             onTap: () {
               pageController.jumpToPage(1);
               Navigator.pop(context);
-              Get.toNamed(AppRoutes.trade);
             },
           ),
           // Add more ListTile items here
