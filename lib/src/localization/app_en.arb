@@ -60,6 +60,22 @@
   "@morePageMenuTooltip": {
     "description": "More page tooltip"
   },
+  "changeInformationPageName": "Change Personal Information",
+  "@changeInformationPageName": {
+    "description": "Change personal information page name"
+  },
+  "changeInformationContent": "Here you can change your information.",
+  "@changeInformationContent": {
+    "description": "Change information page content"
+  },
+  "suitabilityTestPageName": "Suitability Test",
+  "@suitabilityTestPageName": {
+    "description": "Suitability test page name"
+  },
+  "suitabilityTestContent": "Here you can take the suitability test.",
+  "@suitabilityTestContent": {
+    "description": "Suitability test page content"
+  },
   "languageMenuName": "Language",
   "@languageMenuName": {
     "description": "Language menu tooltip"

@@ -1,7 +1,9 @@
 import 'package:flutter_application_template/src/view/main_widget.dart';
 import 'package:flutter_application_template/src/view/pages/mobile/more_page.dart';
+import 'package:flutter_application_template/src/view/pages/shared/change_info_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/home_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/login_page.dart';
+import 'package:flutter_application_template/src/view/pages/shared/suitability_test_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/trade_page.dart';
 import 'package:get/get.dart';
 
@@ -12,6 +14,8 @@ class AppRoutes {
   static const String logout = '/logout';
   static const String trade = '/trade';
   static const String mobileMore = '/mobile-more';
+  static const String changeInformation = '/change-information';
+  static const String suitabilityTest = '/suitability-test';
 
   static final routes = [
     GetPage(name: main, page: () => MainWidget()),
@@ -20,6 +24,8 @@ class AppRoutes {
     GetPage(name: logout, page: () => LoginPage()), // Change to logout page
     GetPage(name: trade, page: () => TradePage()),
     GetPage(name: mobileMore, page: () => MobileMorePage()),
+    GetPage(name: changeInformation, page: () => ChangeInformationPage()),
+    GetPage(name: suitabilityTest, page: () => SuitabilityTestPage()),
   ];
 
   static final mobileNavigationBarPages = [

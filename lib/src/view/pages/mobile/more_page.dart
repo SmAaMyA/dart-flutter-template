@@ -24,6 +24,24 @@ class MobileMorePage extends StatelessWidget {
               Get.toNamed(AppRoutes.login);
             },
           ),
+          const Divider(),
+          ListTile(
+            leading: Icon(Icons.change_circle_outlined),
+            title:
+                Text(AppLocalizations.of(context)!.changeInformationPageName),
+            onTap: () {
+              Get.toNamed(AppRoutes.changeInformation);
+            },
+          ),
+          const Divider(),
+          ListTile(
+            leading: Icon(Icons.checklist_rounded),
+            title: Text(AppLocalizations.of(context)!.suitabilityTestPageName),
+            onTap: () {
+              Get.toNamed(AppRoutes.suitabilityTest);
+            },
+          ),
+          const Divider(),
           ListTile(
             leading: Icon(Icons.logout),
             title: Text(AppLocalizations.of(context)!.logout),
@@ -37,6 +55,7 @@ class MobileMorePage extends StatelessWidget {
             title: Text(AppLocalizations.of(context)!.languageMenuName),
             trailing: SharedLanguageDropdown(showText: true),
           ),
+          const Divider(),
           ListTile(
             leading: Icon(Icons.brightness_6),
             title: Text(AppLocalizations.of(context)!.toggleThemeMenuName),

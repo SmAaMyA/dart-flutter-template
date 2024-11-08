@@ -60,6 +60,22 @@
   "@morePageMenuTooltip": {
     "description": "更多页面提示"
   },
+  "changeInformationPageName": "更改个人信息",
+  "@changeInformationPageName": {
+    "description": "更改个人信息页面名称"
+  },
+  "changeInformationContent": "在这里您可以更改您的信息。",
+  "@changeInformationContent": {
+    "description": "更改信息页面内容"
+  },
+  "suitabilityTestPageName": "适当性测试",
+  "@suitabilityTestPageName": {
+    "description": "适当性测试页面名称"
+  },
+  "suitabilityTestContent": "在这里您可以进行适当性测试。",
+  "@suitabilityTestContent": {
+    "description": "适当性测试页面内容"
+  },
   "languageMenuName": "语言",
   "@languageMenuName": {
     "description": "语言菜单提示"

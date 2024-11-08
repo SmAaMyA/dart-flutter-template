@@ -60,6 +60,22 @@
   "@morePageMenuTooltip": {
     "description": "คำอธิบายทูลทิปหน้าเพิ่มเติม"
   },
+  "changeInformationPageName": "เปลี่ยนแปลงข้อมูลส่วนบุคคล",
+  "@changeInformationPageName": {
+    "description": "ชื่อหน้าเปลี่ยนแปลงข้อมูลส่วนบุคคล"
+  },
+  "changeInformationContent": "คุณสามารถเปลี่ยนแปลงข้อมูลของคุณได้จากหน้านี้",
+  "@changeInformationContent": {
+    "description": "เนื้อหาหน้าเปลี่ยนแปลงข้อมูล"
+  },
+  "suitabilityTestPageName": "การทดสอบความเหมาะสมในการลงทุน",
+  "@suitabilityTestPageName": {
+    "description": "ชื่อหน้าการทดสอบความเหมาะสมในการลงทุน"
+  },
+  "suitabilityTestContent": "คุณสามารถทำการทดสอบความเหมาะสมในการลงทุนได้จากหน้านี้",
+  "@suitabilityTestContent": {
+    "description": "เนื้อหาหน้าการทดสอบความเหมาะสมในการลงทุน"
+  },
   "languageMenuName": "ภาษา",
   "@languageMenuName": {
     "description": "คำอธิบายทูลทิปเมนูภาษา"
