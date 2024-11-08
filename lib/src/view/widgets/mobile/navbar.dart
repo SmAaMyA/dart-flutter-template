@@ -13,29 +13,27 @@ class MobileNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<BottomNavigationBarItem> bottomNavItems = [
-      BottomNavigationBarItem(
-        icon: Icon(Icons.home),
-        label: AppLocalizations.of(context)!.homePageName,
-        tooltip: AppLocalizations.of(context)!.homeMenuTooltip,
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.swap_horiz),
-        label: AppLocalizations.of(context)!.tradePageName,
-        tooltip: AppLocalizations.of(context)!.tradePageMenuTooltip,
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.more),
-        label: AppLocalizations.of(context)!.morePageName,
-        tooltip: AppLocalizations.of(context)!.morePageMenuTooltip,
-      ),
-    ];
-
     return BottomNavigationBar(
-      items: bottomNavItems,
-      currentIndex: selectedIndex,
       selectedItemColor: Theme.of(context).colorScheme.primary,
+      currentIndex: selectedIndex,
       onTap: onItemTapped,
+      items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: AppLocalizations.of(context)!.homePageName,
+          tooltip: AppLocalizations.of(context)!.homeMenuTooltip,
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.swap_horiz),
+          label: AppLocalizations.of(context)!.tradePageName,
+          tooltip: AppLocalizations.of(context)!.tradePageMenuTooltip,
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.more),
+          label: AppLocalizations.of(context)!.morePageName,
+          tooltip: AppLocalizations.of(context)!.morePageMenuTooltip,
+        ),
+      ],
     );
   }
 }

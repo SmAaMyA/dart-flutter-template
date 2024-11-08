@@ -21,4 +21,17 @@ class AppRoutes {
     GetPage(name: trade, page: () => TradePage()),
     GetPage(name: mobileMore, page: () => MobileMorePage()),
   ];
+
+  static final mobileNavigationBarPages = [
+    GetPage(name: home, page: () => HomePage()),
+    GetPage(name: trade, page: () => TradePage()),
+    GetPage(name: mobileMore, page: () => MobileMorePage()),
+  ];
+
+  static final pcWebSidebarPages = [
+    GetPage(name: home, page: () => HomePage()),
+    GetPage(name: login, page: () => LoginPage()),
+    GetPage(name: logout, page: () => LoginPage()), // Change to logout page
+    GetPage(name: trade, page: () => TradePage()),
+  ];
 }

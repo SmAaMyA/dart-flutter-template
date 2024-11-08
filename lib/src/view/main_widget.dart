@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/view/pages/mobile/more_page.dart';
-import 'package:flutter_application_template/src/view/pages/shared/home_page.dart';
-import 'package:flutter_application_template/src/view/pages/shared/trade_page.dart';
+import 'package:flutter_application_template/src/routes/routes.dart';
 import 'package:flutter_application_template/src/view/widgets/mobile/header.dart';
 import 'package:flutter_application_template/src/view/widgets/mobile/navbar.dart';
 import 'package:flutter_application_template/src/view/widgets/pc_web/header.dart';
@@ -16,11 +14,13 @@ class MainWidget extends StatefulWidget {
 
 class MainWidgetState extends State<MainWidget> {
   int _selectedIndex = 0;
+  final PageController _pageController = PageController();
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
+    _pageController.jumpToPage(index);
   }
 
   @override
@@ -28,18 +28,21 @@ class MainWidgetState extends State<MainWidget> {
     bool isMobile = TargetPlatform.iOS == Theme.of(context).platform ||
         TargetPlatform.android == Theme.of(context).platform;
 
-    final List<Widget> pages = <Widget>[
-      HomePage(),
-      TradePage(),
-      MobileMorePage(),
-    ];
-
     return Scaffold(
       appBar: isMobile ? MobileHeader() : PCWebHeader(),
       endDrawer: isMobile ? null : PCWebSidebar(),
-      body: IndexedStack(
-        index: _selectedIndex,
-        children: pages,
+      body: PageView(
+        controller: _pageController,
+        onPageChanged: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        children: isMobile
+            ? AppRoutes.mobileNavigationBarPages
+                .map((page) => page.page())
+                .toList()
+            : AppRoutes.pcWebSidebarPages.map((page) => page.page()).toList(),
       ),
       bottomNavigationBar: isMobile
           ? MobileNavigationBar(
