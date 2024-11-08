@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/routes/routes.dart';
+import 'package:flutter_application_template/src/routes/app_routes.dart';
 import 'package:flutter_application_template/src/view/widgets/shared/language_dropdown.dart';
 import 'package:flutter_application_template/src/view/widgets/shared/notification_menu.dart';
 import 'package:flutter_application_template/src/view/widgets/shared/theme_toggle.dart';

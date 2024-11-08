@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/routes/routes.dart';
+import 'package:flutter_application_template/src/routes/app_routes.dart';
 import 'package:flutter_application_template/src/view/widgets/mobile/header.dart';
 import 'package:flutter_application_template/src/view/widgets/mobile/navbar.dart';
 import 'package:flutter_application_template/src/view/widgets/pc_web/header.dart';
