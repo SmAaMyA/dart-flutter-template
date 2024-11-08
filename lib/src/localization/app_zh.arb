@@ -32,6 +32,18 @@
   "@logoutTooltip": {
     "description": "登出提示"
   },
+  "username": "用户名",
+  "@username": {
+    "description": "用户名文本"
+  },
+  "password": "密码",
+  "@password": {
+    "description": "密码文本"
+  },
+  "cancel": "取消",
+  "@cancel": {
+    "description": "取消按钮文本"
+  },
   "tradePageName": "交易",
   "@tradePageName": {
     "description": "交易页面名称"

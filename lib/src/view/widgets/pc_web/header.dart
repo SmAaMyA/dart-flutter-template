@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/routes/app_routes.dart';
 import 'package:flutter_application_template/src/view/widgets/shared/language_dropdown.dart';
+import 'package:flutter_application_template/src/view/widgets/shared/login_dialog.dart';
 import 'package:flutter_application_template/src/view/widgets/shared/notification_menu.dart';
 import 'package:flutter_application_template/src/view/widgets/shared/theme_toggle.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -63,7 +64,12 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
                 ),
                 label: Text(AppLocalizations.of(context)!.login),
                 onPressed: () {
-                  Get.toNamed(AppRoutes.login);
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return const LoginDialog();
+                    },
+                  );
                 },
               ),
             ),

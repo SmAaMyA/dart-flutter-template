@@ -32,6 +32,18 @@
   "@logoutTooltip": {
     "description": "คำอธิบายทูลทิปออกจากระบบ"
   },
+  "username": "ชื่อผู้ใช้",
+  "@username": {
+    "description": "ข้อความชื่อผู้ใช้"
+  },
+  "password": "รหัสผ่าน",
+  "@password": {
+    "description": "ข้อความรหัสผ่าน"
+  },
+  "cancel": "ยกเลิก",
+  "@cancel": {
+    "description": "ข้อความยกเลิก"
+  },
   "tradePageName": "ซื้อขาย",
   "@tradePageName": {
     "description": "ชื่อหน้าซื้อขาย"

@@ -32,6 +32,18 @@
   "@logoutTooltip": {
     "description": "Logout tooltip"
   },
+  "username": "Username",
+  "@username": {
+    "description": "Username text"
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Password text"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel text"
+  },
   "tradePageName": "Trade",
   "@tradePageName": {
     "description": "Trade page name"

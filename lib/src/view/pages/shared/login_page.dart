@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -16,14 +17,14 @@ class LoginPage extends StatelessWidget {
           children: <Widget>[
             TextField(
               decoration: InputDecoration(
-                labelText: 'Username',
+                labelText: AppLocalizations.of(context)!.username,
                 border: OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 16.0),
             TextField(
               decoration: InputDecoration(
-                labelText: 'Password',
+                labelText: AppLocalizations.of(context)!.password,
                 border: OutlineInputBorder(),
               ),
               obscureText: true,
@@ -37,7 +38,7 @@ class LoginPage extends StatelessWidget {
               onPressed: () {
                 // Handle login action
               },
-              child: const Text('Login'),
+              child: Text(AppLocalizations.of(context)!.login),
             ),
           ],
         ),
