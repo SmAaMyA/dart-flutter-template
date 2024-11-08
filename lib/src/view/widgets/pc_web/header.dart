@@ -34,7 +34,7 @@ class PCWebHeader extends StatelessWidget implements PreferredSizeWidget {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SvgPicture.asset(
-                  'assets/images/logo/asl_logo.svg',
+                  'assets/images/logo/app_logo.svg',
                   fit: BoxFit.cover,
                   width: 24,
                   height: 24,
