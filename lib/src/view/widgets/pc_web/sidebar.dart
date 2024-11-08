@@ -32,17 +32,10 @@ class PCWebSidebar extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.login),
-            title: Text(AppLocalizations.of(context)!.login),
+            leading: Icon(Icons.swap_horiz),
+            title: Text(AppLocalizations.of(context)!.tradePageName),
             onTap: () {
-              Get.toNamed(AppRoutes.login);
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.logout),
-            title: Text(AppLocalizations.of(context)!.logout),
-            onTap: () {
-              Get.toNamed(AppRoutes.logout);
+              Get.toNamed(AppRoutes.trade);
             },
           ),
           // Add more items here
