@@ -8,10 +8,10 @@ class TradePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.tradePageName),
+        title: Text(AppLocalizations.of(context)!.trade),
       ),
       body: Center(
-        child: Text(AppLocalizations.of(context)!.tradePageName),
+        child: Text(AppLocalizations.of(context)!.trade),
       ),
     );
   }

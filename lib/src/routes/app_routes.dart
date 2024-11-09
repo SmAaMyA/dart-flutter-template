@@ -1,5 +1,5 @@
 import 'package:flutter_application_template/src/view/main_widget.dart';
-import 'package:flutter_application_template/src/view/pages/mobile/more_page.dart';
+import 'package:flutter_application_template/src/view/pages/mobile/menu_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/change_info_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/history_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/home_page.dart';

@@ -8,7 +8,7 @@ class HistoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.historyPageName),
+        title: Text(AppLocalizations.of(context)!.history),
       ),
       body: Center(
         child: Text(AppLocalizations.of(context)!.historyContent),

@@ -8,9 +8,9 @@
   "@greeting": {
     "description": "ข้อความทักทาย"
   },
-  "homePageName": "หน้าหลัก",
-  "@homePageName": {
-    "description": "ชื่อหน้าหลัก"
+  "home": "หน้าหลัก",
+  "@home": {
+    "description": "ข้อความหน้าหลัก"
   },
   "homeMenuTooltip": "ไปที่หน้าหลัก",
   "@homeMenuTooltip": {
@@ -44,49 +44,49 @@
   "@cancel": {
     "description": "ข้อความยกเลิก"
   },
-  "tradePageName": "ซื้อขาย",
-  "@tradePageName": {
-    "description": "ชื่อหน้าซื้อขาย"
+  "trade": "ซื้อขาย",
+  "@trade": {
+    "description": "ข้อความซื้อขาย"
   },
-  "tradePageMenuTooltip": "ไปที่หน้าซื้อขาย",
-  "@tradePageMenuTooltip": {
+  "tradeMenuTooltip": "ไปที่หน้าซื้อขาย",
+  "@tradeMenuTooltip": {
     "description": "คำอธิบายทูลทิปหน้าซื้อขาย"
   },
-  "morePageName": "เพิ่มเติม",
-  "@morePageName": {
-    "description": "ชื่อหน้าเพิ่มเติม"
+  "menu": "เมนู",
+  "@menu": {
+    "description": "ข้อความเมนู"
   },
-  "morePageMenuTooltip": "ไปที่หน้าเพิ่มเติม",
-  "@morePageMenuTooltip": {
-    "description": "คำอธิบายทูลทิปหน้าเพิ่มเติม"
+  "menuMenuTooltip": "ไปที่หน้าเมนู",
+  "@menuMenuTooltip": {
+    "description": "คำอธิบายทูลทิปหน้าเมนู"
   },
-  "changeInformationPageName": "เปลี่ยนแปลงข้อมูลส่วนบุคคล",
-  "@changeInformationPageName": {
-    "description": "ชื่อหน้าเปลี่ยนแปลงข้อมูลส่วนบุคคล"
+  "changeInformation": "เปลี่ยนแปลงข้อมูล",
+  "@changeInformation": {
+    "description": "ข้อความเปลี่ยนแปลงข้อมูล"
   },
   "changeInformationContent": "คุณสามารถเปลี่ยนแปลงข้อมูลของคุณได้จากหน้านี้",
   "@changeInformationContent": {
     "description": "เนื้อหาหน้าเปลี่ยนแปลงข้อมูล"
   },
-  "suitabilityTestPageName": "การทดสอบความเหมาะสมในการลงทุน",
-  "@suitabilityTestPageName": {
-    "description": "ชื่อหน้าการทดสอบความเหมาะสมในการลงทุน"
+  "suitabilityTest": "การทดสอบความเหมาะสมในการลงทุน",
+  "@suitabilityTest": {
+    "description": "ข้อความการทดสอบความเหมาะสมในการลงทุน"
   },
   "suitabilityTestContent": "คุณสามารถทำการทดสอบความเหมาะสมในการลงทุนได้จากหน้านี้",
   "@suitabilityTestContent": {
     "description": "เนื้อหาหน้าการทดสอบความเหมาะสมในการลงทุน"
   },
-  "historyPageName": "ประวัติ",
-  "@historyPageName": {
-    "description": "ชื่อหน้าประวัติ"
+  "history": "ประวัติ",
+  "@history": {
+    "description": "ข้อความประวัติ"
   },
   "historyContent": "คุณสามารถดูประวัติของคุณได้จากหน้านี้",
   "@historyContent": {
     "description": "เนื้อหาหน้าประวัติ"
   },
-  "settingPageName": "การตั้งค่า",
-  "@settingPageName": {
-    "description": "ชื่อหน้าการตั้งค่า"
+  "settings": "การตั้งค่า",
+  "@settings": {
+    "description": "ข้อความการตั้งค่า"
   },
   "settingContent": "คุณสามารถเปลี่ยนแปลงการตั้งค่าของคุณได้จากหน้านี้",
   "@settingContent": {

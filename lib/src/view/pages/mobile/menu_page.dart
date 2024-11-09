@@ -12,7 +12,7 @@ class MobileMorePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.morePageName),
+        title: Text(AppLocalizations.of(context)!.menu),
       ),
       body: ListView(
         padding: const EdgeInsets.all(8.0),
@@ -45,12 +45,11 @@ class MobileMorePage extends StatelessWidget {
                             Icon(
                               Icons.change_circle_outlined,
                               size: 40,
-                              color: Colors.blue, // Set the color of the icon
+                              color: Colors.blue,
                             ),
                             SizedBox(height: 8),
                             Text(
-                              AppLocalizations.of(context)!
-                                  .changeInformationPageName,
+                              AppLocalizations.of(context)!.changeInformation,
                               textAlign: TextAlign.center,
                             ),
                           ],
@@ -79,12 +78,11 @@ class MobileMorePage extends StatelessWidget {
                             Icon(
                               Icons.checklist_rounded,
                               size: 40,
-                              color: Colors.green, // Set the color of the icon
+                              color: Colors.green,
                             ),
                             SizedBox(height: 8),
                             Text(
-                              AppLocalizations.of(context)!
-                                  .suitabilityTestPageName,
+                              AppLocalizations.of(context)!.suitabilityTest,
                               textAlign: TextAlign.center,
                             ),
                           ],
@@ -117,11 +115,11 @@ class MobileMorePage extends StatelessWidget {
                             Icon(
                               Icons.history,
                               size: 40,
-                              color: Colors.orange, // Set the color of the icon
+                              color: Colors.orange,
                             ),
                             SizedBox(height: 8),
                             Text(
-                              AppLocalizations.of(context)!.historyPageName,
+                              AppLocalizations.of(context)!.history,
                               textAlign: TextAlign.center,
                             ),
                           ],
@@ -154,7 +152,7 @@ class MobileMorePage extends StatelessWidget {
                             ),
                             SizedBox(height: 8),
                             Text(
-                              AppLocalizations.of(context)!.settingPageName,
+                              AppLocalizations.of(context)!.settings,
                               textAlign: TextAlign.center,
                             ),
                           ],

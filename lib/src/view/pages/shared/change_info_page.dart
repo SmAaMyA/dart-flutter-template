@@ -8,7 +8,7 @@ class ChangeInformationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.changeInformationPageName),
+        title: Text(AppLocalizations.of(context)!.changeInformation),
       ),
       body: Center(
         child: Text(AppLocalizations.of(context)!.changeInformationContent),

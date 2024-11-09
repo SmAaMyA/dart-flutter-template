@@ -8,9 +8,9 @@
   "@greeting": {
     "description": "Greeting message"
   },
-  "homePageName": "Home",
-  "@homePageName": {
-    "description": "Home page name"
+  "home": "Home",
+  "@home": {
+    "description": "Home text"
   },
   "homeMenuTooltip": "Go to home page",
   "@homeMenuTooltip": {
@@ -44,49 +44,49 @@
   "@cancel": {
     "description": "Cancel text"
   },
-  "tradePageName": "Trade",
-  "@tradePageName": {
-    "description": "Trade page name"
+  "trade": "Trade",
+  "@trade": {
+    "description": "Trade text"
   },
-  "tradePageMenuTooltip": "Go to trade page",
-  "@tradePageMenuTooltip": {
+  "tradeMenuTooltip": "Go to trade page",
+  "@tradeMenuTooltip": {
     "description": "Trade page tooltip"
   },
-  "morePageName": "More",
-  "@morePageName": {
-    "description": "More page name"
+  "menu": "Menu",
+  "@menu": {
+    "description": "Menu text"
   },
-  "morePageMenuTooltip": "Go to more page",
-  "@morePageMenuTooltip": {
-    "description": "More page tooltip"
+  "menuMenuTooltip": "Go to menu page",
+  "@menuMenuTooltip": {
+    "description": "Menu page tooltip"
   },
-  "changeInformationPageName": "Change Personal Information",
-  "@changeInformationPageName": {
-    "description": "Change personal information page name"
+  "changeInformation": "Change Information",
+  "@changeInformation": {
+    "description": "Change information text"
   },
   "changeInformationContent": "Here you can change your information.",
   "@changeInformationContent": {
     "description": "Change information page content"
   },
-  "suitabilityTestPageName": "Suitability Test",
-  "@suitabilityTestPageName": {
-    "description": "Suitability test page name"
+  "suitabilityTest": "Suitability Test",
+  "@suitabilityTest": {
+    "description": "Suitability test text"
   },
   "suitabilityTestContent": "Here you can take the suitability test.",
   "@suitabilityTestContent": {
     "description": "Suitability test page content"
   },
-  "historyPageName": "History",
-  "@historyPageName": {
-    "description": "History page name"
+  "history": "History",
+  "@history": {
+    "description": "History text"
   },
   "historyContent": "Here you can see your history.",
   "@historyContent": {
     "description": "History page content"
   },
-  "settingPageName": "Setting",
-  "@settingPageName": {
-    "description": "Setting page name"
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings text"
   },
   "settingContent": "Here you can change your settings.",
   "@settingContent": {

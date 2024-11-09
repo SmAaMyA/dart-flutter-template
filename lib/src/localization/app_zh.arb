@@ -8,9 +8,9 @@
   "@greeting": {
     "description": "问候信息"
   },
-  "homePageName": "主页",
-  "@homePageName": {
-    "description": "主页名称"
+  "home": "主页",
+  "@home": {
+    "description": "主页文本"
   },
   "homeMenuTooltip": "转到主页",
   "@homeMenuTooltip": {
@@ -44,49 +44,49 @@
   "@cancel": {
     "description": "取消按钮文本"
   },
-  "tradePageName": "交易",
-  "@tradePageName": {
-    "description": "交易页面名称"
+  "trade": "交易",
+  "@trade": {
+    "description": "交易按钮文本"
   },
-  "tradePageMenuTooltip": "转到交易页面",
-  "@tradePageMenuTooltip": {
+  "tradeMenuTooltip": "转到交易页面",
+  "@tradeMenuTooltip": {
     "description": "交易页面提示"
   },
-  "morePageName": "更多",
-  "@morePageName": {
-    "description": "更多页面名称"
+  "menu": "更多",
+  "@menu": {
+    "description": "更多按钮文本"
   },
-  "morePageMenuTooltip": "转到更多页面",
-  "@morePageMenuTooltip": {
+  "menuMenuTooltip": "转到更多页面",
+  "@menuMenuTooltip": {
     "description": "更多页面提示"
   },
-  "changeInformationPageName": "更改个人信息",
-  "@changeInformationPageName": {
-    "description": "更改个人信息页面名称"
+  "changeInformation": "更改信息",
+  "@changeInformation": {
+    "description": "更改信息按钮文本"
   },
   "changeInformationContent": "在这里您可以更改您的信息。",
   "@changeInformationContent": {
     "description": "更改信息页面内容"
   },
-  "suitabilityTestPageName": "适当性测试",
-  "@suitabilityTestPageName": {
-    "description": "适当性测试页面名称"
+  "suitabilityTest": "适当性测试",
+  "@suitabilityTest": {
+    "description": "适当性测试按钮文本"
   },
   "suitabilityTestContent": "在这里您可以进行适当性测试。",
   "@suitabilityTestContent": {
     "description": "适当性测试页面内容"
   },
-  "historyPageName": "历史",
-  "@historyPageName": {
-    "description": "历史页面名称"
+  "history": "历史",
+  "@history": {
+    "description": "历史按钮文本"
   },
   "historyContent": "在这里您可以查看历史记录。",
   "@historyContent": {
     "description": "历史页面内容"
   },
-  "settingPageName": "设置",
-  "@settingPageName": {
-    "description": "设置页面名称"
+  "settings": "设置",
+  "@settings": {
+    "description": "设置按钮文本"
   },
   "settingContent": "在这里您可以更改设置。",
   "@settingContent": {

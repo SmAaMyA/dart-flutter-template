@@ -26,7 +26,7 @@ class PCWebSidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.home),
-            title: Text(AppLocalizations.of(context)!.homePageName),
+            title: Text(AppLocalizations.of(context)!.home),
             onTap: () {
               pageController.jumpToPage(0);
               Navigator.pop(context);
@@ -34,7 +34,7 @@ class PCWebSidebar extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.swap_horiz),
-            title: Text(AppLocalizations.of(context)!.tradePageName),
+            title: Text(AppLocalizations.of(context)!.trade),
             onTap: () {
               pageController.jumpToPage(1);
               Navigator.pop(context);

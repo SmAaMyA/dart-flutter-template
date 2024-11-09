@@ -8,7 +8,7 @@ class SettingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.settingPageName),
+        title: Text(AppLocalizations.of(context)!.settings),
       ),
       body: Center(
         child: Text(AppLocalizations.of(context)!.settingContent),
