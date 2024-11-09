@@ -25,21 +25,68 @@ class MobileMorePage extends StatelessWidget {
             },
           ),
           const Divider(),
-          ListTile(
-            leading: Icon(Icons.change_circle_outlined),
-            title:
-                Text(AppLocalizations.of(context)!.changeInformationPageName),
-            onTap: () {
-              Get.toNamed(AppRoutes.changeInformation);
-            },
-          ),
-          const Divider(),
-          ListTile(
-            leading: Icon(Icons.checklist_rounded),
-            title: Text(AppLocalizations.of(context)!.suitabilityTestPageName),
-            onTap: () {
-              Get.toNamed(AppRoutes.suitabilityTest);
-            },
+          Row(
+            children: [
+              Expanded(
+                child: AspectRatio(
+                  aspectRatio: 1.75,
+                  child: Material(
+                    elevation: 4.0,
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        Get.toNamed(AppRoutes.changeInformation);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.change_circle_outlined, size: 40),
+                            SizedBox(height: 8),
+                            Text(
+                              AppLocalizations.of(context)!
+                                  .changeInformationPageName,
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 8),
+              Expanded(
+                child: AspectRatio(
+                  aspectRatio: 1.75,
+                  child: Material(
+                    elevation: 4.0,
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        Get.toNamed(AppRoutes.suitabilityTest);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.checklist_rounded, size: 40),
+                            SizedBox(height: 8),
+                            Text(
+                              AppLocalizations.of(context)!
+                                  .suitabilityTestPageName,
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
           const Divider(),
           ListTile(
