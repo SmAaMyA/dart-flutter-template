@@ -132,6 +132,30 @@
   "@settingContent": {
     "description": "设置页面内容"
   },
+  "contactUs": "联系我们",
+  "@contactUs": {
+    "description": "联系我们按钮文本"
+  },
+  "contactUsMenuTooltip": "转到联系我们页面",
+  "@contactUsMenuTooltip": {
+    "description": "联系我们页面提示"
+  },
+  "contactUsDescription": "您可以通过以下渠道联系我们。",
+  "@contactUsDescription": {
+    "description": "联系我们页面内容"
+  },
+  "email": "电子邮件",
+  "@email": {
+    "description": "电子邮件文本"
+  },
+  "phone": "电话",
+  "@phone": {
+    "description": "电话文本"
+  },
+  "workingHours": "工作时间",
+  "@workingHours": {
+    "description": "工作时间文本"
+  },
   "languageMenuName": "语言",
   "@languageMenuName": {
     "description": "语言菜单提示"

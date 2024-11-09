@@ -132,6 +132,30 @@
   "@settingContent": {
     "description": "Setting page content"
   },
+  "contactUs": "Contact Us",
+  "@contactUs": {
+    "description": "Contact us text"
+  },
+  "contactUsMenuTooltip": "Go to contact us page",
+  "@contactUsMenuTooltip": {
+    "description": "Contact us page tooltip"
+  },
+  "contactUsDescription": "You can contact us via these channels.",
+  "@contactUsDescription": {
+    "description": "Contact us page description"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Email text"
+  },
+  "phone": "Phone",
+  "@phone": {
+    "description": "Phone text"
+  },
+  "workingHours": "Working hours",
+  "@workingHours": {
+    "description": "Working hours text"
+  },
   "languageMenuName": "Language",
   "@languageMenuName": {
     "description": "Language menu tooltip"

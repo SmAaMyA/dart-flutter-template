@@ -132,6 +132,30 @@
   "@settingContent": {
     "description": "เนื้อหาหน้าการตั้งค่า"
   },
+  "contactUs": "ติดต่อเรา",
+  "@contactUs": {
+    "description": "ข้อความติดต่อเรา"
+  },
+  "contactUsMenuTooltip": "ไปที่หน้าติดต่อเรา",
+  "@contactUsMenuTooltip": {
+    "description": "คำอธิบายทูลทิปหน้าติดต่อเรา"
+  },
+  "contactUsDescription": "คุณสามารถติดต่อเราได้ผ่านช่องทางที่ระบุข้างล่างนี้",
+  "@contactUsDescription": {
+    "description": "เนื้อหาหน้าติดต่อเรา"
+  },
+  "email": "อีเมล",
+  "@email": {
+    "description": "ข้อความอีเมล"
+  },
+  "phone": "โทรศัพท์",
+  "@phone": {
+    "description": "ข้อความโทรศัพท์"
+  },
+  "workingHours": "เวลาทำการ",
+  "@workingHours": {
+    "description": "ข้อความเวลาทำการ"
+  },
   "languageMenuName": "ภาษา",
   "@languageMenuName": {
     "description": "คำอธิบายทูลทิปเมนูภาษา"

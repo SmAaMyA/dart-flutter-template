@@ -174,6 +174,14 @@ class MobileMorePage extends StatelessWidget {
           ),
           const Divider(),
           ListTile(
+            leading: Icon(Icons.call),
+            title: Text(AppLocalizations.of(context)!.contactUs),
+            onTap: () {
+              Get.toNamed(AppRoutes.contactUs);
+            },
+          ),
+          const Divider(),
+          ListTile(
             leading: Icon(Icons.language),
             title: Text(AppLocalizations.of(context)!.languageMenuName),
             trailing: SharedLanguageDropdown(showText: true),
