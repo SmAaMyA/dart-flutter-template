@@ -60,6 +60,18 @@
   "@tradeContent": {
     "description": "Trade page content"
   },
+  "chatRooms": "Chat Rooms",
+  "@chatRooms": {
+    "description": "Chat rooms text"
+  },
+  "chatRoomsMenuTooltip": "Go to chat room page",
+  "@chatRoomsMenuTooltip": {
+    "description": "Chat room page tooltip"
+  },
+  "chatRoomsContent": "Here you can see the chat rooms.",
+  "@chatRoomsContent": {
+    "description": "Chat room page content"
+  },
   "chat": "Chat",
   "@chat": {
     "description": "Chat text"

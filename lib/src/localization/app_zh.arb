@@ -60,6 +60,18 @@
   "@tradeContent": {
     "description": "交易页面内容"
   },
+  "chatRooms": "聊天室",
+  "@chatRooms": {
+    "description": "聊天室按钮文本"
+  },
+  "chatRoomsMenuTooltip": "转到聊天室页面",
+  "@chatRoomsMenuTooltip": {
+    "description": "聊天室页面提示"
+  },
+  "chatRoomsContent": "在这里您可以查看聊天室。",
+  "@chatRoomsContent": {
+    "description": "聊天室页面内容"
+  },
   "chat": "聊天",
   "@chat": {
     "description": "聊天按钮文本"

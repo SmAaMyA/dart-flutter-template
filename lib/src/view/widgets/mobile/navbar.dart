@@ -35,7 +35,7 @@ class MobileNavigationBar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: Icon(Icons.sms),
           label: AppLocalizations.of(context)!.chat,
-          tooltip: AppLocalizations.of(context)!.chatMenuTooltip,
+          tooltip: AppLocalizations.of(context)!.chatRoomsMenuTooltip,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.menu),

@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ChatPage extends StatefulWidget {
-  const ChatPage({super.key});
+  final String chatRoomName;
+
+  const ChatPage({super.key, required this.chatRoomName});
 
   @override
   ChatPageState createState() => ChatPageState();
@@ -41,7 +43,7 @@ class ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.chat),
+        title: Text(widget.chatRoomName),
       ),
       body: GestureDetector(
         onTap: () {

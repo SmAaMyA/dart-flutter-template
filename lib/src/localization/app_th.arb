@@ -60,6 +60,18 @@
   "@tradeContent": {
     "description": "เนื้อหาหน้าซื้อขาย"
   },
+  "chatRooms": "ห้องแชท",
+  "@chatRooms": {
+    "description": "ข้อความรายชื่อห้องแชท"
+  },
+  "chatRoomsMenuTooltip": "ไปที่หน้ารายชื่อห้องแชท",
+  "@chatRoomsMenuTooltip": {
+    "description": "คำอธิบายทูลทิปหน้าห้องแชท"
+  },
+  "chatRoomsContent": "ที่นี่คุณสามารถดูห้องแชทได้",
+  "@chatRoomsContent": {
+    "description": "เนื้อหาหน้ารายชื่อห้องแชท"
+  },
   "chat": "แชท",
   "@chat": {
     "description": "ข้อความแชท"
