@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_template/src/app.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MobileNavigationBar extends StatelessWidget {
@@ -15,7 +16,10 @@ class MobileNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       selectedItemColor: Theme.of(context).colorScheme.primary,
-      unselectedItemColor: Theme.of(context).colorScheme.primaryFixed,
+      unselectedItemColor: Theme.of(context)
+          .colorScheme
+          .onSurfaceVariant
+          .withAlpha((0.85 * 255).toInt()),
       currentIndex: selectedIndex,
       onTap: onItemTapped,
       items: <BottomNavigationBarItem>[
