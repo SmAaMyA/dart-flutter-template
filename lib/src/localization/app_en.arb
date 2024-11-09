@@ -156,6 +156,10 @@
   "@workingHours": {
     "description": "Working hours text"
   },
+  "branches": "Branches",
+  "@branches": {
+    "description": "Branches text"
+  },
   "languageMenuName": "Language",
   "@languageMenuName": {
     "description": "Language menu tooltip"

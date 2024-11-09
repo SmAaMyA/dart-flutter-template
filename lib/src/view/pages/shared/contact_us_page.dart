@@ -25,38 +25,6 @@ class ContactUsPage extends StatelessWidget {
               SizedBox(height: 16.0),
               Row(
                 children: [
-                  Icon(Icons.phone,
-                      color: Theme.of(context).colorScheme.inverseSurface),
-                  SizedBox(width: 8.0),
-                  Expanded(
-                    child: Text(
-                      '(+66) 02-508-1567',
-                      style: TextStyle(
-                          fontSize: 16.0,
-                          color: Theme.of(context).colorScheme.inverseSurface),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 16.0),
-              Row(
-                children: [
-                  Icon(Icons.email,
-                      color: Theme.of(context).colorScheme.inverseSurface),
-                  SizedBox(width: 8.0),
-                  Expanded(
-                    child: Text(
-                      'callcenter@aslsecurities.com',
-                      style: TextStyle(
-                          fontSize: 16.0,
-                          color: Theme.of(context).colorScheme.inverseSurface),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 16.0),
-              Row(
-                children: [
                   SvgPicture.asset(
                     'assets/images/logo/line_logo.svg',
                     width: 24.0,
@@ -74,24 +42,8 @@ class ContactUsPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 16.0),
-              Row(
-                children: [
-                  Icon(Icons.access_time,
-                      color: Theme.of(context).colorScheme.inverseSurface),
-                  SizedBox(width: 8.0),
-                  Expanded(
-                    child: Text(
-                      '08:30 - 17:00 (GMT+7)',
-                      style: TextStyle(
-                          fontSize: 16.0,
-                          color: Theme.of(context).colorScheme.inverseSurface),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 16.0),
               Text(
-                'Branches',
+                AppLocalizations.of(context)!.branches,
                 style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 16.0),
@@ -101,6 +53,7 @@ class ContactUsPage extends StatelessWidget {
                 '888/1 ถนนคลองลำเจียก แขวงนวลจันทร์ เขตบึงกุ่ม กรุงเทพมหานคร 10230 ประเทศไทย',
                 '(+66) 02-508-1567',
                 'callcenter@aslsecurities.com',
+                '08:30 - 17:00',
                 LatLng(13.7563, 100.5018),
               ),
               SizedBox(height: 16.0),
@@ -110,6 +63,7 @@ class ContactUsPage extends StatelessWidget {
                 '277/106 ถนนแสงชูโต ตำบลบ้านเหนือ อำเภอเมือง จังหวัดกาญจนบุรี 71000 ประเทศไทย',
                 '034-918-781, 034-918-782, 034-910-100',
                 'callcenter@aslsecurities.com',
+                '08:30 - 17:00',
                 LatLng(14.0228, 99.5328),
               ),
               SizedBox(height: 16.0),
@@ -119,6 +73,7 @@ class ContactUsPage extends StatelessWidget {
                 '182/104 หมู่ที่ 4 ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น 40000 ประเทศไทย',
                 '043-053-557, 043-053-558, 043-224-103, 043-224-104',
                 'aslkhonkaen@aslsecurities.com',
+                '08:30 - 17:00',
                 LatLng(16.4419, 102.8350),
               ),
               SizedBox(height: 16.0),
@@ -128,6 +83,7 @@ class ContactUsPage extends StatelessWidget {
                 '106/36 ถนนตลาดธนารักษ์ ตำบลหมากแข้ง อำเภอเมือง จังหวัดอุดรธานี 41000 ประเทศไทย',
                 '042-119-990, 042-119-991, 042-119-992, 042-119-993',
                 'callcenter@aslsecurities.com',
+                '08:30 - 17:00',
                 LatLng(17.4138, 102.7876),
               ),
               SizedBox(height: 16.0),
@@ -137,6 +93,7 @@ class ContactUsPage extends StatelessWidget {
                 '50/4 ถนนห้วยแก้ว ตำบลช้างเผือก อำเภอเมืองเชียงใหม่ จังหวัดเชียงใหม่ 50300 ประเทศไทย',
                 '053-217-346, 053-217-347, 053-217-348, 053-217-349',
                 'callcenter@aslsecurities.com',
+                '08:30 - 17:00',
                 LatLng(18.7969, 98.9792),
               ),
               SizedBox(height: 16.0),
@@ -146,6 +103,7 @@ class ContactUsPage extends StatelessWidget {
                 '907/35 ถนนขุนสรรค์ ตำบลบางพุทรา อำเภอเมืองสิงห์บุรี จังหวัดสิงห์บุรี 16000 ประเทศไทย',
                 '036-691-161, 036-691-162, 036-691-163',
                 'callcenter@aslsecurities.com',
+                '08:30 - 17:00',
                 LatLng(14.8872, 100.4018),
               ),
             ],
@@ -155,8 +113,14 @@ class ContactUsPage extends StatelessWidget {
     );
   }
 
-  Widget _buildBranchInfo(BuildContext context, String branchName,
-      String address, String phone, String email, LatLng location) {
+  Widget _buildBranchInfo(
+      BuildContext context,
+      String branchName,
+      String address,
+      String phone,
+      String email,
+      String workingHours,
+      LatLng location) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -205,6 +169,22 @@ class ContactUsPage extends StatelessWidget {
             Expanded(
               child: Text(
                 email,
+                style: TextStyle(
+                    fontSize: 16.0,
+                    color: Theme.of(context).colorScheme.inverseSurface),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(height: 8.0),
+        Row(
+          children: [
+            Icon(Icons.access_time,
+                color: Theme.of(context).colorScheme.inverseSurface),
+            SizedBox(width: 8.0),
+            Expanded(
+              child: Text(
+                workingHours,
                 style: TextStyle(
                     fontSize: 16.0,
                     color: Theme.of(context).colorScheme.inverseSurface),

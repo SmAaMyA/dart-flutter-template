@@ -156,6 +156,10 @@
   "@workingHours": {
     "description": "工作时间文本"
   },
+  "branches": "分支",
+  "@branches": {
+    "description": "分支文本"
+  },
   "languageMenuName": "语言",
   "@languageMenuName": {
     "description": "语言菜单提示"

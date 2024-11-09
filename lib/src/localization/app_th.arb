@@ -156,6 +156,10 @@
   "@workingHours": {
     "description": "ข้อความเวลาทำการ"
   },
+  "branches": "สาขา",
+  "@branches": {
+    "description": "ข้อความสาขา"
+  },
   "languageMenuName": "ภาษา",
   "@languageMenuName": {
     "description": "คำอธิบายทูลทิปเมนูภาษา"
