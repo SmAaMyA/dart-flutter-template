@@ -42,7 +42,11 @@ class MobileMorePage extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.change_circle_outlined, size: 40),
+                            Icon(
+                              Icons.change_circle_outlined,
+                              size: 40,
+                              color: Colors.blue, // Set the color of the icon
+                            ),
                             SizedBox(height: 8),
                             Text(
                               AppLocalizations.of(context)!
@@ -72,7 +76,11 @@ class MobileMorePage extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.checklist_rounded, size: 40),
+                            Icon(
+                              Icons.checklist_rounded,
+                              size: 40,
+                              color: Colors.green, // Set the color of the icon
+                            ),
                             SizedBox(height: 8),
                             Text(
                               AppLocalizations.of(context)!
