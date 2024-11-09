@@ -96,6 +96,76 @@ class MobileMorePage extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 8),
+          Row(
+            children: [
+              Expanded(
+                child: AspectRatio(
+                  aspectRatio: 1.75,
+                  child: Material(
+                    elevation: 4.0,
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        Get.toNamed(AppRoutes.history);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.history,
+                              size: 40,
+                              color: Colors.orange, // Set the color of the icon
+                            ),
+                            SizedBox(height: 8),
+                            Text(
+                              AppLocalizations.of(context)!.historyPageName,
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(width: 8),
+              Expanded(
+                child: AspectRatio(
+                  aspectRatio: 1.75,
+                  child: Material(
+                    elevation: 4.0,
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: InkWell(
+                      onTap: () {
+                        Get.toNamed(AppRoutes.setting);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.settings,
+                              size: 40,
+                              color: Colors.purple,
+                            ),
+                            SizedBox(height: 8),
+                            Text(
+                              AppLocalizations.of(context)!.settingPageName,
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
           const Divider(),
           ListTile(
             leading: Icon(Icons.logout),

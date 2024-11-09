@@ -76,6 +76,22 @@
   "@suitabilityTestContent": {
     "description": "เนื้อหาหน้าการทดสอบความเหมาะสมในการลงทุน"
   },
+  "historyPageName": "ประวัติ",
+  "@historyPageName": {
+    "description": "ชื่อหน้าประวัติ"
+  },
+  "historyContent": "คุณสามารถดูประวัติของคุณได้จากหน้านี้",
+  "@historyContent": {
+    "description": "เนื้อหาหน้าประวัติ"
+  },
+  "settingPageName": "การตั้งค่า",
+  "@settingPageName": {
+    "description": "ชื่อหน้าการตั้งค่า"
+  },
+  "settingContent": "คุณสามารถเปลี่ยนแปลงการตั้งค่าของคุณได้จากหน้านี้",
+  "@settingContent": {
+    "description": "เนื้อหาหน้าการตั้งค่า"
+  },
   "languageMenuName": "ภาษา",
   "@languageMenuName": {
     "description": "คำอธิบายทูลทิปเมนูภาษา"

@@ -76,6 +76,22 @@
   "@suitabilityTestContent": {
     "description": "Suitability test page content"
   },
+  "historyPageName": "History",
+  "@historyPageName": {
+    "description": "History page name"
+  },
+  "historyContent": "Here you can see your history.",
+  "@historyContent": {
+    "description": "History page content"
+  },
+  "settingPageName": "Setting",
+  "@settingPageName": {
+    "description": "Setting page name"
+  },
+  "settingContent": "Here you can change your settings.",
+  "@settingContent": {
+    "description": "Setting page content"
+  },
   "languageMenuName": "Language",
   "@languageMenuName": {
     "description": "Language menu tooltip"

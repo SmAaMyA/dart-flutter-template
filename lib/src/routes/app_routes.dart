@@ -1,8 +1,10 @@
 import 'package:flutter_application_template/src/view/main_widget.dart';
 import 'package:flutter_application_template/src/view/pages/mobile/more_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/change_info_page.dart';
+import 'package:flutter_application_template/src/view/pages/shared/history_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/home_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/login_page.dart';
+import 'package:flutter_application_template/src/view/pages/shared/setting_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/suitability_test_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/trade_page.dart';
 import 'package:get/get.dart';
@@ -16,6 +18,8 @@ class AppRoutes {
   static const String mobileMore = '/mobile-more';
   static const String changeInformation = '/change-information';
   static const String suitabilityTest = '/suitability-test';
+  static const String history = '/history';
+  static const String setting = '/setting';
 
   static final routes = [
     GetPage(name: main, page: () => MainWidget()),
@@ -26,6 +30,8 @@ class AppRoutes {
     GetPage(name: mobileMore, page: () => MobileMorePage()),
     GetPage(name: changeInformation, page: () => ChangeInformationPage()),
     GetPage(name: suitabilityTest, page: () => SuitabilityTestPage()),
+    GetPage(name: history, page: () => HistoryPage()),
+    GetPage(name: setting, page: () => SettingPage()),
   ];
 
   static final mobileNavigationBarPages = [
