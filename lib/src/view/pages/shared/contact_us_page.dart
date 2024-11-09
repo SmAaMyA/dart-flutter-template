@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class ContactUsPage extends StatelessWidget {
@@ -52,7 +53,7 @@ class ContactUsPage extends StatelessWidget {
               SizedBox(height: 16.0),
               Row(
                 children: [
-                  Image.asset(
+                  SvgPicture.asset(
                     'assets/images/logo/line_logo.svg',
                     width: 24.0,
                     height: 24.0,
