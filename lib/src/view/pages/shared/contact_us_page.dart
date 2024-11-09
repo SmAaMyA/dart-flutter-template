@@ -22,44 +22,63 @@ class ContactUsPage extends StatelessWidget {
                 style: TextStyle(fontSize: 16.0),
               ),
               SizedBox(height: 16.0),
-              Text(
-                AppLocalizations.of(context)!.phone,
-                style: TextStyle(fontSize: 16.0),
-              ),
-              SizedBox(height: 8.0),
-              Text(
-                '(+66) 02-508-1567',
-                style: TextStyle(fontSize: 16.0, color: Colors.blue),
-              ),
-              SizedBox(height: 16.0),
-              Text(
-                AppLocalizations.of(context)!.email,
-                style: TextStyle(fontSize: 16.0),
-              ),
-              SizedBox(height: 8.0),
-              Text(
-                'callcenter@aslsecurities.com',
-                style: TextStyle(fontSize: 16.0, color: Colors.blue),
+              Row(
+                children: [
+                  Icon(Icons.phone,
+                      color: Theme.of(context).colorScheme.inverseSurface),
+                  SizedBox(width: 8.0),
+                  Text(
+                    '(+66) 02-508-1567',
+                    style: TextStyle(
+                        fontSize: 16.0,
+                        color: Theme.of(context).colorScheme.primary),
+                  ),
+                ],
               ),
               SizedBox(height: 16.0),
-              Text(
-                'LINE:',
-                style: TextStyle(fontSize: 16.0),
-              ),
-              SizedBox(height: 8.0),
-              Text(
-                '@aslonnet',
-                style: TextStyle(fontSize: 16.0, color: Colors.blue),
+              Row(
+                children: [
+                  Icon(Icons.email,
+                      color: Theme.of(context).colorScheme.inverseSurface),
+                  SizedBox(width: 8.0),
+                  Text(
+                    'callcenter@aslsecurities.com',
+                    style: TextStyle(
+                        fontSize: 16.0,
+                        color: Theme.of(context).colorScheme.primary),
+                  ),
+                ],
               ),
               SizedBox(height: 16.0),
-              Text(
-                AppLocalizations.of(context)!.workingHours,
-                style: TextStyle(fontSize: 16.0),
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/images/logo/line_logo.svg',
+                    width: 24.0,
+                    height: 24.0,
+                  ),
+                  SizedBox(width: 8.0),
+                  Text(
+                    '@aslonnet',
+                    style: TextStyle(
+                        fontSize: 16.0,
+                        color: Theme.of(context).colorScheme.primary),
+                  ),
+                ],
               ),
-              SizedBox(height: 8.0),
-              Text(
-                '08:30 - 17:00 (GMT+7)',
-                style: TextStyle(fontSize: 16.0, color: Colors.blue),
+              SizedBox(height: 16.0),
+              Row(
+                children: [
+                  Icon(Icons.access_time,
+                      color: Theme.of(context).colorScheme.inverseSurface),
+                  SizedBox(width: 8.0),
+                  Text(
+                    '08:30 - 17:00 (GMT+7)',
+                    style: TextStyle(
+                        fontSize: 16.0,
+                        color: Theme.of(context).colorScheme.primary),
+                  ),
+                ],
               ),
               SizedBox(height: 16.0),
               SizedBox(
