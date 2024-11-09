@@ -72,6 +72,10 @@
   "@chatContent": {
     "description": "聊天页面内容"
   },
+  "chatBoxPlaceholder": "输入您的消息...",
+  "@chatBoxPlaceholder": {
+    "description": "聊天框占位符"
+  },
   "menu": "更多",
   "@menu": {
     "description": "更多按钮文本"

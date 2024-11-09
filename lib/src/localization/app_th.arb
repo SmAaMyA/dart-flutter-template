@@ -72,6 +72,10 @@
   "@chatContent": {
     "description": "เนื้อหาหน้าแชท"
   },
+  "chatBoxPlaceholder": "พิมพ์ข้อความของคุณ...",
+  "@chatBoxPlaceholder": {
+    "description": "ข้อความส่วนที่ใช้ในช่องแชท"
+  },
   "menu": "เมนู",
   "@menu": {
     "description": "ข้อความเมนู"

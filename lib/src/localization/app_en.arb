@@ -72,6 +72,10 @@
   "@chatContent": {
     "description": "Chat page content"
   },
+  "chatBoxPlaceholder": "Enter your message...",
+  "@chatBoxPlaceholder": {
+    "description": "Chat box placeholder text"
+  },
   "menu": "Menu",
   "@menu": {
     "description": "Menu text"
