@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
         title: Text(AppLocalizations.of(context)!.home),
       ),
       body: Center(
-        child: Text(AppLocalizations.of(context)!.greeting),
+        child: Text(AppLocalizations.of(context)!.homeContent),
       ),
     );
   }

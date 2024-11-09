@@ -16,6 +16,10 @@
   "@homeMenuTooltip": {
     "description": "คำอธิบายทูลทิปหน้าหลัก"
   },
+  "homeContent": "นี่คือหน้าหลัก",
+  "@homeContent": {
+    "description": "เนื้อหาหน้าหลัก"
+  },
   "login": "เข้าสู่ระบบ",
   "@login": {
     "description": "ข้อความเข้าสู่ระบบ"
@@ -52,6 +56,22 @@
   "@tradeMenuTooltip": {
     "description": "คำอธิบายทูลทิปหน้าซื้อขาย"
   },
+  "tradeContent": "คุณสามารถซื้อขายได้ที่นี่",
+  "@tradeContent": {
+    "description": "เนื้อหาหน้าซื้อขาย"
+  },
+  "chat": "แชท",
+  "@chat": {
+    "description": "ข้อความแชท"
+  },
+  "chatMenuTooltip": "ไปที่หน้าแชท",
+  "@chatMenuTooltip": {
+    "description": "คำอธิบายทูลทิปหน้าแชท"
+  },
+  "chatContent": "ที่นี่คุณสามารถแชทกับผู้ใช้คนอื่นได้",
+  "@chatContent": {
+    "description": "เนื้อหาหน้าแชท"
+  },
   "menu": "เมนู",
   "@menu": {
     "description": "ข้อความเมนู"
@@ -59,6 +79,10 @@
   "menuMenuTooltip": "ไปที่หน้าเมนู",
   "@menuMenuTooltip": {
     "description": "คำอธิบายทูลทิปหน้าเมนู"
+  },
+  "menuContent": "นี่คือเนื้อหาหน้าเมนู",
+  "@menuContent": {
+    "description": "เนื้อหาหน้าเมนู"
   },
   "changeInformation": "เปลี่ยนแปลงข้อมูล",
   "@changeInformation": {

@@ -1,6 +1,7 @@
 import 'package:flutter_application_template/src/view/main_widget.dart';
 import 'package:flutter_application_template/src/view/pages/mobile/menu_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/change_info_page.dart';
+import 'package:flutter_application_template/src/view/pages/shared/chat_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/history_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/home_page.dart';
 import 'package:flutter_application_template/src/view/pages/shared/login_page.dart';
@@ -15,6 +16,7 @@ class AppRoutes {
   static const String login = '/login';
   static const String logout = '/logout';
   static const String trade = '/trade';
+  static const String chat = '/chat';
   static const String mobileMore = '/mobile-more';
   static const String changeInformation = '/change-information';
   static const String suitabilityTest = '/suitability-test';
@@ -27,6 +29,7 @@ class AppRoutes {
     GetPage(name: login, page: () => LoginPage()),
     GetPage(name: logout, page: () => LoginPage()), // Change to logout page
     GetPage(name: trade, page: () => TradePage()),
+    GetPage(name: chat, page: () => ChatPage()),
     GetPage(name: mobileMore, page: () => MobileMorePage()),
     GetPage(name: changeInformation, page: () => ChangeInformationPage()),
     GetPage(name: suitabilityTest, page: () => SuitabilityTestPage()),
@@ -37,6 +40,7 @@ class AppRoutes {
   static final mobileNavigationBarPages = [
     GetPage(name: home, page: () => HomePage()),
     GetPage(name: trade, page: () => TradePage()),
+    GetPage(name: chat, page: () => ChatPage()),
     GetPage(name: mobileMore, page: () => MobileMorePage()),
   ];
 

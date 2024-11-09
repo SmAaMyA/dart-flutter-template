@@ -16,6 +16,10 @@
   "@homeMenuTooltip": {
     "description": "Home page tooltip"
   },
+  "homeContent": "This is the home page.",
+  "@homeContent": {
+    "description": "Home page content"
+  },
   "login": "Login",
   "@login": {
     "description": "Login text"
@@ -52,6 +56,22 @@
   "@tradeMenuTooltip": {
     "description": "Trade page tooltip"
   },
+  "tradeContent": "Here you can trade.",
+  "@tradeContent": {
+    "description": "Trade page content"
+  },
+  "chat": "Chat",
+  "@chat": {
+    "description": "Chat text"
+  },
+  "chatMenuTooltip": "Go to chat page",
+  "@chatMenuTooltip": {
+    "description": "Chat page tooltip"
+  },
+  "chatContent": "Here you can chat with other users.",
+  "@chatContent": {
+    "description": "Chat page content"
+  },
   "menu": "Menu",
   "@menu": {
     "description": "Menu text"
@@ -59,6 +79,10 @@
   "menuMenuTooltip": "Go to menu page",
   "@menuMenuTooltip": {
     "description": "Menu page tooltip"
+  },
+  "menuContent": "Here you can see the menu.",
+  "@menuContent": {
+    "description": "Menu page content"
   },
   "changeInformation": "Change Information",
   "@changeInformation": {

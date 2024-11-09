@@ -15,6 +15,7 @@ class MobileNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       selectedItemColor: Theme.of(context).colorScheme.primary,
+      unselectedItemColor: Theme.of(context).colorScheme.primaryFixed,
       currentIndex: selectedIndex,
       onTap: onItemTapped,
       items: <BottomNavigationBarItem>[
@@ -29,7 +30,12 @@ class MobileNavigationBar extends StatelessWidget {
           tooltip: AppLocalizations.of(context)!.tradeMenuTooltip,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.more),
+          icon: Icon(Icons.sms),
+          label: AppLocalizations.of(context)!.chat,
+          tooltip: AppLocalizations.of(context)!.chatMenuTooltip,
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.menu),
           label: AppLocalizations.of(context)!.menu,
           tooltip: AppLocalizations.of(context)!.menuMenuTooltip,
         ),

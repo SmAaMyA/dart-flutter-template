@@ -16,6 +16,10 @@
   "@homeMenuTooltip": {
     "description": "主页提示"
   },
+  "homeContent": "这是主页。",
+  "@homeContent": {
+    "description": "主页内容"
+  },
   "login": "登录",
   "@login": {
     "description": "登录按钮文本"
@@ -52,6 +56,22 @@
   "@tradeMenuTooltip": {
     "description": "交易页面提示"
   },
+  "tradeContent": "在这里您可以交易。",
+  "@tradeContent": {
+    "description": "交易页面内容"
+  },
+  "chat": "聊天",
+  "@chat": {
+    "description": "聊天按钮文本"
+  },
+  "chatMenuTooltip": "转到聊天页面",
+  "@chatMenuTooltip": {
+    "description": "聊天页面提示"
+  },
+  "chatContent": "在这里您可以与其他用户聊天。",
+  "@chatContent": {
+    "description": "聊天页面内容"
+  },
   "menu": "更多",
   "@menu": {
     "description": "更多按钮文本"
@@ -59,6 +79,10 @@
   "menuMenuTooltip": "转到更多页面",
   "@menuMenuTooltip": {
     "description": "更多页面提示"
+  },
+  "menuContent": "这是主页内容。",
+  "@menuContent": {
+    "description": "更多页面内容"
   },
   "changeInformation": "更改信息",
   "@changeInformation": {
