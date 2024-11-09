@@ -56,7 +56,7 @@ class ContactUsPage extends StatelessWidget {
                 '08:30 - 17:00',
                 LatLng(13.7563, 100.5018),
               ),
-              SizedBox(height: 16.0),
+              Divider(),
               _buildBranchInfo(
                 context,
                 'สาขากาญจนบุรี',
@@ -66,7 +66,7 @@ class ContactUsPage extends StatelessWidget {
                 '08:30 - 17:00',
                 LatLng(14.0228, 99.5328),
               ),
-              SizedBox(height: 16.0),
+              Divider(),
               _buildBranchInfo(
                 context,
                 'สาขาขอนแก่น',
@@ -76,7 +76,7 @@ class ContactUsPage extends StatelessWidget {
                 '08:30 - 17:00',
                 LatLng(16.4419, 102.8350),
               ),
-              SizedBox(height: 16.0),
+              Divider(),
               _buildBranchInfo(
                 context,
                 'สาขาอุดรธานี',
@@ -86,7 +86,7 @@ class ContactUsPage extends StatelessWidget {
                 '08:30 - 17:00',
                 LatLng(17.4138, 102.7876),
               ),
-              SizedBox(height: 16.0),
+              Divider(),
               _buildBranchInfo(
                 context,
                 'สาขาเชียงใหม่-ห้วยแก้ว',
@@ -96,7 +96,7 @@ class ContactUsPage extends StatelessWidget {
                 '08:30 - 17:00',
                 LatLng(18.7969, 98.9792),
               ),
-              SizedBox(height: 16.0),
+              Divider(),
               _buildBranchInfo(
                 context,
                 'สาขาสิงห์บุรี',
@@ -128,7 +128,7 @@ class ContactUsPage extends StatelessWidget {
           branchName,
           style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: 8.0),
+        SizedBox(height: 10.0),
         Row(
           children: [
             Icon(Icons.location_on,
@@ -144,7 +144,7 @@ class ContactUsPage extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 8.0),
+        SizedBox(height: 10.0),
         Row(
           children: [
             Icon(Icons.phone,
@@ -160,7 +160,7 @@ class ContactUsPage extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 8.0),
+        SizedBox(height: 10.0),
         Row(
           children: [
             Icon(Icons.email,
@@ -176,7 +176,7 @@ class ContactUsPage extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 8.0),
+        SizedBox(height: 10.0),
         Row(
           children: [
             Icon(Icons.access_time,
@@ -192,7 +192,7 @@ class ContactUsPage extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 8.0),
+        SizedBox(height: 10.0),
         SizedBox(
           height: 200.0,
           child: GoogleMap(
@@ -212,6 +212,7 @@ class ContactUsPage extends StatelessWidget {
             },
           ),
         ),
+        SizedBox(height: 10.0),
       ],
     );
   }
