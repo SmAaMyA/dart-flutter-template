@@ -53,5 +53,6 @@ class AppRoutes {
   static final pcWebSidebarPages = [
     GetPage(name: home, page: () => HomePage()),
     GetPage(name: trade, page: () => TradePage()),
+    GetPage(name: contactUs, page: () => ContactUsPage()),
   ];
 }

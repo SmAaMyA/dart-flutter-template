@@ -40,6 +40,14 @@ class PCWebSidebar extends StatelessWidget {
               Navigator.pop(context);
             },
           ),
+          ListTile(
+            leading: Icon(Icons.phone),
+            title: Text(AppLocalizations.of(context)!.contactUs),
+            onTap: () {
+              pageController.jumpToPage(2);
+              Navigator.pop(context);
+            },
+          ),
           // Add more ListTile items here
         ],
       ),
