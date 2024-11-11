@@ -160,6 +160,30 @@
   "@branches": {
     "description": "分支文本"
   },
+  "socialMedia": "社交媒体",
+  "@socialMedia": {
+    "description": "社交媒体文本"
+  },
+  "failLaunchUrl": "无法启动",
+  "@failLaunchUrl": {
+    "description": "无法启动提示"
+  },
+  "lineMenuTooltip": "转到 LINE 应用程序",
+  "@lineMenuTooltip": {
+    "description": "LINE 应用程序提示"
+  },
+  "facebookMenuTooltip": "转到 Facebook 应用程序",
+  "@facebookMenuTooltip": {
+    "description": "Facebook 应用程序提示"
+  },
+  "youtubeMenuTooltip": "转到 YouTube 应用程序",
+  "@youtubeMenuTooltip": {
+    "description": "YouTube 应用程序提示"
+  },
+  "tiktokMenuTooltip": "转到 TikTok 应用程序",
+  "@tiktokMenuTooltip": {
+    "description": "TikTok 应用程序提示"
+  },
   "languageMenuName": "语言",
   "@languageMenuName": {
     "description": "语言菜单提示"

@@ -24,48 +24,42 @@ class ContactUsPage extends StatelessWidget {
                 style: TextStyle(fontSize: 16.0),
               ),
               SizedBox(height: 16.0),
-              Row(
-                children: [
-                  SvgPicture.asset(
-                    'assets/images/logo/line_logo.svg',
-                    width: 24.0,
-                    height: 24.0,
-                  ),
-                  SizedBox(width: 8.0),
-                  Expanded(
-                    child: GestureDetector(
+              Text(
+                AppLocalizations.of(context)!.socialMedia,
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 16.0),
+              Center(
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    GestureDetector(
                       onTap: () async {
                         const String url = 'https://line.me/ti/p/~@aslonnet';
                         final Uri uri = Uri.parse(url);
                         if (await canLaunchUrl(uri)) {
                           await launchUrl(uri);
                         } else {
-                          throw 'Could not launch $url';
+                          throw AppLocalizations.of(context)!.failLaunchUrl +
+                              ' ' +
+                              url;
                         }
                       },
-                      child: Text(
-                        '@aslonnet',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          color: Theme.of(context).colorScheme.inverseSurface,
-                          decoration: TextDecoration.underline,
+                      child: Tooltip(
+                        message: AppLocalizations.of(context)!.lineMenuTooltip,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SvgPicture.asset(
+                            'assets/images/logo/line_logo.svg',
+                            fit: BoxFit.cover,
+                            width: 48,
+                            height: 48,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 16.0),
-              Row(
-                children: [
-                  SvgPicture.asset(
-                    'assets/images/logo/facebook_logo.svg',
-                    width: 24.0,
-                    height: 24.0,
-                  ),
-                  SizedBox(width: 8.0),
-                  Expanded(
-                    child: GestureDetector(
+                    SizedBox(width: 16.0),
+                    GestureDetector(
                       onTap: () async {
                         const String url =
                             'https://www.facebook.com/ASLSecurities';
@@ -73,32 +67,27 @@ class ContactUsPage extends StatelessWidget {
                         if (await canLaunchUrl(uri)) {
                           await launchUrl(uri);
                         } else {
-                          throw 'Could not launch $url';
+                          throw AppLocalizations.of(context)!.failLaunchUrl +
+                              ' ' +
+                              url;
                         }
                       },
-                      child: Text(
-                        'https://www.facebook.com/ASLSecurities',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          color: Theme.of(context).colorScheme.inverseSurface,
-                          decoration: TextDecoration.underline,
+                      child: Tooltip(
+                        message:
+                            AppLocalizations.of(context)!.facebookMenuTooltip,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SvgPicture.asset(
+                            'assets/images/logo/facebook_logo.svg',
+                            fit: BoxFit.cover,
+                            width: 48,
+                            height: 48,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 16.0),
-              Row(
-                children: [
-                  SvgPicture.asset(
-                    'assets/images/logo/youtube_logo.svg',
-                    width: 24.0,
-                    height: 24.0,
-                  ),
-                  SizedBox(width: 8.0),
-                  Expanded(
-                    child: GestureDetector(
+                    SizedBox(width: 16.0),
+                    GestureDetector(
                       onTap: () async {
                         const String url =
                             'https://www.youtube.com/@aslsecuritiesco.ltd.4579';
@@ -106,32 +95,27 @@ class ContactUsPage extends StatelessWidget {
                         if (await canLaunchUrl(uri)) {
                           await launchUrl(uri);
                         } else {
-                          throw 'Could not launch $url';
+                          throw AppLocalizations.of(context)!.failLaunchUrl +
+                              ' ' +
+                              url;
                         }
                       },
-                      child: Text(
-                        'https://www.youtube.com/@aslsecuritiesco.ltd.4579',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          color: Theme.of(context).colorScheme.inverseSurface,
-                          decoration: TextDecoration.underline,
+                      child: Tooltip(
+                        message:
+                            AppLocalizations.of(context)!.youtubeMenuTooltip,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SvgPicture.asset(
+                            'assets/images/logo/youtube_logo.svg',
+                            fit: BoxFit.cover,
+                            width: 48,
+                            height: 48,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 16.0),
-              Row(
-                children: [
-                  SvgPicture.asset(
-                    'assets/images/logo/tiktok_logo.svg',
-                    width: 24.0,
-                    height: 24.0,
-                  ),
-                  SizedBox(width: 8.0),
-                  Expanded(
-                    child: GestureDetector(
+                    SizedBox(width: 16.0),
+                    GestureDetector(
                       onTap: () async {
                         const String url =
                             'https://www.tiktok.com/@aslsecurities';
@@ -139,20 +123,27 @@ class ContactUsPage extends StatelessWidget {
                         if (await canLaunchUrl(uri)) {
                           await launchUrl(uri);
                         } else {
-                          throw 'Could not launch $url';
+                          throw AppLocalizations.of(context)!.failLaunchUrl +
+                              ' ' +
+                              url;
                         }
                       },
-                      child: Text(
-                        'https://www.tiktok.com/@aslsecurities',
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          color: Theme.of(context).colorScheme.inverseSurface,
-                          decoration: TextDecoration.underline,
+                      child: Tooltip(
+                        message:
+                            AppLocalizations.of(context)!.tiktokMenuTooltip,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: SvgPicture.asset(
+                            'assets/images/logo/tiktok_logo.svg',
+                            fit: BoxFit.cover,
+                            width: 48,
+                            height: 48,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               SizedBox(height: 16.0),
               Divider(),

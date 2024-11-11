@@ -160,6 +160,30 @@
   "@branches": {
     "description": "ข้อความสาขา"
   },
+  "socialMedia": "โซเชียลมีเดีย",
+  "@socialMedia": {
+    "description": "ข้อความโซเชียลมีเดีย"
+  },
+  "failLaunchUrl": "ไม่สามารถเปิดลิงค์",
+  "@failLaunchUrl": {
+    "description": "ข้อความไม่สามารถเปิดลิงค์"
+  },
+  "lineMenuTooltip": "ไปที่แอปพลิเคชัน LINE",
+  "@lineMenuTooltip": {
+    "description": "คำอธิบายทูลทิปแอปพลิเคชัน LINE"
+  },
+  "facebookMenuTooltip": "ไปที่แอปพลิเคชัน Facebook",
+  "@facebookMenuTooltip": {
+    "description": "คำอธิบายทูลทิปแอปพลิเคชัน Facebook"
+  },
+  "youtubeMenuTooltip": "ไปที่แอปพลิเคชัน YouTube",
+  "@youtubeMenuTooltip": {
+    "description": "คำอธิบายทูลทิปแอปพลิเคชัน YouTube"
+  },
+  "tiktokMenuTooltip": "ไปที่แอปพลิเคชัน TikTok",
+  "@tiktokMenuTooltip": {
+    "description": "คำอธิบายทูลทิปแอปพลิเคชัน TikTok"
+  },
   "languageMenuName": "ภาษา",
   "@languageMenuName": {
     "description": "คำอธิบายทูลทิปเมนูภาษา"

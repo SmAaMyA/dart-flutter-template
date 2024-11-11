@@ -160,6 +160,30 @@
   "@branches": {
     "description": "Branches text"
   },
+  "socialMedia": "Social media",
+  "@socialMedia": {
+    "description": "Social media text"
+  },
+  "failLaunchUrl": "Could not launch",
+  "@failLaunchUrl": {
+    "description": "Fail to launch URL message"
+  },
+  "lineMenuTooltip": "Go to LINE application",
+  "@lineMenuTooltip": {
+    "description": "LINE application tooltip"
+  },
+  "facebookMenuTooltip": "Go to Facebook application",
+  "@facebookMenuTooltip": {
+    "description": "Facebook application tooltip"
+  },
+  "youtubeMenuTooltip": "Go to YouTube application",
+  "@youtubeMenuTooltip": {
+    "description": "YouTube application tooltip"
+  },
+  "tiktokMenuTooltip": "Go to TikTok application",
+  "@tiktokMenuTooltip": {
+    "description": "TikTok application tooltip"
+  },
   "languageMenuName": "Language",
   "@languageMenuName": {
     "description": "Language menu tooltip"
