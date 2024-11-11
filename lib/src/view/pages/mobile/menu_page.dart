@@ -29,7 +29,7 @@ class MobileMorePage extends StatelessWidget {
             children: [
               Expanded(
                 child: AspectRatio(
-                  aspectRatio: 1.7,
+                  aspectRatio: 1.5,
                   child: Material(
                     elevation: 4.0,
                     borderRadius: BorderRadius.circular(8.0),
@@ -62,7 +62,7 @@ class MobileMorePage extends StatelessWidget {
               SizedBox(width: 8),
               Expanded(
                 child: AspectRatio(
-                  aspectRatio: 1.7,
+                  aspectRatio: 1.5,
                   child: Material(
                     elevation: 4.0,
                     borderRadius: BorderRadius.circular(8.0),
@@ -99,7 +99,7 @@ class MobileMorePage extends StatelessWidget {
             children: [
               Expanded(
                 child: AspectRatio(
-                  aspectRatio: 1.7,
+                  aspectRatio: 1.5,
                   child: Material(
                     elevation: 4.0,
                     borderRadius: BorderRadius.circular(8.0),
@@ -132,7 +132,7 @@ class MobileMorePage extends StatelessWidget {
               SizedBox(width: 8),
               Expanded(
                 child: AspectRatio(
-                  aspectRatio: 1.7,
+                  aspectRatio: 1.5,
                   child: Material(
                     elevation: 4.0,
                     borderRadius: BorderRadius.circular(8.0),
