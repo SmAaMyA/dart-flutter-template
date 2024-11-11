@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/controllers/branch_controller.dart';
 import 'package:flutter_application_template/src/model/branch_model.dart';
@@ -190,98 +191,177 @@ class ContactUsPage extends StatelessWidget {
 
 Widget _buildBranchInfo(BuildContext context, String branchName, String address,
     String phone, String email, String workingHours, LatLng location) {
-  return Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+  final random = Random();
+  final randomColor = Color.fromARGB(
+    255,
+    random.nextInt(256),
+    random.nextInt(256),
+    random.nextInt(256),
+  );
+
+  return Stack(
     children: [
-      Text(
-        branchName,
-        style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
-      ),
-      SizedBox(height: 10.0),
-      Row(
-        children: [
-          Icon(Icons.location_on,
-              color: Theme.of(context).colorScheme.inverseSurface),
-          SizedBox(width: 8.0),
-          Expanded(
-            child: Text(
-              address,
-              style: TextStyle(
-                  fontSize: 16.0,
-                  color: Theme.of(context).colorScheme.inverseSurface),
-            ),
-          ),
-        ],
-      ),
-      SizedBox(height: 10.0),
-      Row(
-        children: [
-          Icon(Icons.phone,
-              color: Theme.of(context).colorScheme.inverseSurface),
-          SizedBox(width: 8.0),
-          Expanded(
-            child: Text(
-              phone,
-              style: TextStyle(
-                  fontSize: 16.0,
-                  color: Theme.of(context).colorScheme.inverseSurface),
-            ),
-          ),
-        ],
-      ),
-      SizedBox(height: 10.0),
-      Row(
-        children: [
-          Icon(Icons.email,
-              color: Theme.of(context).colorScheme.inverseSurface),
-          SizedBox(width: 8.0),
-          Expanded(
-            child: Text(
-              email,
-              style: TextStyle(
-                  fontSize: 16.0,
-                  color: Theme.of(context).colorScheme.inverseSurface),
-            ),
-          ),
-        ],
-      ),
-      SizedBox(height: 10.0),
-      Row(
-        children: [
-          Icon(Icons.access_time,
-              color: Theme.of(context).colorScheme.inverseSurface),
-          SizedBox(width: 8.0),
-          Expanded(
-            child: Text(
-              workingHours,
-              style: TextStyle(
-                  fontSize: 16.0,
-                  color: Theme.of(context).colorScheme.inverseSurface),
-            ),
-          ),
-        ],
-      ),
-      SizedBox(height: 10.0),
-      SizedBox(
-        height: 200.0,
-        child: GoogleMap(
-          initialCameraPosition: CameraPosition(
-            target: location,
-            zoom: 14.0,
-          ),
-          markers: {
-            Marker(
-              markerId: MarkerId(branchName),
-              position: location,
-              infoWindow: InfoWindow(
-                title: branchName,
-                snippet: address,
+      Card(
+        color: Theme.of(context).cardColor,
+        margin: EdgeInsets.symmetric(vertical: 16.0),
+        elevation: 4.0,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 32.0), // Space for the oval
+              Row(
+                children: [
+                  Icon(Icons.location_on,
+                      color: Theme.of(context).colorScheme.inverseSurface),
+                  SizedBox(width: 8.0),
+                  Expanded(
+                    child: InkWell(
+                      onTap: () async {
+                        final Uri uri = Uri.parse(
+                            'https://www.google.com/maps/search/?api=1&query=${Uri.encodeComponent(address)}');
+                        if (await canLaunchUrl(uri)) {
+                          await launchUrl(uri);
+                        } else {
+                          throw AppLocalizations.of(context)!.failLaunchUrl +
+                              ' ' +
+                              uri.toString();
+                        }
+                      },
+                      child: Text(
+                        address,
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ),
-          },
+              SizedBox(height: 10.0),
+              Row(
+                children: [
+                  Icon(Icons.phone,
+                      color: Theme.of(context).colorScheme.inverseSurface),
+                  SizedBox(width: 8.0),
+                  Expanded(
+                    child: Wrap(
+                      children: phone.split(',').expand((phoneNumber) {
+                        return [
+                          InkWell(
+                            onTap: () async {
+                              final Uri uri =
+                                  Uri(scheme: 'tel', path: phoneNumber.trim());
+                              if (await canLaunchUrl(uri)) {
+                                await launchUrl(uri);
+                              } else {
+                                throw AppLocalizations.of(context)!
+                                        .failLaunchUrl +
+                                    ' ' +
+                                    uri.toString();
+                              }
+                            },
+                            child: Text(
+                              phoneNumber.trim(),
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Theme.of(context).colorScheme.primary,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            ', ',
+                            style: TextStyle(fontSize: 16.0),
+                          ),
+                        ];
+                      }).toList()
+                        ..removeLast(), // Remove the last comma
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10.0),
+              Row(
+                children: [
+                  Icon(Icons.email,
+                      color: Theme.of(context).colorScheme.inverseSurface),
+                  SizedBox(width: 8.0),
+                  Expanded(
+                    child: InkWell(
+                      onTap: () async {
+                        final Uri uri = Uri(scheme: 'mailto', path: email);
+                        if (await canLaunchUrl(uri)) {
+                          await launchUrl(uri);
+                        } else {
+                          throw AppLocalizations.of(context)!.failLaunchUrl +
+                              ' ' +
+                              uri.toString();
+                        }
+                      },
+                      child: Text(
+                        email,
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10.0),
+              Row(
+                children: [
+                  Icon(Icons.access_time,
+                      color: Theme.of(context).colorScheme.inverseSurface),
+                  SizedBox(width: 8.0),
+                  Text(
+                    workingHours,
+                    style: TextStyle(fontSize: 16.0),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10.0),
+              SizedBox(
+                height: 200.0,
+                child: GoogleMap(
+                  initialCameraPosition: CameraPosition(
+                    target: location,
+                    zoom: 14.0,
+                  ),
+                  markers: {
+                    Marker(
+                      markerId: MarkerId(branchName),
+                      position: location,
+                    ),
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
-      SizedBox(height: 10.0),
+      Positioned(
+        top: 0,
+        left: 16.0,
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          decoration: BoxDecoration(
+            color: randomColor,
+            borderRadius: BorderRadius.circular(20.0),
+          ),
+          child: Text(
+            branchName,
+            style: TextStyle(
+              fontSize: 16.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
     ],
   );
 }
