@@ -29,7 +29,9 @@ class MainWidgetState extends State<MainWidget> {
         TargetPlatform.android == Theme.of(context).platform;
 
     return Scaffold(
-      appBar: isMobile ? MobileHeader() : PCWebHeader(),
+      appBar: isMobile
+          ? MobileHeader()
+          : PCWebHeader(pageController: _pageController),
       endDrawer:
           isMobile ? null : PCWebSidebar(pageController: _pageController),
       body: PageView(
