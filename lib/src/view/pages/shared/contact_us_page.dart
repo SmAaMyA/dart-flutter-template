@@ -89,6 +89,72 @@ class ContactUsPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 16.0),
+              Row(
+                children: [
+                  SvgPicture.asset(
+                    'assets/images/logo/youtube_logo.svg',
+                    width: 24.0,
+                    height: 24.0,
+                  ),
+                  SizedBox(width: 8.0),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () async {
+                        const String url =
+                            'https://www.youtube.com/@aslsecuritiesco.ltd.4579';
+                        final Uri uri = Uri.parse(url);
+                        if (await canLaunchUrl(uri)) {
+                          await launchUrl(uri);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
+                      child: Text(
+                        'https://www.youtube.com/@aslsecuritiesco.ltd.4579',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Theme.of(context).colorScheme.inverseSurface,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 16.0),
+              Row(
+                children: [
+                  SvgPicture.asset(
+                    'assets/images/logo/tiktok_logo.svg',
+                    width: 24.0,
+                    height: 24.0,
+                  ),
+                  SizedBox(width: 8.0),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () async {
+                        const String url =
+                            'https://www.tiktok.com/@aslsecurities';
+                        final Uri uri = Uri.parse(url);
+                        if (await canLaunchUrl(uri)) {
+                          await launchUrl(uri);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
+                      child: Text(
+                        'https://www.tiktok.com/@aslsecurities',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Theme.of(context).colorScheme.inverseSurface,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 16.0),
               Divider(),
               SizedBox(height: 16.0),
               Text(
