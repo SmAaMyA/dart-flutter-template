@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactUsPage extends StatelessWidget {
   const ContactUsPage({super.key});
@@ -32,15 +33,63 @@ class ContactUsPage extends StatelessWidget {
                   ),
                   SizedBox(width: 8.0),
                   Expanded(
-                    child: Text(
-                      '@aslonnet',
-                      style: TextStyle(
+                    child: GestureDetector(
+                      onTap: () async {
+                        const String url = 'https://line.me/ti/p/~@aslonnet';
+                        final Uri uri = Uri.parse(url);
+                        if (await canLaunchUrl(uri)) {
+                          await launchUrl(uri);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
+                      child: Text(
+                        '@aslonnet',
+                        style: TextStyle(
                           fontSize: 16.0,
-                          color: Theme.of(context).colorScheme.inverseSurface),
+                          color: Theme.of(context).colorScheme.inverseSurface,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
                     ),
                   ),
                 ],
               ),
+              SizedBox(height: 16.0),
+              Row(
+                children: [
+                  SvgPicture.asset(
+                    'assets/images/logo/facebook_logo.svg',
+                    width: 24.0,
+                    height: 24.0,
+                  ),
+                  SizedBox(width: 8.0),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () async {
+                        const String url =
+                            'https://www.facebook.com/ASLSecurities';
+                        final Uri uri = Uri.parse(url);
+                        if (await canLaunchUrl(uri)) {
+                          await launchUrl(uri);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
+                      },
+                      child: Text(
+                        'https://www.facebook.com/ASLSecurities',
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Theme.of(context).colorScheme.inverseSurface,
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 16.0),
+              Divider(),
               SizedBox(height: 16.0),
               Text(
                 AppLocalizations.of(context)!.branches,
