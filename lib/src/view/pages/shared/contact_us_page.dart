@@ -14,6 +14,8 @@ class ContactUsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String languageCode = Localizations.localeOf(context).languageCode;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(AppLocalizations.of(context)!.contactUs),
@@ -159,26 +161,30 @@ class ContactUsPage extends StatelessWidget {
               ),
               SizedBox(height: 16.0),
               FutureBuilder<List<BranchInfo>>(
-                future: _branchController.getBranchInfo(),
+                future: _branchController.getBranchInfo(languageCode),
                 builder: (context, snapshot) {
-                  if (snapshot.hasData) {
-                    return Column(
-                      children: snapshot.data!
-                          .map((branch) => _buildBranchInfo(
-                                context,
-                                branch.name,
-                                branch.address,
-                                branch.phone,
-                                branch.email,
-                                branch.workingHours,
-                                branch.location,
-                              ))
-                          .toList(),
-                    );
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Center(child: CircularProgressIndicator());
                   } else if (snapshot.hasError) {
-                    return Text('${snapshot.error}');
+                    return Center(child: Text('Error: ${snapshot.error}'));
+                  } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                    return Center(
+                        child: Text('No branch information available'));
+                  } else {
+                    return Column(
+                      children: snapshot.data!.map((branch) {
+                        return _buildBranchInfo(
+                          context,
+                          branch.name,
+                          branch.address,
+                          branch.phone,
+                          branch.email,
+                          branch.workingHours,
+                          branch.location,
+                        );
+                      }).toList(),
+                    );
                   }
-                  return Center(child: CircularProgressIndicator());
                 },
               ),
             ],
