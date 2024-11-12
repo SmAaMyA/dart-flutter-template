@@ -14,7 +14,7 @@ class MobileNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      selectedItemColor: Theme.of(context).colorScheme.onSurfaceVariant,
+      selectedItemColor: Theme.of(context).colorScheme.primary,
       unselectedItemColor: Theme.of(context)
           .colorScheme
           .onSurfaceVariant
