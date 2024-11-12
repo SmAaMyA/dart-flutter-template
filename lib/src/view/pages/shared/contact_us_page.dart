@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_template/src/controllers/contact_us_controller.dart';
-import 'package:flutter_application_template/src/model/branch_model.dart';
+import 'package:flutter_application_template/src/model/contact_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -149,7 +149,7 @@ class ContactUsPage extends StatelessWidget {
                 style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 16.0),
-              FutureBuilder<List<BranchInfo>>(
+              FutureBuilder<List<ContactInfo>>(
                 future: _contactUsController.getBranchInfo(languageCode),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
@@ -165,9 +165,11 @@ class ContactUsPage extends StatelessWidget {
                         return _buildBranchInfo(
                           context,
                           branch.name,
+                          branch.description,
                           branch.address,
                           branch.mapUrl,
                           branch.phone,
+                          branch.extension,
                           branch.email,
                           branch.workingHours,
                           branch.location,
@@ -185,7 +187,7 @@ class ContactUsPage extends StatelessWidget {
                 style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 16.0),
-              FutureBuilder<BranchInfo>(
+              FutureBuilder<ContactInfo>(
                 future: _contactUsController.getComplaintsInfo(languageCode),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
@@ -196,139 +198,22 @@ class ContactUsPage extends StatelessWidget {
                     return Center(
                         child: Text('No complaints information available'));
                   } else {
-                    final complaintsInfo = snapshot.data!;
-                    return Card(
-                      elevation: 4.0,
-                      margin: EdgeInsets.symmetric(vertical: 8.0),
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'กรณีท่านมีข้อร้องเรียน คำแนะนำ หรือข้อเสนอแนะเกี่ยวกับการปฏิบัติงานใด ๆ ของพนักงาน บริษัทหลักทรัพย์ เอเอสแอล จำกัด สามารถติดต่อมายังฝ่ายกำกับและตรวจสอบ',
-                              style: TextStyle(fontSize: 16.0),
-                            ),
-                            SizedBox(height: 16.0),
-                            Row(
-                              children: [
-                                Icon(Icons.location_on,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .inverseSurface),
-                                SizedBox(width: 8.0),
-                                Expanded(
-                                  child: InkWell(
-                                    onTap: () async {
-                                      final Uri uri =
-                                          Uri.parse(complaintsInfo.mapUrl);
-                                      if (await canLaunchUrl(uri)) {
-                                        await launchUrl(uri);
-                                      } else {
-                                        throw AppLocalizations.of(context)!
-                                                .failLaunchUrl +
-                                            ' ' +
-                                            uri.toString();
-                                      }
-                                    },
-                                    child: Text(
-                                      complaintsInfo.address,
-                                      style: TextStyle(
-                                        fontSize: 16.0,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .primary,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 16.0),
-                            Row(
-                              children: [
-                                Icon(Icons.phone,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .inverseSurface),
-                                SizedBox(width: 8.0),
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      InkWell(
-                                        onTap: () async {
-                                          final Uri uri = Uri(
-                                              scheme: 'tel',
-                                              path: complaintsInfo.phone);
-                                          if (await canLaunchUrl(uri)) {
-                                            await launchUrl(uri);
-                                          } else {
-                                            throw AppLocalizations.of(context)!
-                                                    .failLaunchUrl +
-                                                ' ' +
-                                                uri.toString();
-                                          }
-                                        },
-                                        child: Text(
-                                          complaintsInfo.phone,
-                                          style: TextStyle(
-                                            fontSize: 16.0,
-                                            color: Theme.of(context)
-                                                .colorScheme
-                                                .primary,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'ต่อ ${complaintsInfo.extension}',
-                                        style: TextStyle(fontSize: 16.0),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 16.0),
-                            Row(
-                              children: [
-                                Icon(Icons.email,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .inverseSurface),
-                                SizedBox(width: 8.0),
-                                Expanded(
-                                  child: InkWell(
-                                    onTap: () async {
-                                      final Uri uri = Uri(
-                                          scheme: 'mailto',
-                                          path: complaintsInfo.email);
-                                      if (await canLaunchUrl(uri)) {
-                                        await launchUrl(uri);
-                                      } else {
-                                        throw AppLocalizations.of(context)!
-                                                .failLaunchUrl +
-                                            ' ' +
-                                            uri.toString();
-                                      }
-                                    },
-                                    child: Text(
-                                      complaintsInfo.email,
-                                      style: TextStyle(
-                                        fontSize: 16.0,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .primary,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
+                    final ContactInfo complaints = snapshot.data!;
+                    return Column(
+                      children: [
+                        _buildBranchInfo(
+                          context,
+                          complaints.name,
+                          complaints.description,
+                          complaints.address,
+                          complaints.mapUrl,
+                          complaints.phone,
+                          complaints.extension,
+                          complaints.email,
+                          complaints.workingHours,
+                          complaints.location,
                         ),
-                      ),
+                      ],
                     );
                   }
                 },
@@ -342,13 +227,15 @@ class ContactUsPage extends StatelessWidget {
 
   Widget _buildBranchInfo(
       BuildContext context,
-      String branchName,
-      String address,
-      String mapUrl,
-      String phone,
-      String email,
-      String workingHours,
-      LatLng location) {
+      String? name,
+      String? description,
+      String? address,
+      String? mapUrl,
+      String? phone,
+      String? extension,
+      String? email,
+      String? workingHours,
+      LatLng? location) {
     return Stack(
       children: [
         Card(
@@ -360,157 +247,186 @@ class ContactUsPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 32.0),
-                Row(
-                  children: [
-                    Icon(Icons.location_on,
-                        color: Theme.of(context).colorScheme.inverseSurface),
-                    SizedBox(width: 8.0),
-                    Expanded(
-                      child: InkWell(
-                        onTap: () async {
-                          final Uri uri = Uri.parse(mapUrl);
-                          if (await canLaunchUrl(uri)) {
-                            await launchUrl(uri);
-                          } else {
-                            throw AppLocalizations.of(context)!.failLaunchUrl +
-                                ' ' +
-                                uri.toString();
-                          }
-                        },
-                        child: Text(
-                          address,
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            color: Theme.of(context).colorScheme.primary,
+                SizedBox(height: 24.0),
+                if (description != null)
+                  Text(
+                    description,
+                    style: TextStyle(fontSize: 16.0),
+                  ),
+                if (description != null) SizedBox(height: 10.0),
+                if (address != null)
+                  Row(
+                    children: [
+                      Icon(Icons.location_on,
+                          color: Theme.of(context).colorScheme.inverseSurface),
+                      SizedBox(width: 8.0),
+                      Expanded(
+                        child: InkWell(
+                          onTap: () async {
+                            final Uri uri;
+                            if (mapUrl != null) {
+                              uri = Uri.parse(mapUrl);
+                            } else {
+                              uri = Uri.parse(
+                                  'https://www.google.com/maps/search/?api=1&query=${Uri.encodeComponent(address)}');
+                            }
+                            if (await canLaunchUrl(uri)) {
+                              await launchUrl(uri);
+                            } else {
+                              throw AppLocalizations.of(context)!
+                                      .failLaunchUrl +
+                                  ' ' +
+                                  uri.toString();
+                            }
+                          },
+                          child: Text(
+                            address,
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    Icon(Icons.phone,
-                        color: Theme.of(context).colorScheme.inverseSurface),
-                    SizedBox(width: 8.0),
-                    Expanded(
-                      child: Wrap(
-                        children: phone.split(',').expand((phoneNumber) {
-                          return [
-                            InkWell(
-                              onTap: () async {
-                                final Uri uri = Uri(
-                                    scheme: 'tel', path: phoneNumber.trim());
-                                if (await canLaunchUrl(uri)) {
-                                  await launchUrl(uri);
-                                } else {
-                                  throw AppLocalizations.of(context)!
-                                          .failLaunchUrl +
-                                      ' ' +
-                                      uri.toString();
-                                }
-                              },
-                              child: Text(
-                                phoneNumber.trim(),
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Theme.of(context).colorScheme.primary,
+                    ],
+                  ),
+                if (address != null) SizedBox(height: 10.0),
+                if (phone != null)
+                  Row(
+                    children: [
+                      Icon(Icons.phone,
+                          color: Theme.of(context).colorScheme.inverseSurface),
+                      SizedBox(width: 8.0),
+                      Expanded(
+                        child: Wrap(
+                          children: phone.split(',').expand((phoneNumber) {
+                            return [
+                              InkWell(
+                                onTap: () async {
+                                  final Uri uri = Uri(
+                                      scheme: 'tel', path: phoneNumber.trim());
+                                  if (await canLaunchUrl(uri)) {
+                                    await launchUrl(uri);
+                                  } else {
+                                    throw AppLocalizations.of(context)!
+                                            .failLaunchUrl +
+                                        ' ' +
+                                        uri.toString();
+                                  }
+                                },
+                                child: Text(
+                                  phoneNumber.trim(),
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color:
+                                        Theme.of(context).colorScheme.primary,
+                                  ),
                                 ),
                               ),
-                            ),
-                            Text(
-                              ', ',
-                              style: TextStyle(fontSize: 16.0),
-                            ),
-                          ];
-                        }).toList()
-                          ..removeLast(),
+                              Text(
+                                ', ',
+                                style: TextStyle(fontSize: 16.0),
+                              ),
+                            ];
+                          }).toList()
+                            ..removeLast(),
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    Icon(Icons.email,
-                        color: Theme.of(context).colorScheme.inverseSurface),
-                    SizedBox(width: 8.0),
-                    Expanded(
-                      child: InkWell(
-                        onTap: () async {
-                          final Uri uri = Uri(scheme: 'mailto', path: email);
-                          if (await canLaunchUrl(uri)) {
-                            await launchUrl(uri);
-                          } else {
-                            throw AppLocalizations.of(context)!.failLaunchUrl +
-                                ' ' +
-                                uri.toString();
-                          }
-                        },
-                        child: Text(
-                          email,
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            color: Theme.of(context).colorScheme.primary,
+                      if (extension != null)
+                        Text(
+                          extension,
+                          style: TextStyle(fontSize: 16.0),
+                        ),
+                      if (extension != null) SizedBox(height: 10.0),
+                    ],
+                  ),
+                if (phone != null) SizedBox(height: 10.0),
+                if (email != null)
+                  Row(
+                    children: [
+                      Icon(Icons.email,
+                          color: Theme.of(context).colorScheme.inverseSurface),
+                      SizedBox(width: 8.0),
+                      Expanded(
+                        child: InkWell(
+                          onTap: () async {
+                            final Uri uri = Uri(scheme: 'mailto', path: email);
+                            if (await canLaunchUrl(uri)) {
+                              await launchUrl(uri);
+                            } else {
+                              throw AppLocalizations.of(context)!
+                                      .failLaunchUrl +
+                                  ' ' +
+                                  uri.toString();
+                            }
+                          },
+                          child: Text(
+                            email,
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10.0),
-                Row(
-                  children: [
-                    Icon(Icons.access_time,
-                        color: Theme.of(context).colorScheme.inverseSurface),
-                    SizedBox(width: 8.0),
-                    Text(
-                      workingHours,
-                      style: TextStyle(fontSize: 16.0),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 10.0),
-                SizedBox(
-                  height: 200.0,
-                  child: GoogleMap(
-                    initialCameraPosition: CameraPosition(
-                      target: location,
-                      zoom: 14.0,
-                    ),
-                    markers: {
-                      Marker(
-                        markerId: MarkerId(branchName),
-                        position: location,
-                      ),
-                    },
+                    ],
                   ),
-                ),
+                if (email != null) SizedBox(height: 10.0),
+                if (workingHours != null)
+                  Row(
+                    children: [
+                      Icon(Icons.access_time,
+                          color: Theme.of(context).colorScheme.inverseSurface),
+                      SizedBox(width: 8.0),
+                      Text(
+                        workingHours,
+                        style: TextStyle(fontSize: 16.0),
+                      ),
+                    ],
+                  ),
+                if (workingHours != null) SizedBox(height: 10.0),
+                if (location != null)
+                  SizedBox(
+                    height: 200.0,
+                    child: GoogleMap(
+                      initialCameraPosition: CameraPosition(
+                        target: location,
+                        zoom: 14.0,
+                      ),
+                      markers: {
+                        Marker(
+                          markerId: name != null
+                              ? MarkerId(name)
+                              : MarkerId(location.toString()),
+                          position: location,
+                        ),
+                      },
+                    ),
+                  ),
               ],
             ),
           ),
         ),
-        Positioned(
-          top: 0,
-          left: 16.0,
-          child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.primary,
-              borderRadius: BorderRadius.circular(20.0),
-            ),
-            child: Text(
-              branchName,
-              style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.bold,
-                color: Theme.of(context).colorScheme.onPrimary,
+        if (name != null)
+          Positioned(
+            top: 0,
+            left: 16.0,
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: Text(
+                name,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
               ),
             ),
           ),
-        ),
       ],
     );
   }
