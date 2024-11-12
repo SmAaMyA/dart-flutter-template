@@ -152,6 +152,10 @@
   "@phone": {
     "description": "Phone text"
   },
+  "phoneExtensions": "Ext.",
+  "@phoneExtensions": {
+    "description": "Phone extension text"
+  },
   "workingHours": "Working hours",
   "@workingHours": {
     "description": "Working hours text"

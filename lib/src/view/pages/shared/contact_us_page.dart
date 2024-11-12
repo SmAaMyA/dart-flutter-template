@@ -247,7 +247,10 @@ class ContactUsPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 24.0),
+                if (name != null)
+                  SizedBox(height: 24.0)
+                else
+                  SizedBox(height: 8.0),
                 if (description != null)
                   Text(
                     description,
@@ -332,14 +335,18 @@ class ContactUsPage extends StatelessWidget {
                             ..removeLast(),
                         ),
                       ),
-                      if (extension != null)
-                        Text(
-                          extension,
-                          style: TextStyle(fontSize: 16.0),
-                        ),
-                      if (extension != null) SizedBox(height: 10.0),
                     ],
                   ),
+                if (extension != null)
+                  Row(children: [
+                    SizedBox(width: 40.0),
+                    Text(
+                      AppLocalizations.of(context)!.phoneExtensions +
+                          ' ' +
+                          extension,
+                      style: TextStyle(fontSize: 16.0),
+                    ),
+                  ]),
                 if (phone != null) SizedBox(height: 10.0),
                 if (email != null)
                   Row(

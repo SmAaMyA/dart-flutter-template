@@ -256,7 +256,6 @@ class BranchService {
 
   Future<ContactInfo> _mockComplaintsInfoTh() async {
     return ContactInfo(
-      name: 'สำนักงานใหญ่',
       description:
           'กรณีท่านมีข้อร้องเรียน คำแนะนำ หรือข้อเสนอแนะเกี่ยวกับการปฏิบัติงานใด ๆ ของพนักงาน บริษัทหลักทรัพย์ เอเอสแอล จำกัด สามารถติดต่อมายังฝ่ายกำกับและตรวจสอบ',
       address:
@@ -265,14 +264,11 @@ class BranchService {
       phone: '(+66) 02-508-1567',
       extension: '3300, 3301, 3302',
       email: 'callcenter@aslsecurities.com',
-      workingHours: '08:30 - 17:00',
-      location: LatLng(13.8206144, 100.6348702),
     );
   }
 
   Future<ContactInfo> _mockComplaintsInfoEn() async {
     return ContactInfo(
-      name: 'Head Office',
       description:
           'If you have any complaints, suggestions, or feedback on the conduct of any of the employees of ASL Securities Co., Ltd., please contact the Supervision and Inspection Department',
       address:
@@ -281,22 +277,17 @@ class BranchService {
       phone: '(+66) 02-508-1567',
       extension: '3300, 3301, 3302',
       email: 'callcenter@aslsecurities.com',
-      workingHours: '08:30 - 17:00',
-      location: LatLng(13.8206144, 100.6348702),
     );
   }
 
   Future<ContactInfo> _mockComplaintsInfoZh() async {
     return ContactInfo(
-      name: '总部',
       description: '如果您对ASL证券有限公司的任何员工的行为有任何投诉、建议或反馈，请联系监督和检查部门',
       address: '泰国曼谷10230，Bueng Kum，Nuanchan，Klong Lamchiak路888/1号',
       mapUrl: 'https://goo.gl/maps/pg9qVSVHC5R84ErH8',
       phone: '(+66) 02-508-1567',
       extension: '3300, 3301, 3302',
       email: 'callcenter@aslsecurities.com',
-      workingHours: '08:30 - 17:00',
-      location: LatLng(13.8206144, 100.6348702),
     );
   }
 }

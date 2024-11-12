@@ -152,6 +152,10 @@
   "@phone": {
     "description": "ข้อความโทรศัพท์"
   },
+  "phoneExtensions": "ต่อ",
+  "@phoneExtensions": {
+    "description": "ข้อความเบอร์ต่อ"
+  },
   "workingHours": "เวลาทำการ",
   "@workingHours": {
     "description": "ข้อความเวลาทำการ"

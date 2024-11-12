@@ -152,6 +152,10 @@
   "@phone": {
     "description": "电话文本"
   },
+  "phoneExtensions": "分机",
+  "@phoneExtensions": {
+    "description": "分机文本"
+  },
   "workingHours": "工作时间",
   "@workingHours": {
     "description": "工作时间文本"
