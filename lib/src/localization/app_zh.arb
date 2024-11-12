@@ -160,6 +160,10 @@
   "@branches": {
     "description": "分支文本"
   },
+  "complaints": "投诉",
+  "@complaints": {
+    "description": "投诉按钮文本"
+  },
   "socialMedia": "社交媒体",
   "@socialMedia": {
     "description": "社交媒体文本"

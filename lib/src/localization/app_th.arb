@@ -160,6 +160,10 @@
   "@branches": {
     "description": "ข้อความสาขา"
   },
+  "complaints": "แจ้งข้อร้องเรียน",
+  "@complaints": {
+    "description": "ข้อความแจ้งข้อร้องเรียน"
+  },
   "socialMedia": "โซเชียลมีเดีย",
   "@socialMedia": {
     "description": "ข้อความโซเชียลมีเดีย"

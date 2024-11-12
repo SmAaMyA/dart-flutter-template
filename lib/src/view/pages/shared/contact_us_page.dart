@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_template/src/controllers/branch_controller.dart';
+import 'package:flutter_application_template/src/controllers/contact_us_controller.dart';
 import 'package:flutter_application_template/src/model/branch_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -7,7 +7,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactUsPage extends StatelessWidget {
-  final BranchController _branchController = BranchController();
+  final ContactUsController _contactUsController = ContactUsController();
 
   ContactUsPage({super.key});
 
@@ -150,7 +150,7 @@ class ContactUsPage extends StatelessWidget {
               ),
               SizedBox(height: 16.0),
               FutureBuilder<List<BranchInfo>>(
-                future: _branchController.getBranchInfo(languageCode),
+                future: _contactUsController.getBranchInfo(languageCode),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
                     return Center(child: CircularProgressIndicator());
@@ -166,12 +166,169 @@ class ContactUsPage extends StatelessWidget {
                           context,
                           branch.name,
                           branch.address,
+                          branch.mapUrl,
                           branch.phone,
                           branch.email,
                           branch.workingHours,
                           branch.location,
                         );
                       }).toList(),
+                    );
+                  }
+                },
+              ),
+              SizedBox(height: 16.0),
+              Divider(),
+              SizedBox(height: 16.0),
+              Text(
+                AppLocalizations.of(context)!.complaints,
+                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 16.0),
+              FutureBuilder<BranchInfo>(
+                future: _contactUsController.getComplaintsInfo(languageCode),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Center(child: CircularProgressIndicator());
+                  } else if (snapshot.hasError) {
+                    return Center(child: Text('Error: ${snapshot.error}'));
+                  } else if (!snapshot.hasData) {
+                    return Center(
+                        child: Text('No complaints information available'));
+                  } else {
+                    final complaintsInfo = snapshot.data!;
+                    return Card(
+                      elevation: 4.0,
+                      margin: EdgeInsets.symmetric(vertical: 8.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'กรณีท่านมีข้อร้องเรียน คำแนะนำ หรือข้อเสนอแนะเกี่ยวกับการปฏิบัติงานใด ๆ ของพนักงาน บริษัทหลักทรัพย์ เอเอสแอล จำกัด สามารถติดต่อมายังฝ่ายกำกับและตรวจสอบ',
+                              style: TextStyle(fontSize: 16.0),
+                            ),
+                            SizedBox(height: 16.0),
+                            Row(
+                              children: [
+                                Icon(Icons.location_on,
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .inverseSurface),
+                                SizedBox(width: 8.0),
+                                Expanded(
+                                  child: InkWell(
+                                    onTap: () async {
+                                      final Uri uri =
+                                          Uri.parse(complaintsInfo.mapUrl);
+                                      if (await canLaunchUrl(uri)) {
+                                        await launchUrl(uri);
+                                      } else {
+                                        throw AppLocalizations.of(context)!
+                                                .failLaunchUrl +
+                                            ' ' +
+                                            uri.toString();
+                                      }
+                                    },
+                                    child: Text(
+                                      complaintsInfo.address,
+                                      style: TextStyle(
+                                        fontSize: 16.0,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .primary,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 16.0),
+                            Row(
+                              children: [
+                                Icon(Icons.phone,
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .inverseSurface),
+                                SizedBox(width: 8.0),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      InkWell(
+                                        onTap: () async {
+                                          final Uri uri = Uri(
+                                              scheme: 'tel',
+                                              path: complaintsInfo.phone);
+                                          if (await canLaunchUrl(uri)) {
+                                            await launchUrl(uri);
+                                          } else {
+                                            throw AppLocalizations.of(context)!
+                                                    .failLaunchUrl +
+                                                ' ' +
+                                                uri.toString();
+                                          }
+                                        },
+                                        child: Text(
+                                          complaintsInfo.phone,
+                                          style: TextStyle(
+                                            fontSize: 16.0,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .primary,
+                                          ),
+                                        ),
+                                      ),
+                                      Text(
+                                        'ต่อ ${complaintsInfo.extension}',
+                                        style: TextStyle(fontSize: 16.0),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 16.0),
+                            Row(
+                              children: [
+                                Icon(Icons.email,
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .inverseSurface),
+                                SizedBox(width: 8.0),
+                                Expanded(
+                                  child: InkWell(
+                                    onTap: () async {
+                                      final Uri uri = Uri(
+                                          scheme: 'mailto',
+                                          path: complaintsInfo.email);
+                                      if (await canLaunchUrl(uri)) {
+                                        await launchUrl(uri);
+                                      } else {
+                                        throw AppLocalizations.of(context)!
+                                                .failLaunchUrl +
+                                            ' ' +
+                                            uri.toString();
+                                      }
+                                    },
+                                    child: Text(
+                                      complaintsInfo.email,
+                                      style: TextStyle(
+                                        fontSize: 16.0,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .primary,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
                     );
                   }
                 },
@@ -187,6 +344,7 @@ class ContactUsPage extends StatelessWidget {
       BuildContext context,
       String branchName,
       String address,
+      String mapUrl,
       String phone,
       String email,
       String workingHours,
@@ -211,8 +369,7 @@ class ContactUsPage extends StatelessWidget {
                     Expanded(
                       child: InkWell(
                         onTap: () async {
-                          final Uri uri = Uri.parse(
-                              'https://www.google.com/maps/search/?api=1&query=${Uri.encodeComponent(address)}');
+                          final Uri uri = Uri.parse(mapUrl);
                           if (await canLaunchUrl(uri)) {
                             await launchUrl(uri);
                           } else {

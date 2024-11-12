@@ -160,6 +160,10 @@
   "@branches": {
     "description": "Branches text"
   },
+  "complaints": "Complaints",
+  "@complaints": {
+    "description": "Complaints text"
+  },
   "socialMedia": "Social media",
   "@socialMedia": {
     "description": "Social media text"
