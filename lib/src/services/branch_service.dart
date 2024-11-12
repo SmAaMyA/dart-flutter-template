@@ -39,7 +39,7 @@ class BranchService {
         phone: '(+66) 02-508-1567',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(13.7563, 100.5018),
+        location: LatLng(13.8206144, 100.6348702),
       ),
       BranchInfo(
         name: 'สาขากาญจนบุรี',
@@ -48,7 +48,7 @@ class BranchService {
         phone: '(+66) 034-918-781, (+66) 034-918-782, (+66) 034-910-100',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(14.0228, 99.5328),
+        location: LatLng(14.0273351, 99.5304824),
       ),
       BranchInfo(
         name: 'สาขาขอนแก่น',
@@ -58,7 +58,7 @@ class BranchService {
             '(+66) 043-053-557, (+66) 043-053-558, (+66) 043-224-103, (+66) 043-224-104',
         email: 'aslkhonkaen@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(16.4419, 102.8350),
+        location: LatLng(16.4285248, 102.8504593),
       ),
       BranchInfo(
         name: 'สาขาอุดรธานี',
@@ -68,7 +68,7 @@ class BranchService {
             '(+66) 042-119-990, (+66) 042-119-991, (+66) 042-119-992, (+66) 042-119-993',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(17.4138, 102.7876),
+        location: LatLng(17.4039847, 102.789772),
       ),
       BranchInfo(
         name: 'สาขาเชียงใหม่-ห้วยแก้ว',
@@ -78,7 +78,7 @@ class BranchService {
             '(+66) 053-217-346, (+66) 053-217-347, (+66) 053-217-348, (+66) 053-217-349',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(18.7969, 98.9792),
+        location: LatLng(18.8001637, 98.9702524),
       ),
       BranchInfo(
         name: 'สาขาสิงห์บุรี',
@@ -87,7 +87,7 @@ class BranchService {
         phone: '(+66) 036-691-161, (+66) 036-691-162, (+66) 036-691-163',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(14.8872, 100.4018),
+        location: LatLng(14.896215, 100.398268),
       ),
     ];
   }
@@ -101,7 +101,7 @@ class BranchService {
         phone: '(+66) 02-508-1567',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(13.7563, 100.5018),
+        location: LatLng(13.8206144, 100.6348702),
       ),
       BranchInfo(
         name: 'Kanchanaburi Branch',
@@ -110,7 +110,7 @@ class BranchService {
         phone: '(+66) 034-918-781, (+66) 034-918-782, (+66) 034-910-100',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(14.0228, 99.5328),
+        location: LatLng(14.0273351, 99.5304824),
       ),
       BranchInfo(
         name: 'Khon Kaen Branch',
@@ -120,7 +120,7 @@ class BranchService {
             '(+66) 043-053-557, (+66) 043-053-558, (+66) 043-224-103, (+66) 043-224-104',
         email: 'aslkhonkaen@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(16.4419, 102.8350),
+        location: LatLng(16.4285248, 102.8504593),
       ),
       BranchInfo(
         name: 'Udon Thani Branch',
@@ -130,7 +130,7 @@ class BranchService {
             '(+66) 042-119-990, (+66) 042-119-991, (+66) 042-119-992, (+66) 042-119-993',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(17.4138, 102.7876),
+        location: LatLng(17.4039847, 102.789772),
       ),
       BranchInfo(
         name: 'Chiang Mai-Huay Kaew Branch',
@@ -140,7 +140,7 @@ class BranchService {
             '(+66) 053-217-346, (+66) 053-217-347, (+66) 053-217-348, (+66) 053-217-349',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(18.7969, 98.9792),
+        location: LatLng(18.8001637, 98.9702524),
       ),
       BranchInfo(
         name: 'Sing Buri Branch',
@@ -149,7 +149,7 @@ class BranchService {
         phone: '(+66) 036-691-161, (+66) 036-691-162, (+66) 036-691-163',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(14.8872, 100.4018),
+        location: LatLng(14.896215, 100.398268),
       ),
     ];
   }
@@ -162,7 +162,7 @@ class BranchService {
         phone: '(+66) 02-508-1567',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(13.7563, 100.5018),
+        location: LatLng(13.8206144, 100.6348702),
       ),
       BranchInfo(
         name: '北碧府分行',
@@ -170,7 +170,7 @@ class BranchService {
         phone: '(+66) 034-918-781, (+66) 034-918-782, (+66) 034-910-100',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(14.0228, 99.5328),
+        location: LatLng(14.0273351, 99.5304824),
       ),
       BranchInfo(
         name: '孔敬府分行',
@@ -179,7 +179,7 @@ class BranchService {
             '(+66) 043-053-557, (+66) 043-053-558, (+66) 043-224-103, (+66) 043-224-104',
         email: 'aslkhonkaen@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(16.4419, 102.8350),
+        location: LatLng(16.4285248, 102.8504593),
       ),
       BranchInfo(
         name: '乌隆他尼府分行',
@@ -188,7 +188,7 @@ class BranchService {
             '(+66) 042-119-990, (+66) 042-119-991, (+66) 042-119-992, (+66) 042-119-993',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(17.4138, 102.7876),
+        location: LatLng(17.4039847, 102.789772),
       ),
       BranchInfo(
         name: '清迈-怀凯奥分行',
@@ -197,7 +197,7 @@ class BranchService {
             '(+66) 053-217-346, (+66) 053-217-347, (+66) 053-217-348, (+66) 053-217-349',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(18.7969, 98.9792),
+        location: LatLng(18.8001637, 98.9702524),
       ),
       BranchInfo(
         name: '信武里府分行',
@@ -205,7 +205,7 @@ class BranchService {
         phone: '(+66) 036-691-161, (+66) 036-691-162, (+66) 036-691-163',
         email: 'callcenter@aslsecurities.com',
         workingHours: '08:30 - 17:00',
-        location: LatLng(14.8872, 100.4018),
+        location: LatLng(14.896215, 100.398268),
       ),
     ];
   }
