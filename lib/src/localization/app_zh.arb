@@ -4,7 +4,7 @@
   "@appTitle": {
     "description": "应用名称"
   },
-  "greeting": "你好",
+  "greeting": "欢迎",
   "@greeting": {
     "description": "问候信息"
   },
@@ -28,6 +28,46 @@
   "@loginTooltip": {
     "description": "登录提示"
   },
+  "loginDescription": "登录以继续",
+  "@loginDescription": {
+    "description": "登录描述"
+  },
+  "newUser": "我是新用户",
+  "@newUser": {
+    "description": "新用户文本"
+  },
+  "signup": "注册",
+  "@signup": {
+    "description": "注册按钮文本"
+  },
+  "signupDescription": "注册以开始",
+  "@signupDescription": {
+    "description": "注册描述"
+  },
+  "existingUser": "我已经是会员",
+  "@existingUser": {
+    "description": "现有用户文本"
+  },
+  "createAccount": "创建账户",
+  "@createAccount": {
+    "description": "创建账户按钮文本"
+  },
+  "forgotPassword": "忘记密码",
+  "@forgotPassword": {
+    "description": "忘记密码按钮文本"
+  },
+  "usernameError": "用户名无效",
+  "@usernameError": {
+    "description": "用户名错误文本"
+  },
+  "passwordError": "请输入密码",
+  "@passwordError": {
+    "description": "密码错误文本"
+  },
+  "passwordMatchError": "密码不匹配",
+  "@passwordMatchError": {
+    "description": "确认密码错误文本"
+  },
   "logout": "登出",
   "@logout": {
     "description": "登出按钮文本"
@@ -43,6 +83,10 @@
   "password": "密码",
   "@password": {
     "description": "密码文本"
+  },
+  "confirmPassword": "确认密码",
+  "@confirmPassword": {
+    "description": "确认密码文本"
   },
   "cancel": "取消",
   "@cancel": {

@@ -4,7 +4,7 @@
   "@appTitle": {
     "description": "Application name"
   },
-  "greeting": "Hello",
+  "greeting": "Welcome",
   "@greeting": {
     "description": "Greeting message"
   },
@@ -28,6 +28,46 @@
   "@loginTooltip": {
     "description": "Login tooltip"
   },
+  "loginDescription": "Sign in to continue",
+  "@loginDescription": {
+    "description": "Login description"
+  },
+  "newUser": "I'm a new user",
+  "@newUser": {
+    "description": "New user text"
+  },
+  "signup": "Sign Up",
+  "@signup": {
+    "description": "Sign Up button text"
+  },
+  "signupDescription": "Sign up to get started",
+  "@signupDescription": {
+    "description": "Sign up description text"
+  },
+  "existingUser": "I'm already a member",
+  "@existingUser": {
+    "description": "Existing user text"
+  },
+  "createAccount": "Create Account",
+  "@createAccount": {
+    "description": "Create account text"
+  },
+  "forgotPassword": "Forgot Password",
+  "@forgotPassword": {
+    "description": "Forgot password text"
+  },
+  "usernameError": "Username is invalid",
+  "@usernameError": {
+    "description": "Username error text"
+  },
+  "passwordError": "Please enter a password",
+  "@passwordError": {
+    "description": "Password error text"
+  },
+  "passwordMatchError": "Passwords do not match",
+  "@passwordMatchError": {
+    "description": "Confirm password error text"
+  },
   "logout": "Logout",
   "@logout": {
     "description": "Logout text"
@@ -43,6 +83,10 @@
   "password": "Password",
   "@password": {
     "description": "Password text"
+  },
+  "confirmPassword": "Confirm Password",
+  "@confirmPassword": {
+    "description": "Confirm password text"
   },
   "cancel": "Cancel",
   "@cancel": {

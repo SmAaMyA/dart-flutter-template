@@ -4,7 +4,7 @@
   "@appTitle": {
     "description": "ชื่อแอปพลิเคชัน"
   },
-  "greeting": "สวัสดี",
+  "greeting": "ยินดีต้อนรับ",
   "@greeting": {
     "description": "ข้อความทักทาย"
   },
@@ -28,6 +28,46 @@
   "@loginTooltip": {
     "description": "คำอธิบายทูลทิปเข้าสู่ระบบ"
   },
+  "loginDescription": "ลงชื่อเข้าใช้เพื่อดำเนินการต่อ",
+  "@loginDescription": {
+    "description": "ข้อความลงชื่อเข้าใช้"
+  },
+  "newUser": "ฉันเป็นผู้ใช้ใหม่",
+  "@newUser": {
+    "description": "ข้อความผู้ใช้ใหม่"
+  },
+  "signup": "เปิดบัญชี",
+  "@signup": {
+    "description": "ข้อความปุ่มลงทะเบียน"
+  },
+  "signupDescription": "ลงทะเบียนเพื่อเริ่มใช้งาน",
+  "@signupDescription": {
+    "description": "ข้อความลงทะเบียน"
+  },
+  "existingUser": "ฉันเป็นสมาชิกอยู่แล้ว",
+  "@existingUser": {
+    "description": "ข้อความสมาชิกอยู่แล้ว"
+  },
+  "createAccount": "เปิดบัญชี",
+  "@createAccount": {
+    "description": "ข้อความเปิดบัญชี"
+  },
+  "forgotPassword": "ลืมรหัสผ่าน",
+  "@forgotPassword": {
+    "description": "ข้อความลืมรหัสผ่าน"
+  },
+  "usernameError": "ชื่อผู้ใช้ไม่ถูกต้อง",
+  "@usernameError": {
+    "description": "ข้อความชื่อผู้ใช้ไม่ถูกต้อง"
+  },
+  "passwordError": "โปรดใส่รหัสผ่าน",
+  "@passwordError": {
+    "description": "ข้อความโปรดใส่รหัสผ่าน"
+  },
+  "passwordMatchError": "รหัสผ่านไม่ตรงกัน",
+  "@passwordMatchError": {
+    "description": "ข้อความรหัสผ่านไม่ตรงกัน"
+  },
   "logout": "ออกจากระบบ",
   "@logout": {
     "description": "ข้อความออกจากระบบ"
@@ -43,6 +83,10 @@
   "password": "รหัสผ่าน",
   "@password": {
     "description": "ข้อความรหัสผ่าน"
+  },
+  "confirmPassword": "ยืนยันรหัสผ่าน",
+  "@confirmPassword": {
+    "description": "ข้อความยืนยันรหัสผ่าน"
   },
   "cancel": "ยกเลิก",
   "@cancel": {
